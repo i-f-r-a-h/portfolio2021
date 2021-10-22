@@ -30,13 +30,19 @@ body {
 
 // site navigation
 header {
+  position: fixed;
+  top: 0px;
   display: flex;
+
   justify-content: space-between;
   padding-left: 15px;
+  background-color: brown;
   margin-top: 10px;
+  width: 100%;
 }
 
 .navbar {
+  
   width: 100vw;
   height: 100vh;
   background-color: #fff9ce;
@@ -173,3 +179,35 @@ header {
 
 
 }
+
+
+
+
+
+
+// landing page
+
+section{
+  padding: 120px 7%;
+  &:nth-child(1){
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    background-color: blue;
+  }
+  h1{
+    font-family:'Bitter', serif; 
+    font-size: 4rem;
+    line-height: 3.9rem;
+    width: 50%;
+    margin-bottom: 30px;
+    
+  }
+  p{
+    width: 85%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+   
+  }
+}
+
