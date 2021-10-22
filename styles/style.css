@@ -124,4 +124,59 @@ header {
   -webkit-transform: rotateZ(405deg) translate(-8px, -6px);
           transform: rotateZ(405deg) translate(-8px, -6px);
 }
+
+@media (min-width: 780px) {
+  .navbar__logo {
+    color: black;
+    font-size: 43px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.08em;
+  }
+  header {
+    background-color: azure;
+    top: 0;
+    margin: 0;
+    padding: 20px 40px 40px 40px;
+  }
+  .navbar {
+    width: auto;
+    height: auto;
+    background-color: azure;
+    right: auto;
+    position: relative;
+  }
+  .navbar .navbar__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    width: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    border: 0;
+  }
+  .navbar .navbar__list .navbar__list-item {
+    padding: 10px;
+    border-bottom: 0;
+    margin: auto;
+  }
+  .navbar .navbar__list .navbar__list-item:hover {
+    border-bottom: 0;
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+  }
+  .navbar .navbar__list .navbar__list-link {
+    font-size: 22px;
+    margin-left: 1.05vw;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+  }
+  .navbar .hamburger-menu {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
