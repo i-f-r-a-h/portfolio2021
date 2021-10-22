@@ -7,26 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"
         href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/waving-hand_1f44b.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <title>Ifrah's Portfolio | 2021</title>
 </head>
 
 <body>
-    <header>
-        <span class="navbar__logo"><a href="#home">Ifrah</a></span>
+    <header class="header">
+        <!-- logo -->
+       <a class="navbar__logo" href="#home">Ifrah.</a>
+
         <nav class="navbar">
+            <!-- hamburger menu -->
+            <div class="hamburger-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+            <!-- site navigation -->
             <ul class="navbar__list">
-                <li class="navbar__list-item"><a href="#home">home</a></li>
-                <li class="navbar__list-item"><a href="#about">about</a></li>
-                <li class="navbar__list-item"><a href="#portfolio">portfolio</a></li>
-                <li class="navbar__list-item"><a href="#contact">contact</a></li>
+                <li class="navbar__list-item">
+                    <a href="#home" class="navbar__list-link">home.</a>
+                </li>
+                <li class="navbar__list-item">
+                    <a href="#portfolio" class="navbar__list-link">portfolio.</a>
+                </li>
+                <li class="navbar__list-item">
+                    <a href="#about" class="navbar__list-link">about.</a>
+                </li>
+                <li class="navbar__list-item">
+                    <a href="blog.html" class="navbar__list-link">blog.</a>
+                </li>
+                <li class="navbar__list-item">
+                    <a href="#contact" class="navbar__list-link">contact.</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <!-- landing page -->
-        <section id="#home">
+        <section id="home">
 
         </section>
         <!-- about ifrah section -->
@@ -48,6 +73,7 @@
     <footer>
 
     </footer>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>

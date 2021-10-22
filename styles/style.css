@@ -1,1 +1,138 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navbar__logo {
+  color: black;
+  font-size: 8vw;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hamburger-menu {
+  width: 34px;
+  height: 29px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 2;
+}
+
+.header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cursor {
+  display: none;
+}
+
+.header.sticky .line {
+  background-color: black;
+}
+
+.header li a:hover {
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  background-color: #300adb;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.change {
+  right: 0;
+}
+
+.hamburger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.change .line-1 {
+  -webkit-transform: rotateZ(-405deg) translate(-8px, 6px);
+          transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  -webkit-transform: rotateZ(405deg) translate(-8px, -6px);
+          transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.navbar__list {
+  text-align: center;
+}
+
+.navbar__list-item {
+  list-style: none;
+  margin: 10px;
+}
+
+.navbar__list-link {
+  text-decoration: none;
+  font-size: 33px;
+  color: black;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */
