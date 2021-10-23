@@ -14,7 +14,7 @@ body {
 
 .navbar__logo {
   color: black;
-  font-size: 32px;
+  font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: -0.08em;
@@ -137,6 +137,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
+  font-size: 3.2vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -146,6 +147,9 @@ header {
 }
 
 @media (min-width: 780px) {
+  .navbar_copyright {
+    display: none;
+  }
   .navbar__logo {
     color: black;
     font-size: 43px;

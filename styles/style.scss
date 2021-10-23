@@ -21,7 +21,7 @@ body {
 // logo
 .navbar__logo {
   color: black;
-  font-size: 32px;
+  font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: -0.08em;
@@ -57,7 +57,7 @@ header {
     justify-content: center;
     margin: 30% 5px auto 10%;
     border-top: 1px grey solid;
- 
+
 
     .navbar__list-item {
       padding: 20px;
@@ -122,10 +122,11 @@ header {
 .navbar_copyright {
   display: flex;
   flex-flow: row;
+  font-size: 3.2vw;
   justify-content: space-between;
   width: 80%;
   margin: auto 0px auto 10%;
- color: grey;
+  color: grey;
 }
 
 
@@ -142,6 +143,10 @@ header {
 // desktop navigation
 
 @media (min-width:780px) {
+  .navbar_copyright {
+    display: none;
+  }
+
   .navbar__logo {
     color: black;
     font-size: 43px;
@@ -172,7 +177,7 @@ header {
       border: 0;
 
       .navbar__list-item {
-        padding: 10px;
+      padding: 10px;  
         border-bottom: 0;
         margin: auto;
 
