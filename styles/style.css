@@ -33,6 +33,8 @@ header {
 }
 
 .navbar {
+  display: -ms-grid;
+  display: grid;
   width: 100vw;
   height: 100vh;
   background-color: #fff9ce;
@@ -109,6 +111,8 @@ header {
 
 .change {
   right: 0;
+  display: -ms-grid;
+  display: grid;
 }
 
 .change .line-1 {
@@ -123,6 +127,22 @@ header {
 .change .line-3 {
   -webkit-transform: rotateZ(405deg) translate(-8px, -6px);
           transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.navbar_copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: auto 0px auto 10%;
+  color: grey;
 }
 
 @media (min-width: 780px) {
