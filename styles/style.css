@@ -14,7 +14,7 @@ body {
 
 .navbar__logo {
   color: black;
-  font-size: 32px;
+  font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: -0.08em;
@@ -35,6 +35,8 @@ header {
 }
 
 .navbar {
+  display: -ms-grid;
+  display: grid;
   width: 100vw;
   height: 100vh;
   background-color: #fff9ce;
@@ -79,7 +81,7 @@ header {
 
 .navbar .navbar__list .navbar__list-link {
   text-decoration: none;
-  font-size: 9vw;
+  font-size: 4vw;
   color: black;
   letter-spacing: 5px;
 }
@@ -111,6 +113,8 @@ header {
 
 .change {
   right: 0;
+  display: -ms-grid;
+  display: grid;
 }
 
 .change .line-1 {
@@ -127,7 +131,27 @@ header {
           transform: rotateZ(405deg) translate(-8px, -6px);
 }
 
+.navbar_copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  font-size: 3.2vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: auto 0px auto 10%;
+  color: grey;
+}
+
 @media (min-width: 780px) {
+  .navbar_copyright {
+    display: none;
+  }
   .navbar__logo {
     color: black;
     font-size: 43px;
