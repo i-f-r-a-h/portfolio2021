@@ -21,10 +21,11 @@ body {
 // logo
 .navbar__logo {
   color: black;
-  font-size: 38px;
+  font-size: 32px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: -0.08em;
+  z-index: 5;
 }
 
 
@@ -35,10 +36,8 @@ header {
   display: flex;
 
   justify-content: space-between;
-  padding-left: 15px;
+  padding: 0.5rem 1.3rem;
   background-color: brown;
-  margin-top: 10px;
-  width: 100%;
 }
 
 .navbar {
@@ -85,11 +84,11 @@ header {
   .hamburger-menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 25px;
+    justify-content: space-around;
+    width: 1.7rem;
+    height: 1.7rem;
     position: fixed;
-    top: 25px;
+    top: 15px;
     right: 30px;
     z-index: 2;
 
