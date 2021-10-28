@@ -1,0 +1,15 @@
+//===============================================================================
+// This file contains all the very basic foundation styling of the portfolio
+//===============================================================================
+
+*{
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    min-height:calc(100vh - 89px);
+}

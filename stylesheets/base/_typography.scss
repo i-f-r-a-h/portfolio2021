@@ -1,0 +1,16 @@
+//===============================================================================
+// This file contains all the base typography stylings used within the portfolio
+//===============================================================================
+
+body{
+    font-size: $text-base-size;
+    font-family: $font-primary;
+    color: $primary-colour;
+}
+
+h1, h2, h3, h4, form legend {
+    color: $secondary-colour;
+    margin-bottom: $space-sm;
+    line-height:$heading-line-height;
+}
+

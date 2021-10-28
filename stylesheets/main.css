@@ -1,3 +1,8 @@
+/* Font stack */
+/* Text used this as reference - https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd */
+/* spacing values */
+/* Colours */
+/* Media Quires*/
 * {
   list-style-type: none;
   text-decoration: none;
@@ -5,19 +10,26 @@
           box-sizing: 0;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 89px);
 }
 
 body {
-  background-color: #fcfcfc;
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  color: #0a0d14;
+}
+
+h1, h2, h3, h4, form legend {
+  color: #5d49ab;
+  margin-bottom: calc($baseline/2);
+  line-height: 1.2;
 }
 
 .navbar__logo {
-  color: black;
-  font-size: 24px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.08em;
+  font-size: 1.2em;
   z-index: 5;
 }
 
@@ -33,13 +45,11 @@ header {
 }
 
 .navbar {
-  display: -ms-grid;
-  display: grid;
   width: 100vw;
   height: 100vh;
   background-color: #fff9ce;
   position: fixed;
-  right: -100%;
+  right: -100vw;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,19 +164,19 @@ header {
     color: black;
     font-size: 43px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    letter-spacing: -0.08em;
+    font-weight: 500;
+    letter-spacing: -0.03em;
   }
   header {
-    background-color: azure;
+    background-color: #009d9d;
     top: 0;
     margin: 0;
     padding: 20px 40px 40px 40px;
   }
   .navbar {
+    background-color: #009d9d;
     width: auto;
     height: auto;
-    background-color: azure;
     right: auto;
     position: relative;
   }
@@ -202,5 +212,11 @@ header {
   .navbar .hamburger-menu {
     display: none;
   }
+}
+
+footer {
+  min-height: 89px;
+  background-color: #5d49ab;
+  color: #fcfcfc;
 }
 /*# sourceMappingURL=main.css.map */

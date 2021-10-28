@@ -1,0 +1,67 @@
+//===============================================================================
+// This file contains all the global configs and variables used in this portfolio
+//===============================================================================
+
+
+/* Font stack */
+$font-primary-url :'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap';
+$font-secondary-url :'https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&display=swap';
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Bitter',serif;
+
+
+
+
+/* Text used this as reference - https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd */
+
+// text base values
+$text-base-size: 1.5em;
+$text-scale-ratio: 1.2;
+
+//font scale value
+
+//line height
+$heading-line-height: 1.2;
+$body-line-height: 1.4;
+
+//spacing
+$baseline: 24px;
+  
+/* spacing values */
+$space-sm:   calc($baseline/2);
+$space-md:   $baseline;
+$space-lg:   calc($baseline*2);
+$space-xl:   calc($baseline*3);
+
+/* Colours */
+// Explicit Colours used
+// // Base styling
+// /* SASS */
+// // $swatch_1: #fcfcfc;
+// // $swatch_2: #0b0e16;
+// // $swatch_3: #29304a;
+// // $swatch_4: #3e5359;
+// // $swatch_5: #b7b5ae;
+// // $swatch_6: #5d49ac;
+// // $swatch_7: #5eeda9;
+// // $swatch_8: #4fb978;
+
+
+$grey:#b7b5ae;
+$black:#0a0d14;
+$white:#fcfcfc;
+
+$ocean-green:#50b978;
+$studio:#5d49ab;
+$milan:#ffffa8;
+$martinique:#2a314c;
+$vulcan:#0a0d14;
+
+// Colours used
+$primary-colour:$vulcan;
+$secondary-colour:$studio;
+$tertiary-colour:$milan;
+$accent-colour:$ocean-green;
+$heading-colour:$martinique;
+
+/* Media Quires*/
