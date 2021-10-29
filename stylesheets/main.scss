@@ -30,8 +30,10 @@
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
+  'abstracts/maps',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/extends';
 
 
 

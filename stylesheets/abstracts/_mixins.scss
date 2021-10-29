@@ -1,0 +1,62 @@
+//===============================================================================
+// This file contains all the mixins used in this portfolio
+//===============================================================================
+
+
+// BEM selectors
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin modifier($modifier) {
+    &-#{$modifier} {
+        @content;
+    }
+}
+
+//flex-layout
+@mixin flex-layout($direction:null, $just:null, $aSelf:null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $just;
+    align-self: $aSelf;
+    @content;
+}
+
+//media quires 
+@mixin media-quires($break) {
+    @if $break == "xs" {
+      @media (max-width: mq('xs')) {
+        @content;
+      }
+    }
+    @else if $break == "medium" {
+      @media (min-width: mq('medium')) {
+        @content;
+      }
+    }
+    @else if $break == "l" {
+      @media (min-width: mq('l')) {
+        @content;
+      }
+    }
+    @else {
+      @error "This is not a valid breakpoint ifrah! `#{$break}`. "
+    }
+  }
+  
+  //width and height
+  @mixin sizing($width:null,$height:null,$top:null, $right:null, $mrg:null,$pad:null,$brd:null){
+      width:$width;
+      height:$height;
+      top:$top;
+      right:$right;    
+      margin:$mrg;
+      padding:$pad;
+      border-bottom:$brd;
+      @content
+  }
+
+

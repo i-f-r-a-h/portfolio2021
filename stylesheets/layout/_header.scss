@@ -1,180 +1,108 @@
  // logo
  .navbar__logo {
-    font-size: 1.2em;
-    z-index: 5;
-  }
-  
-  
-  // site navigation
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 1.3rem;
-    background-color: brown;
-  }
-  
-  .navbar {
-     
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff9ce;
-    position: fixed;
-    right: -100vw;
-    top: 0;
-    display: flex;
-    transition: right 0.8s cubic-bezier(0.1, 0, 0.1, 0.2);
-    overflow: hidden;
-    z-index: 2;
-  
-    .navbar__list {
-      display: flex;
-      flex-flow: column;
-      width: 80%;
-      justify-content: center;
-      margin: 30% 5px auto 10%;
-      border-top: 1px grey solid;
-  
-  
-      .navbar__list-item {
-        padding: 20px;
-        border-bottom: 1px grey solid;
-  
-        &:hover {
-          border-bottom: 5px rgb(213, 20, 20) solid;
-          transition: ease-in-out 0.5s;
-        }
-      }
-  
-      .navbar__list-link {
-        text-decoration: none;
-        font-size: 4vw;
-        color: rgb(0, 0, 0);
-        letter-spacing: 5px;
-  
-  
-      }
-    }
-  
-    .hamburger-menu {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 1.7rem;
-      height: 1.7rem;
-      position: fixed;
-      top: 15px;
-      right: 30px;
-      z-index: 2;
-  
-      .line {
-        height: 4px;
-        background-color: rgb(0, 0, 0);
-        transition: all 0.9s;
-      }
-    }
-  }
-  
-  .change {
-    right: 0;
-    display: grid;
-  }
-  
-  .change .line-1 {
-    transform: rotateZ(-405deg) translate(-8px, 6px);
-  }
-  
-  .change .line-2 {
-    opacity: 0;
-  }
-  
-  .change .line-3 {
-    transform: rotateZ(405deg) translate(-8px, -6px);
-  }
-  
-  
-  
-  
-  
-  .navbar_copyright {
-    display: flex;
-    flex-flow: row;
-    font-size: 3.2vw;
-    justify-content: space-between;
-    width: 80%;
-    margin: auto 0px auto 10%;
-    color: grey;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  // desktop navigation
-  
-  @media (min-width:780px) {
-    .navbar_copyright {
-      display: none;
-    }
-  
-    .navbar__logo {
-      color: black;
-      font-size: 43px;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 500;
-      letter-spacing: -0.03em;
-    }
-  
-    header {
-      background-color: rgb(0, 157, 157);
-      top: 0;
-      margin: 0;
-      padding: 20px 40px 40px 40px;
-    }
-  
-    .navbar {
-      background-color: rgb(0, 157, 157);
-      width: auto;
-      height: auto;
-      right: auto;
-      position: relative;
-  
-      .navbar__list {
-        flex-flow: row;
-        width: auto;
-        justify-content: center;
-        margin: 0;
-        border: 0;
-  
-        .navbar__list-item {
-        padding: 10px;  
-          border-bottom: 0;
-          margin: auto;
-  
-          &:hover {
-            border-bottom: 0;
-            transition: ease-in-out 0.5s;
-          }
-        }
-  
-        .navbar__list-link {
-          font-size: 22px;
-          margin-left: 1.05vw;
-          text-decoration: none;
-          color: rgb(0, 0, 0);
-          letter-spacing: 2px;
-        }
-      }
-  
-      .hamburger-menu {
-        display: none;
-      }
-    }
-  
-  }
+   font-size: 1.2em;
+   z-index: 5;
+   color: $black;
+
+   @include media-quires('medium') {
+     color: black;
+     font-size: 43px;
+     font-weight: 500;
+     letter-spacing: -0.03em;
+   }
+ }
+
+
+
+
+ // site navigation
+ header {
+   @include flex-layout($just:space-between);
+
+   @include sizing($pad:0.5rem 1.3rem) {
+     background-color: brown;
+   }
+
+   @include media-quires('medium') {
+     @include sizing($top:0, $pad:20px 40px 40px 40px, $mrg:0);
+     background-color: rgb(0, 157, 157);
+   }
+ }
+
+
+ .navbar {
+   @extend %navbar;
+
+   @include element(list) {
+     @extend %navbar-item-list;
+
+
+     @include element(item) {
+       @include sizing($pad:20px, $brd:1px grey solid);
+
+       @include media-quires('medium') {
+         @include sizing($pad:10px, $brd:0, $mrg:auto);
+       }
+
+       &:hover {
+         border-bottom: 5px rgb(213, 20, 20) solid;
+         transition: ease-in-out 0.5s;
+       }
+     }
+
+     a {
+       @extend %nav-item-link
+     }
+   }
+
+   .hamburger-menu {
+     @include flex-layout($direction:column, $just:space-around);
+     @include sizing(1.7rem, 1.7rem, 15px,30px);
+     position: fixed;
+     z-index: 2;
+
+
+     @include media-quires('medium') {
+       display: none;
+     }
+
+     [class^="line"] {
+       height: 4px;
+       background-color: rgb(0, 0, 0);
+       transition: all 0.9s;
+     }
+   }
+ }
+
+ .change {
+   right: 0;
+   display: grid;
+
+   .line {
+     &-1 {
+       transform: rotateZ(-405deg) translate(-8px, 6px);
+     }
+
+     &-2 {
+       opacity: 0;
+     }
+
+     &-3 {
+       transform: rotateZ(405deg) translate(-8px, -6px);
+     }
+   }
+ }
+
+
+
+
+ .navbar_copyright {
+   @include flex-layout($direction:row, $just:space-between);
+   @include sizing($mrg:auto 0px auto 10%, $width:80%);
+   font-size: 3.2vw;
+   color: grey;
+
+   @include media-quires('medium') {
+     display: none;
+   }
+ }
