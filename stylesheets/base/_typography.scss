@@ -2,14 +2,43 @@
 // This file contains all the base typography stylings used within the portfolio
 //===============================================================================
 
-body{
-    font-size: $text-base-size;
+body {
+    font-size: $text-s;
     font-family: $font-primary;
     color: $primary-colour;
+    line-height: $body-line-height;
 }
 
-h1, h2, h3, h4, form legend {
+
+h2,
+h3,
+h4,
+form legend {
+    font-size: $text-md;
     color: $primary-colour;
-    margin-bottom: $space-sm;
+    margin-bottom: $space-lg;
+    line-height: $body-line-height;
+    letter-spacing: 1px;
 }
 
+h1 {
+    line-height: $heading-line-height;
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+}
+
+h2 {
+    @include flex-layout($direction:row-reverse, $just:flex-end);
+}
+
+i {
+    text-decoration: underline;
+}
+
+#home {
+    p {
+        &:nth-child(2) {
+            font-family: $font-secondary;
+        }
+    }
+}
