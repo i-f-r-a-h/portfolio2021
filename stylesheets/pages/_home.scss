@@ -2,3 +2,10 @@
     padding-top: 80px;
     @extend %section-padding;
 }
+
+
+*{
+    @include media-quires('medium') {
+        background-color: blue;
+    }
+}

@@ -22,9 +22,11 @@ form legend {
 }
 
 h1 {
-    line-height: $heading-line-height;
-    margin-bottom: 10px;
+    font-size: $text-md;
+    margin-bottom: 12px;
+    font-size: 2.4rem;
     font-family: $font-secondary;
+
 }
 
 h2 {
@@ -36,9 +38,25 @@ i {
 }
 
 #home {
+
     p {
+        margin-bottom: 40px;
+        line-height: 30px;
+        font-size: $text-reg;
         &:nth-child(2) {
+            // font-size: 1.875rem;
             font-family: $font-secondary;
+            font-size: $text-md;
+        }
+        &:nth-child(3) {
+            // font-size: 1.875rem;
+            border-bottom: 1px solid black;
+            width: max-content;
+            span{
+                position: relative;
+                animation:learn-more 0.98s ease infinite alternate;   
+            }
         }
     }
 }
+

@@ -28,7 +28,7 @@
 //media quires 
 @mixin media-quires($break) {
     @if $break == "xs" {
-      @media (max-width: mq('xs')) {
+      @media (min-width: mq('xs')) {
         @content;
       }
     }
@@ -37,8 +37,8 @@
         @content;
       }
     }
-    @else if $break == "l" {
-      @media (min-width: mq('l')) {
+    @else if $break == "large" {
+      @media (min-width: mq('large')) {
         @content;
       }
     }

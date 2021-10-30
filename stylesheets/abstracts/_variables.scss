@@ -19,7 +19,10 @@ $text-base-size:1em;
 $text-scale-ratio:1.2;
 
 //text
-$text-s: calc(#{$text-base-size} * #{$text-scale-ratio});
+$text-xxs: calc(#{$text-base-size} / #{$text-scale-ratio} / #{$text-scale-ratio} / #{$text-scale-ratio});
+$text-xs: calc(#{$text-base-size} / #{$text-scale-ratio} / #{$text-scale-ratio});
+$text-s: calc(#{$text-base-size} / #{$text-scale-ratio});
+$text-reg: calc(#{$text-base-size} * #{$text-scale-ratio});
 $text-md: calc(#{$text-base-size} * #{$text-scale-ratio} * #{$text-scale-ratio});
 $text-lg: calc(#{$text-base-size} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});
 $text-xl: calc(#{$text-base-size} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio} * #{$text-scale-ratio});

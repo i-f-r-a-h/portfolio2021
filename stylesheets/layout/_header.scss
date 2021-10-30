@@ -1,9 +1,9 @@
  // logo
  .navbar__logo {
-   font-size: 1.2em;
+   font-size: $text-lg;
    z-index: 5;
    color: $black;
-
+   margin-top: 5px;
    @include media-quires('medium') {
      color: black;
      font-size: 43px;
@@ -20,7 +20,7 @@
    @include flex-layout($just:space-between);
 
    @include sizing($pad:0.5rem 1.3rem) {
-     background-color: brown;
+     border-bottom: 1px solid $grey;
    }
 
    @include media-quires('medium') {
@@ -57,7 +57,7 @@
 
    .hamburger-menu {
      @include flex-layout($direction:column, $just:space-around);
-     @include sizing(1.7rem, 1.7rem, 15px,30px);
+     @include sizing(1.6rem, 1.6rem, 15px,30px);
      position: fixed;
      z-index: 2;
 
@@ -67,7 +67,7 @@
      }
 
      [class^="line"] {
-       height: 4px;
+       height: 3px;
        background-color: rgb(0, 0, 0);
        transition: all 0.9s;
      }
@@ -80,7 +80,7 @@
 
    .line {
      &-1 {
-       transform: rotateZ(-405deg) translate(-8px, 6px);
+       transform: rotateZ(-405deg) translate(-6px, 6px);
      }
 
      &-2 {
@@ -88,7 +88,7 @@
      }
 
      &-3 {
-       transform: rotateZ(405deg) translate(-8px, -6px);
+       transform: rotateZ(405deg) translate(-6px, -6px);
      }
    }
  }

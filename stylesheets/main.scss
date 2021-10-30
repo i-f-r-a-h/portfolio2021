@@ -31,11 +31,14 @@
 'abstracts/maps',
 'abstracts/functions',
 'abstracts/mixins';
-
-
+// 2. components stuff
+@import 'components/extends',
+'components/button';
 
 // 3. Base stuff
-@import 'base/base',
+@import 
+'base/base',
+'base/animations',
 'base/typography';
 
 // 4. Layout-related sections
