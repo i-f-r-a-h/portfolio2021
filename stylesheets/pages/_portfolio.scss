@@ -1,0 +1,43 @@
+.portfolio-content {
+    border-top: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.portfolio-content-index {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-index {
+    h3 {
+        width: 100px;
+        line-height: 1.1em;
+        padding: 40px 0px 60px 0;
+    }
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    overflow: auto;
+    min-width: 100%;
+    padding-left: 5%;
+
+    li {
+        padding-right: 8%;
+    }
+}
+
+.book {
+    align-self: [start];
+
+    img {
+        max-width: 60vw;
+        height: auto;
+    }
+}
+
+.links {
+    padding: 10px 20px 20px 10px;
+}

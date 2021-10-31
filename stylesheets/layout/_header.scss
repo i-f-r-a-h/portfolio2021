@@ -4,12 +4,18 @@
    z-index: 5;
    color: $black;
    margin-top: 5px;
+
    @include media-quires('medium') {
-     color: black;
-     font-size: 43px;
      font-weight: 500;
      letter-spacing: -0.03em;
    }
+
+   @include media-quires('large') {
+     font-size: $text-xl;
+   }
+   @include media-quires('xl') {
+    font-size: $text-xxl;
+}
  }
 
 
@@ -21,16 +27,22 @@
 
    @include sizing($pad:0.5rem 1.3rem) {
      border-bottom: 1px solid $grey;
+     position: sticky;
+     top: 0;
+     background-color: transparentize($white, 0.05);
    }
 
    @include media-quires('medium') {
-     @include sizing($top:0, $pad:20px 40px 40px 40px, $mrg:0);
-     background-color: rgb(0, 157, 157);
+     @include sizing($top:0, $pad:10px 40px 10px 40px, $mrg:0);
    }
+   @include media-quires('xl') {
+    @include sizing($pad:0.5rem 13rem) 
+  }
  }
 
 
  .navbar {
+
    @extend %navbar;
 
    @include element(list) {
@@ -57,7 +69,7 @@
 
    .hamburger-menu {
      @include flex-layout($direction:column, $just:space-around);
-     @include sizing(1.6rem, 1.6rem, 15px,30px);
+     @include sizing(1.6rem, 1.6rem, 15px, 30px);
      position: fixed;
      z-index: 2;
 
@@ -98,8 +110,7 @@
 
  .navbar_copyright {
    @include flex-layout($direction:row, $just:space-between);
-   @include sizing($mrg:auto 0px auto 10%, $width:80%);
-   font-size: 3.2vw;
+   @include sizing($mrg:0px 0px 90px 10%, $width:80%);
    color: grey;
 
    @include media-quires('medium') {

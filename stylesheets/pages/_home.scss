@@ -1,11 +1,52 @@
-#home{
-    padding-top: 80px;
+#home {
     @extend %section-padding;
 }
 
 
-*{
-    @include media-quires('medium') {
-        background-color: blue;
+.home {
+    &-primary {
+        // font-size: 1.875rem;
+        font-family: $font-secondary;
+        font-size: $text-md;
+        line-height: 30px;
+        margin-bottom: 40px;
+
+        @include media-quires('small') {
+            min-width: 450px;
+            max-width: 70%;
+            font-size: $text-lg;
+        }
+
+        @include media-quires('large') {
+            min-width: 450px;
+            max-width: 550px;
+            // font-size: 50px;
+            font-size: $text-xl;
+            line-height: 38px;
+        }
+
+    }
+
+
+    &-secondary {
+
+        font-size: $text-reg;
+        // font-size: 1.875rem;
+        border-bottom: 1px solid black;
+        width: max-content;
+        padding-bottom: 8px;
+
+        span {
+            z-index: -1;
+            position: relative;
+            animation: learn-more 0.98s ease infinite alternate;
+        }
+
+        @include media-quires('small') {
+            font-size: $text-md;
+        }
+        @include media-quires('large') {
+            font-size: $text-lg;
+        }
     }
 }

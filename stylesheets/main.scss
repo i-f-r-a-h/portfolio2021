@@ -44,9 +44,11 @@
 // 4. Layout-related sections
 @import 'layout/extends',
 'layout/header',
+'layout/grid',
 'layout/footer';
 
 // 5. pages sections
 // 4. Layout-related sections
 @import 'pages/extends',
+'pages/portfolio',
 'pages/home';

@@ -32,6 +32,11 @@
         @content;
       }
     }
+    @else if $break == "small" {
+      @media (min-width: mq('small')) {
+        @content;
+      }
+    }
     @else if $break == "medium" {
       @media (min-width: mq('medium')) {
         @content;
@@ -39,6 +44,11 @@
     }
     @else if $break == "large" {
       @media (min-width: mq('large')) {
+        @content;
+      }
+    }
+    @else if $break == "xl" {
+      @media (min-width: mq('xl')) {
         @content;
       }
     }

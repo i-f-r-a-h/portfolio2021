@@ -3,17 +3,3 @@
 //===============================================================================
 
 
- 
-
-button {
-    @extend %btn;
-    @include media-quires(medium) {
-      width: 100%;
-    }
-    @include media-quires(medium) {
-      width: auto;
-      display: inline-block;
-    }
-  }
-  
-  

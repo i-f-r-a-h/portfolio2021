@@ -10,7 +10,7 @@ body {
 }
 
 
-h2,
+
 h3,
 h4,
 form legend {
@@ -19,44 +19,61 @@ form legend {
     margin-bottom: $space-lg;
     line-height: $body-line-height;
     letter-spacing: 1px;
+    font-size:$text-xl;
 }
-
 h1 {
     font-size: $text-md;
     margin-bottom: 12px;
     font-size: 2.4rem;
     font-family: $font-secondary;
+    @include media-quires('large') {
+        font-size: 3.2rem;
+    }
 
 }
 
 h2 {
-    @include flex-layout($direction:row-reverse, $just:flex-end);
+    @include flex-layout($direction:row, $just:space-between);
+    padding: 5px 0;
+    font-size: 10vw;
 }
 
 i {
     text-decoration: underline;
 }
 
-#home {
-
-    p {
-        margin-bottom: 40px;
-        line-height: 30px;
-        font-size: $text-reg;
-        &:nth-child(2) {
-            // font-size: 1.875rem;
-            font-family: $font-secondary;
-            font-size: $text-md;
-        }
-        &:nth-child(3) {
-            // font-size: 1.875rem;
-            border-bottom: 1px solid black;
-            width: max-content;
-            span{
-                position: relative;
-                animation:learn-more 0.98s ease infinite alternate;   
-            }
-        }
-    }
+// create partial for this
+.marquee {
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
 }
 
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 7s linear infinite;
+    animation-play-state: running;
+}
+
+.marquee span {
+    font-size: 10vw;
+    padding: 0 2vw;
+    width: max-content;
+}
+
+
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}

@@ -1,0 +1,5 @@
+%heading{
+    @include flex-layout($direction:row, $just:space-between);
+    padding: 5px 0;
+    font-size: 10vw;
+}
