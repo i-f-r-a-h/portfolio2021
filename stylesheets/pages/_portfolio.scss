@@ -2,11 +2,25 @@
     border-top: 2px solid black;
     padding-top: 20px;
     padding-bottom: 30px;
+    @include media-quires(large){
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    
+       
+    }
 }
 
 .portfolio-content-index {
-    display: flex;
-    justify-content: space-between;
+    div{
+        display: flex;
+        justify-content: space-between;
+        @include media-quires(large){
+           padding-right: 20px;
+            }
+    }
+    @include media-quires(large){
+    border-right: 2px black solid;
+    }
 }
 
 .portfolio-index {
@@ -22,22 +36,48 @@
     display: flex;
     overflow: auto;
     min-width: 100%;
+     margin-right: -10%;
     padding-left: 5%;
 
     li {
-        padding-right: 8%;
+        padding-right: 3%;
+    }
+
+    @include media-quires(large){
+        display: grid;
+        grid-template-columns: 1fr 1fr;   
     }
 }
 
 .book {
-    align-self: [start];
+    // align-self: [start];
 
     img {
         max-width: 60vw;
         height: auto;
+        @include media-quires(small){
+            max-width: 46vw;
+        }
+        @include media-quires(medium){
+            max-width: 44vw;
+        }
+        @include media-quires(large){
+            max-width: 21vw;
+        }
+    }
+
+    @include media-quires(large){
+        
+
+        border-bottom: 2px black solid;
+
+        &:nth-child(odd){
+            border-right: 2px black solid;
+        }
     }
 }
 
 .links {
     padding: 10px 20px 20px 10px;
+    line-height: 22px;
 }

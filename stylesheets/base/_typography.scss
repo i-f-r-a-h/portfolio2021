@@ -12,7 +12,6 @@ body {
 
 
 h3,
-h4,
 form legend {
     font-size: $text-md;
     color: $primary-colour;
@@ -38,9 +37,15 @@ h2 {
     font-size: 10vw;
 }
 
+h4{
+    font-size:$text-md;
+    color: $black;
+}
+
 i {
     text-decoration: underline;
 }
+
 
 // create partial for this
 .marquee {
@@ -64,6 +69,11 @@ i {
     font-size: 10vw;
     padding: 0 2vw;
     width: max-content;
+}
+
+
+a{
+    color: $primary-colour;
 }
 
 

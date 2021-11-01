@@ -55,7 +55,6 @@ body {
 }
 
 h3,
-h4,
 form legend {
   font-size: calc(1em * 1.2 * 1.2);
   color: #0a0d14;
@@ -93,6 +92,11 @@ h2 {
   font-size: 10vw;
 }
 
+h4 {
+  font-size: calc(1em * 1.2 * 1.2);
+  color: #0a0d14;
+}
+
 i {
   text-decoration: underline;
 }
@@ -127,6 +131,10 @@ i {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+a {
+  color: #0a0d14;
 }
 
 @-webkit-keyframes marquee {
@@ -408,13 +416,34 @@ footer {
   padding-bottom: 30px;
 }
 
-.portfolio-content-index {
+@media (min-width: 980px) {
+  .portfolio-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+}
+
+.portfolio-content-index div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 980px) {
+  .portfolio-content-index div {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 980px) {
+  .portfolio-content-index {
+    border-right: 2px black solid;
+  }
 }
 
 .portfolio-index h3 {
@@ -430,17 +459,21 @@ footer {
   display: flex;
   overflow: auto;
   min-width: 100%;
+  margin-right: -10%;
   padding-left: 5%;
 }
 
 .wrapper li {
-  padding-right: 8%;
+  padding-right: 3%;
 }
 
-.book {
-  -ms-flex-item-align: [start];
-      -ms-grid-row-align: [start];
-      align-self: [start];
+@media (min-width: 980px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 .book img {
@@ -448,8 +481,36 @@ footer {
   height: auto;
 }
 
+@media (min-width: 528px) {
+  .book img {
+    max-width: 46vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .book img {
+    max-width: 44vw;
+  }
+}
+
+@media (min-width: 980px) {
+  .book img {
+    max-width: 21vw;
+  }
+}
+
+@media (min-width: 980px) {
+  .book {
+    border-bottom: 2px black solid;
+  }
+  .book:nth-child(odd) {
+    border-right: 2px black solid;
+  }
+}
+
 .links {
   padding: 10px 20px 20px 10px;
+  line-height: 22px;
 }
 
 .home-primary {
