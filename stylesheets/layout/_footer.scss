@@ -3,7 +3,47 @@
 //===============================================================================
 
 footer {
-    min-height: 89px;
-    background-color: $secondary-colour;
-    color: $white;
+    min-height: fit-content;
+    color: $secondary-colour;
+    display: flex;
+    flex-direction: column;
+    margin: auto 10%;
+    padding-top:30px;
+
+
+    a {
+        color: $secondary-colour;
+        line-height: 22px;
+    }
+
+    p {
+        text-align: center;
+        margin: auto;
+        padding: 20px 30px 10px 30px;                 
+    }
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 2px solid black;
+    padding: 10px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+
+    div {
+        margin-right: 40px;
+
+    
+        h6 {
+            color: rgb(0, 229, 255);
+            line-height: 22px;
+        }
+    }
+
+    @include media-quires(medium) {
+        padding: 0 40px 10px 40px;
+    }
 }
