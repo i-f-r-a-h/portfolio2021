@@ -1,4 +1,4 @@
-// Mobile navigation (inspired by https://codepen.io/riogrande/pen/gbXxdx) //
+// Mobile navigation (inspiblack by https://codepen.io/riogrande/pen/gbXxdx) //
 
 const menuIcon = document.querySelector('.hamburger-menu');
 const navbar = document.querySelector('.navbar');
