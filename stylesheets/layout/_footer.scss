@@ -7,10 +7,8 @@ footer {
     color: $secondary-colour;
     display: flex;
     flex-direction: column;
-    margin: auto 10%;
+    border-top:2px solid black;
     padding-top:30px;
-
-
     a {
         color: $secondary-colour;
         line-height: 22px;
@@ -29,8 +27,9 @@ footer {
     gap: 10px;
     border-bottom: 2px solid black;
     padding: 10px 20px;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin: auto 10%;
   
 
     div {
@@ -45,5 +44,6 @@ footer {
 
     @include media-quires(medium) {
         padding: 0 40px 10px 40px;
+        flex-direction: row;
     }
 }

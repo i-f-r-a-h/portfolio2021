@@ -13,9 +13,10 @@
    @include media-quires('large') {
      font-size: $text-xl;
    }
+
    @include media-quires('xl') {
-    font-size: $text-xxl;
-}
+     font-size: $text-xxl;
+   }
  }
 
 
@@ -30,14 +31,19 @@
      position: sticky;
      top: 0;
      background-color: transparentize($white, 0.05);
+     z-index: 9;
    }
+
+
+
 
    @include media-quires('medium') {
      @include sizing($top:0, $pad:10px 40px 10px 40px, $mrg:0);
    }
+
    @include media-quires('xl') {
-    @include sizing($pad:0.5rem 13rem) 
-  }
+     @include sizing($pad:0.5rem 13rem)
+   }
  }
 
 
