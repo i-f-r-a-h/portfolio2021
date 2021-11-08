@@ -16,6 +16,26 @@
     }
 }
 
+@mixin m($modifier) {
+  &--#{$modifier} {
+      @content;
+  }
+}
+
+
+//social media color selector
+@mixin social-media($map, $p-el:null) {
+  @each $social, $color in $map {
+      @include m($social) {
+          &:hover {
+              background-color:$color;
+              transition: 0.5s ease-in-out;
+          }
+      }
+  }
+}
+
+
 //flex-layout
 @mixin flex-layout($direction:null, $just:null, $aSelf:null) {
     display: flex;
@@ -27,8 +47,8 @@
 
 //media quires 
 @mixin media-quires($break) {
-    @if $break == "xs" {
-      @media (min-width: mq('xs')) {
+    @if $break == "xsmall" {
+      @media (max-width: mq('xsmall')) {
         @content;
       }
     }
@@ -53,7 +73,7 @@
       }
     }
     @else {
-      @error "This is not a valid breakpoint ifrah! `#{$break}`. "
+      @error "This is not a valid breakpoint ifrah! `#{$break}`. ";
     }
   }
   
@@ -70,3 +90,12 @@
   }
 
 
+  // Image replacement
+
+  @mixin img-replace($img, $w, $h, $disp: block) {
+    background-image: url('#{$path--rel}/#{$img}');
+    background-repeat: no-repeat;
+    width: $w;
+    height: $h;
+    display: $disp;
+  }

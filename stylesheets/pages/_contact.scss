@@ -1,0 +1,70 @@
+// form
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    
+
+    label {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        &:nth-child(n+2) {
+            margin-top: 30px;
+        }
+    }
+
+    [type="submit"] {
+        border: none;
+        outline: none;
+        background-color: white;
+        margin-top: 20px;
+        padding: 10px;
+        max-width: 200px;
+        border: 2px solid black;
+    }
+
+
+
+    input {
+        @extend %form-styling;
+        height: 40px;
+        @include media-quires(large){
+            height: 80px;
+        }
+    }
+
+    textarea {
+        @extend %form-styling;
+        height: 100px;
+        @include media-quires(large){
+            height: 200px;
+        }
+    }
+
+    @include media-quires(medium){
+        max-width: 65%;
+        margin: auto;
+    }
+    @include media-quires(xl){
+        max-width: 50%;
+    }
+
+}
+
+
+// social media banner
+.social__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 150px 0;
+    padding: 25px 0;
+    gap: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+    @include media-quires(small) {
+        justify-content: space-around;
+    }
+}

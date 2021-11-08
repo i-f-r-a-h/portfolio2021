@@ -3,10 +3,23 @@
 //===============================================================================
 
 $breakpoints:(
-'xs':476px,
+'xsmall':476px,
 'small':528px,
 'medium':600px,
 'regular':782px,
 'large':980px,
 'xl':1600px,
+);
+
+
+// social media buttons found in the contact page
+$socials: (
+    linkedin:blue,
+    instagram:red,
+    spotify:lime,
+    github:darkgreen,
+    codepen:lightblue,
+    dribble:pink,
+    email:orange,
+    location:yellow,
 );

@@ -6,3 +6,17 @@
 		padding-bottom: 20em;
     }
 }
+
+%form-styling{
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid black;
+	background-color: rgb(245, 245, 245);
+
+	&:focus {
+		background: lighten($accent-colour , 40);
+		border-bottom: 3px solid $accent-colour;
+		transition: 0.2s ease-out;
+	}
+}

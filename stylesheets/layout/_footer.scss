@@ -4,16 +4,16 @@
 
 footer {
     min-height: fit-content;
-    color: $secondary-colour;
+    background-color: $primary-colour;
+    color: $white;
     display: flex;
     flex-direction: column;
     border-top:2px solid black;
     padding-top:30px;
     a {
-        color: $secondary-colour;
-        line-height: 22px;
+        color: $white;
+        line-height: 24px;
     }
-
     p {
         text-align: center;
         margin: auto;
@@ -25,20 +25,22 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    border-bottom: 2px solid black;
     padding: 10px 20px;
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto 10%;
   
-
     div {
         margin-right: 40px;
+        margin-top: 20px;
 
     
         h6 {
-            color: rgb(0, 229, 255);
-            line-height: 22px;
+            color: peachpuff;
+            font-weight: 600;
+            line-height: 29px;
+            font-size: 18px;
+            letter-spacing: 1px;
         }
     }
 
