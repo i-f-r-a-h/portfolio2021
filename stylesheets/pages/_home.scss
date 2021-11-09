@@ -1,28 +1,32 @@
 #home {
     @extend %section-padding;
+    margin: auto 7%;
+    @include media-quires('medium') {
+        margin: auto 10%;
+ }
+ @include media-quires('large') {
+    margin: auto 30%;
+}
 }
 
 
 .home {
+  
     &-primary {
         // font-size: 1.875rem;
         font-family: $font-secondary;
-        font-size: $text-md;
-        line-height: 30px;
+        font-size: 2.2rem;
+        line-height: 38px;
         margin-bottom: 40px;
 
-        @include media-quires('small') {
-            min-width: 450px;
-            max-width: 70%;
-            font-size: $text-lg;
-        }
+       
 
         @include media-quires('large') {
             min-width: 450px;
-            max-width: 550px;
+            max-width: 800px;
             // font-size: 50px;
-            font-size: $text-xl;
-            line-height: 38px;
+            font-size: 2.4rem;
+      
         }
 
     }
@@ -52,5 +56,8 @@
         @include media-quires('large') {
             font-size: $text-lg;
         }
+     
     }
+
+
 }

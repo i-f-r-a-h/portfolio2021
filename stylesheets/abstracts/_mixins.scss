@@ -80,18 +80,18 @@
       @content;
     }
   }
-
+  @else if $break=="xtra-large" {
+    @media screen and (min-width: mq('xtra-large')) {
+      @content;
+    }
+  }
   @else if $break=="large" {
-    @media (min-width: mq('large')) {
+    @media screen and (min-width: mq('large'))  {
       @content;
     }
   }
 
-  @else if $break=="xl" {
-    @media (min-width: mq('xl')) {
-      @content;
-    }
-  }
+ 
 
   @else {
     @error "This is not a valid breakpoint ifrah! `#{$break}`. ";

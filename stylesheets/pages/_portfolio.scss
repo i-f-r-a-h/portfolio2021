@@ -1,5 +1,7 @@
 .portfolio {
-    padding: 100px 0;
+    margin: auto;
+    padding: 100px 10%;
+    background-color: $grey;
 }
 
 .portfolio-content {
@@ -118,7 +120,7 @@
 
 
 
-// links
+// portfolio links (navigation)
 
 .links {
     :nth-child(1) {

@@ -15,4 +15,3 @@ a.forEach(item => {
   });
 });
 
-//enable mobile grid horizontal scroll from https://stackoverflow.com/questions/58353280/prevent-click-when-leave-drag-to-scroll-in-js

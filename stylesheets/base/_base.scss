@@ -2,7 +2,7 @@
 // This file contains all the very basic foundation styling of the portfolio
 //===============================================================================
 
-*{
+* {
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -10,17 +10,12 @@
     padding: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-main{
-    min-height:calc(100vh - 89px);
-    margin: auto 7%;
-    @include media-quires('medium') {
-        margin: auto 10%;
-    }
-
+main {
+    min-height: calc(100vh - 89px);
 }
 
 

@@ -14,7 +14,7 @@
      font-size: $text-xl;
    }
 
-   @include media-quires('xl') {
+   @include media-quires('xtra-large') {
      font-size: $text-xxl;
    }
  }
@@ -23,7 +23,7 @@
 
 
  // site navigation
- header {
+ .header {
    @include flex-layout($just:space-between);
 
    @include sizing($pad:0.5rem 1.3rem) {
@@ -37,13 +37,14 @@
 
 
 
-   @include media-quires('medium') {
-     @include sizing($top:0, $pad:10px 40px 10px 40px, $mrg:0);
+   @include media-quires('large') {
+     @include sizing($top:0, $pad:10px 40px 10px 40px, $mrg:auto);
+     max-width: 2000px;
    }
 
-   @include media-quires('xl') {
-     @include sizing($pad:0.5rem 13rem)
-   }
+
+  
+  
  }
 
 
@@ -62,7 +63,7 @@
          @include sizing($pad:10px, $brd:0, $mrg:auto);
        }
 
-      
+
      }
 
      a {

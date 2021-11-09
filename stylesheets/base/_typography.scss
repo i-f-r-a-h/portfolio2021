@@ -19,16 +19,18 @@ form legend {
     line-height: $body-line-height;
     letter-spacing: 1px;
     font-size:$text-xl;
-}
+} 
 h1 {
-    font-size: $text-md;
-    margin-bottom: 12px;
-    font-size: 2.4rem;
+    font-size: 12vw;
+    line-height:1.7em;
     font-family: $font-secondary;
-    @include media-quires('large') {
-        font-size: 3.2rem;
+    @include media-quires('medium') {
+        font-size: 5.2rem;
+        line-height:$heading-line-height;
     }
-
+    @include media-quires('large') {
+        font-size: 8rem;
+    }
 }
 
 h2 {

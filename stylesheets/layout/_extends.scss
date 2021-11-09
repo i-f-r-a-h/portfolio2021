@@ -61,7 +61,7 @@
         font-size: $text-md;
     }
 
-    @include media-quires('xl') {
+    @include media-quires('xtra-large') {
         font-size: $text-lg;
     }
 }

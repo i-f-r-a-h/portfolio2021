@@ -1,9 +1,10 @@
 %section-padding {
 	 padding-top: 6em;
      padding-bottom: 2em;
-	height: 80vh;
+	height: 65vh;
 	@include media-quires('medium') {
 		padding-top: 10em;
+		height: 100vh;
     }
 }
 
@@ -20,3 +21,4 @@
 		transition: 0.2s ease-out;
 	}
 }
+

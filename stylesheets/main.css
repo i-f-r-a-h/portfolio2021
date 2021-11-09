@@ -61,7 +61,7 @@
   display: none;
 }
 
-@media (min-width: 980px) {
+@media screen and (min-width: 980px) {
   [class^="img--"] {
     position: absolute;
     padding: 20px;
@@ -212,13 +212,6 @@ html {
 
 main {
   min-height: calc(100vh - 89px);
-  margin: auto 7%;
-}
-
-@media (min-width: 600px) {
-  main {
-    margin: auto 10%;
-  }
 }
 
 @-webkit-keyframes learn-more {
@@ -293,15 +286,21 @@ form legend {
 }
 
 h1 {
-  font-size: calc(1em * 1.2 * 1.2);
-  margin-bottom: 12px;
-  font-size: 2.4rem;
+  font-size: 12vw;
+  line-height: 1.7em;
   font-family: "Bitter", serif;
 }
 
-@media (min-width: 980px) {
+@media (min-width: 600px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 5.2rem;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  h1 {
+    font-size: 8rem;
   }
 }
 
@@ -465,13 +464,13 @@ a {
   }
 }
 
-@media (min-width: 980px) {
+@media screen and (min-width: 980px) {
   .navbar__list a {
     font-size: calc(1em * 1.2 * 1.2);
   }
 }
 
-@media (min-width: 1600px) {
+@media screen and (min-width: 1500px) {
   .navbar__list a {
     font-size: calc(1em * 1.2 * 1.2 * 1.2);
   }
@@ -581,19 +580,19 @@ p {
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .navbar__logo {
     font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
   }
 }
 
-@media (min-width: null) {
+@media screen and (min-width: null) {
   .navbar__logo {
     font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
   }
 }
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,7 +600,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem 1.3rem;
-  border-bottom: 1px solid #b7b5ae;
+  border-bottom: 1px solid #F7F8FB;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -609,17 +608,12 @@ header {
   z-index: 9;
 }
 
-@media (min-width: 767px) {
-  header {
+@media screen and (min-width: 788px) {
+  .header {
     top: 0;
-    margin: 0;
+    margin: auto;
     padding: 10px 40px 10px 40px;
-  }
-}
-
-@media (min-width: null) {
-  header {
-    padding: 0.5rem 13rem;
+    max-width: 2000px;
   }
 }
 
@@ -791,12 +785,13 @@ footer p {
 #home {
   padding-top: 6em;
   padding-bottom: 2em;
-  height: 80vh;
+  height: 65vh;
 }
 
 @media (min-width: 767px) {
   #home {
     padding-top: 10em;
+    height: 100vh;
   }
 }
 
@@ -813,6 +808,16 @@ form input:focus, form textarea:focus {
   border-bottom: 3px solid #50b978;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
+}
+
+.contact {
+  margin: auto 7%;
+}
+
+@media (min-width: 767px) {
+  .contact {
+    margin: auto 10%;
+  }
 }
 
 form {
@@ -849,7 +854,7 @@ form input {
   height: 40px;
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   form input {
     height: 80px;
   }
@@ -859,7 +864,7 @@ form textarea {
   height: 100px;
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   form textarea {
     height: 200px;
   }
@@ -872,7 +877,7 @@ form textarea {
   }
 }
 
-@media (min-width: null) {
+@media screen and (min-width: null) {
   form {
     max-width: 50%;
   }
@@ -903,16 +908,20 @@ form textarea {
   }
 }
 
-.download {
-  margin-top: 100px;
-  height: 250px;
-  background-color: brown;
-  z-index: 10;
-  text-align: center;
+.about {
+  margin: auto 7%;
+}
+
+@media (min-width: 767px) {
+  .about {
+    margin: auto 10%;
+  }
 }
 
 .portfolio {
-  padding: 100px 0;
+  margin: auto;
+  padding: 100px 10%;
+  background-color: #F7F8FB;
 }
 
 .portfolio-content {
@@ -921,7 +930,7 @@ form textarea {
   padding-bottom: 30px;
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .portfolio-content {
     display: -ms-grid;
     display: grid;
@@ -948,13 +957,13 @@ form textarea {
           justify-content: space-between;
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .portfolio-content-index div {
     padding-right: 20px;
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .portfolio-content-index {
     border-right: 2px black solid;
   }
@@ -1015,7 +1024,7 @@ form textarea {
           align-items: flex-start;
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .wrapper > .book {
     border-radius: 12px;
     -webkit-box-shadow: 5px 5px 13px #d6d6d6, -5px -5px 13px #ffffff;
@@ -1023,7 +1032,7 @@ form textarea {
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .wrapper {
     display: -ms-grid;
     display: grid;
@@ -1053,7 +1062,7 @@ form textarea {
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .book img {
     max-width: 21vw;
   }
@@ -1061,6 +1070,16 @@ form textarea {
 
 .links :nth-child(1) {
   margin-right: 30px;
+}
+
+.main-blog {
+  margin: auto 7%;
+}
+
+@media (min-width: 767px) {
+  .main-blog {
+    margin: auto 10%;
+  }
 }
 
 .blog {
@@ -1084,7 +1103,7 @@ form textarea {
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .blog {
     display: -ms-grid;
     display: grid;
@@ -1131,34 +1150,41 @@ form textarea {
   margin-top: 20px;
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   [class^="grid"] {
     max-width: 500px;
     height: 300px;
   }
 }
 
-.home-primary {
-  font-family: "Bitter", serif;
-  font-size: calc(1em * 1.2 * 1.2);
-  line-height: 30px;
-  margin-bottom: 40px;
+#home {
+  margin: auto 7%;
 }
 
-@media (min-width: 624px) {
-  .home-primary {
-    min-width: 450px;
-    max-width: 70%;
-    font-size: calc(1em * 1.2 * 1.2 * 1.2);
+@media (min-width: 767px) {
+  #home {
+    margin: auto 10%;
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
+  #home {
+    margin: auto 30%;
+  }
+}
+
+.home-primary {
+  font-family: "Bitter", serif;
+  font-size: 2.2rem;
+  line-height: 38px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 788px) {
   .home-primary {
     min-width: 450px;
-    max-width: 550px;
-    font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
-    line-height: 38px;
+    max-width: 800px;
+    font-size: 2.4rem;
   }
 }
 
@@ -1191,7 +1217,7 @@ form textarea {
   }
 }
 
-@media (min-width: 788px) {
+@media screen and (min-width: 788px) {
   .home-secondary {
     font-size: calc(1em * 1.2 * 1.2 * 1.2);
   }
