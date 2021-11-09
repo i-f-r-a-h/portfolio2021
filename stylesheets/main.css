@@ -295,7 +295,6 @@ a:hover {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 50%;
-    z-index: -1;
     -webkit-animation-name: floating;
             animation-name: floating;
     -webkit-animation-duration: 4s;
@@ -317,7 +316,7 @@ a:hover {
     position: absolute;
     content: " ";
     border-radius: 50%;
-    border: 1px solid #e1e1e1;
+    border: 1px solid rgba(225, 225, 225, 0.762);
     width: 40rem;
     height: 40rem;
   }
@@ -1117,11 +1116,6 @@ form textarea {
   #home {
     margin: auto 30%;
   }
-}
-
-.wrap {
-  background-color: plum;
-  z-index: 2;
 }
 
 .home-primary {
