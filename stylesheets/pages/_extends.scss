@@ -1,11 +1,12 @@
 %section-padding {
-	 padding-top: 6em;
-     padding-bottom: 2em;
-	height: 65vh;
+	 padding-top: 5rem;
+     padding-bottom: 9rem;
+
 	@include media-quires('medium') {
 		padding-top: 10em;
 		height: 100vh;
     }
+	
 }
 
 %form-styling{

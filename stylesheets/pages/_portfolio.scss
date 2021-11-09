@@ -21,6 +21,11 @@
         display: flex;
         gap: 10px;
         padding: 10px 0;
+        margin-bottom: 20px;
+        li{
+            border-bottom: 1px solid black;
+        }
+     
     }
 }
 
@@ -47,7 +52,6 @@
         width: 100px;
         line-height: 1.1em;
         padding: 40px 0px 10px 0;
-
     }
 
     p {
@@ -96,14 +100,10 @@
 
 .book {
     // align-self: [start];
-
     img {
-
         max-width: 60vw;
         height: auto;
         padding-bottom: 10px;
-
-
         @include media-quires(small) {
             max-width: 46vw;
         }
@@ -123,6 +123,7 @@
 // portfolio links (navigation)
 
 .links {
+   
     :nth-child(1) {
         margin-right: 30px;
     }
