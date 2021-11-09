@@ -58,14 +58,11 @@
      @include element(item) {
        @include sizing($pad:20px, $brd:1px grey solid);
 
-       @include media-quires('medium') {
+       @include media-quires('small') {
          @include sizing($pad:10px, $brd:0, $mrg:auto);
        }
 
-       &:hover {
-         border-bottom: 2px $accent-colour solid;
-         transition: ease-in-out 0.5s;
-       }
+      
      }
 
      a {
@@ -80,7 +77,7 @@
      z-index: 2;
 
 
-     @include media-quires('medium') {
+     @include media-quires('small') {
        display: none;
      }
 
@@ -119,7 +116,7 @@
    @include sizing($mrg:0px 0px 90px 10%, $width:80%);
    color: grey;
 
-   @include media-quires('medium') {
+   @include media-quires('small') {
      display: none;
    }
  }

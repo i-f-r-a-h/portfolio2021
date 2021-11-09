@@ -1,9 +1,9 @@
 %section-padding {
-	padding-top: 6em;
-    padding-bottom: 12em;
+	 padding-top: 6em;
+     padding-bottom: 2em;
+	height: 80vh;
 	@include media-quires('medium') {
 		padding-top: 10em;
-		padding-bottom: 20em;
     }
 }
 

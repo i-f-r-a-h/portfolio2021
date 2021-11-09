@@ -13,6 +13,9 @@ footer {
     a {
         color: $white;
         line-height: 24px;
+        &:hover{
+            color: $accent-colour;
+        }
     }
     p {
         text-align: center;
@@ -33,7 +36,9 @@ footer {
     div {
         margin-right: 40px;
         margin-top: 20px;
-
+        @include media-quires(medium) {
+            margin-right: 0px;
+        }
     
         h6 {
             color: peachpuff;

@@ -220,6 +220,7 @@ a {
 .navbar {
   width: 100vw;
   height: 100vh;
+  background-color: #fff9ce;
   position: fixed;
   right: -100vw;
   top: 0;
@@ -278,6 +279,10 @@ a {
   font-size: 4vw;
   color: black;
   letter-spacing: 5px;
+}
+
+.navbar__list a:hover {
+  color: #50b978;
 }
 
 @media (min-width: 600px) {
@@ -453,18 +458,12 @@ header {
   border-bottom: 1px grey solid;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 624px) {
   .navbar__list__item {
     margin: auto;
     padding: 10px;
     border-bottom: 0;
   }
-}
-
-.navbar__list__item:hover {
-  border-bottom: 2px #50b978 solid;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
 }
 
 .navbar .hamburger-menu {
@@ -485,7 +484,7 @@ header {
   z-index: 2;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 624px) {
   .navbar .hamburger-menu {
     display: none;
   }
@@ -534,7 +533,7 @@ header {
   color: grey;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 624px) {
   .navbar_copyright {
     display: none;
   }
@@ -560,6 +559,10 @@ footer {
 footer a {
   color: #fcfcfc;
   line-height: 24px;
+}
+
+footer a:hover {
+  color: #50b978;
 }
 
 footer p {
@@ -591,6 +594,12 @@ footer p {
   margin-top: 20px;
 }
 
+@media (min-width: 767px) {
+  .footer-main div {
+    margin-right: 0px;
+  }
+}
+
 .footer-main div h6 {
   color: peachpuff;
   font-weight: 600;
@@ -611,13 +620,13 @@ footer p {
 
 #home {
   padding-top: 6em;
-  padding-bottom: 12em;
+  padding-bottom: 2em;
+  height: 80vh;
 }
 
 @media (min-width: 767px) {
   #home {
     padding-top: 10em;
-    padding-bottom: 20em;
   }
 }
 
@@ -732,6 +741,10 @@ form textarea {
   text-align: center;
 }
 
+.portfolio {
+  padding: 100px 0;
+}
+
 .portfolio-content {
   border-top: 2px solid black;
   padding-top: 20px;
@@ -748,6 +761,7 @@ form textarea {
 }
 
 .portfolio-nav ul {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -776,10 +790,24 @@ form textarea {
   }
 }
 
+.portfolio-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .portfolio-index h3 {
   width: 100px;
   line-height: 1.1em;
-  padding: 40px 0px 60px 0;
+  padding: 40px 0px 10px 0;
+}
+
+.portfolio-index p {
+  padding-bottom: 50px;
 }
 
 .wrapper {
@@ -791,10 +819,36 @@ form textarea {
   min-width: 100%;
   margin-right: -10%;
   padding-left: 5%;
+  padding-bottom: 40px;
 }
 
 .wrapper li {
   padding-right: 3%;
+}
+
+.wrapper > .book {
+  padding: 0 20px;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 788px) {
+  .wrapper > .book {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+  }
 }
 
 @media (min-width: 788px) {
@@ -812,6 +866,7 @@ form textarea {
 .book img {
   max-width: 60vw;
   height: auto;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 624px) {
@@ -832,18 +887,8 @@ form textarea {
   }
 }
 
-@media (min-width: 788px) {
-  .book {
-    border-bottom: 2px black solid;
-  }
-  .book:nth-child(odd) {
-    border-right: 2px black solid;
-  }
-}
-
-.links {
-  padding: 10px 20px 20px 10px;
-  line-height: 22px;
+.links :nth-child(1) {
+  margin-right: 30px;
 }
 
 .blog {
@@ -880,7 +925,24 @@ form textarea {
 }
 
 [class^="grid"] {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   border: 1px solid black;
+}
+
+[class^="grid"]:hover {
+  border-radius: 16px;
+  background-color: #50b978;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 [class^="grid"] div {

@@ -4,7 +4,6 @@
     flex-direction: column;
     padding: 50px 0;
     gap: 20px;
-
     @include media-quires(small) {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -21,8 +20,16 @@
 
 
 [class^="grid"] {
-
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     border: 1px solid black;
+    &:hover{
+        border-radius: 16px;
+        background-color: $accent-colour;
+        transition: ease-in-out 0.5s;
+    }
 
     div {
         display: flex;

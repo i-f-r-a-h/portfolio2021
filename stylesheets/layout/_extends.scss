@@ -4,6 +4,7 @@
 %navbar {
     width: 100vw;
     height: 100vh;
+    background-color: #fff9ce;
     position: fixed;
     right: -100vw;
     top: 0;
@@ -16,8 +17,8 @@
         width: auto;
         height: auto;
         right: auto;
-        position: relative;   
-         transition: none;
+        position: relative;
+        transition: none;
     }
 }
 
@@ -26,10 +27,9 @@
         width: 80%;
         margin: 150px 5px auto 10%;
         border-top: 1px grey solid;
- 
     }
+
     @include media-quires('medium') {
-       
         flex-flow: row;
         width: auto;
         justify-content: center;
@@ -37,24 +37,31 @@
         border: 0;
     }
 }
-    %nav-item-link {
+
+%nav-item-link {
+    text-decoration: none;
+    font-size: 4vw;
+    color: rgb(0, 0, 0);
+    letter-spacing: 5px;
+
+
+    &:hover {
+        color: $accent-colour;
+       }
+    
+    @include media-quires('medium') {
+        font-size: $text-s;
+        margin-left: 1.05vw;
         text-decoration: none;
-        font-size: 4vw;
         color: rgb(0, 0, 0);
-        letter-spacing: 5px;
-
-        @include media-quires('medium') {
-            font-size: $text-s;
-            margin-left: 1.05vw;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            letter-spacing: 2px;
-        }
-
-        @include media-quires('large') {
-            font-size: $text-md;
-        }
-        @include media-quires('xl') {
-            font-size: $text-lg;
-        }
+        letter-spacing: 2px;
     }
+
+    @include media-quires('large') {
+        font-size: $text-md;
+    }
+
+    @include media-quires('xl') {
+        font-size: $text-lg;
+    }
+}
