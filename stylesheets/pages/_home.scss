@@ -6,14 +6,17 @@
         margin: auto 10%;
     }
 
-    @include media-quires('large') {
+    @include media-quires('xtra-large') {
         margin: auto 30%;
     }
 }
-
+.wrap{
+    background-color: plum;
+    z-index: 2;
+}
 
 .home {
-
+  
     &-primary {
         // font-size: 1.875rem;
         font-family: $font-secondary;

@@ -124,7 +124,6 @@ h3,
 form legend {
   font-size: calc(1em * 1.2 * 1.2);
   color: #0a0d14;
-  margin-bottom: calc($baseline*2);
   line-height: 1.4;
   letter-spacing: 1px;
   font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
@@ -225,7 +224,7 @@ a:hover {
 }
 
 .btn--linkedin:hover {
-  background-color: blue;
+  background-color: #0b9eff;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -243,7 +242,7 @@ a:hover {
 }
 
 .btn--github:hover {
-  background-color: darkgreen;
+  background-color: #33d533;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -296,6 +295,7 @@ a:hover {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 50%;
+    z-index: -1;
     -webkit-animation-name: floating;
             animation-name: floating;
     -webkit-animation-duration: 4s;
@@ -317,7 +317,7 @@ a:hover {
     position: absolute;
     content: " ";
     border-radius: 50%;
-    border: 1px solid grey;
+    border: 1px solid #e1e1e1;
     width: 40rem;
     height: 40rem;
   }
@@ -329,7 +329,7 @@ a:hover {
     position: absolute;
     content: " ";
     border-radius: 50%;
-    border: 1px solid grey;
+    border: 1px solid #e1e1e1;
     width: 30rem;
     height: 30rem;
   }
@@ -343,7 +343,7 @@ a:hover {
     position: absolute;
     content: " ";
     border-radius: 50%;
-    border: 1px solid grey;
+    border: 1px solid #e1e1e1;
     width: 20rem;
     height: 20rem;
   }
@@ -353,10 +353,10 @@ a:hover {
     padding: 40px;
   }
   .img--linkedin {
-    background-color: #ccccff;
+    background-color: #d7efff;
   }
   .img--linkedin:hover {
-    background-color: #b3b3ff;
+    background-color: #bee5ff;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }
@@ -377,10 +377,10 @@ a:hover {
     transition: 1s ease-in-out;
   }
   .img--github {
-    background-color: #31ff31;
+    background-color: #dcf8dc;
   }
   .img--github:hover {
-    background-color: #18ff18;
+    background-color: #c7f3c7;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }
@@ -508,92 +508,6 @@ a:hover {
   }
 }
 
-h2 {
-  margin-top: 20px;
-  font-size: 2rem;
-}
-
-.project-details p {
-  color: #0042d1;
-}
-
-.about--section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0;
-  padding: 10%;
-  max-width: 100vw;
-  margin-top: 30px;
-  background-color: #f7f7f7;
-  border-radius: 4px;
-}
-
-.about--section hr {
-  border: 1px solid #0b0808;
-  margin: 5px 0 20px 0;
-}
-
-.about--section details {
-  margin-bottom: 20px;
-}
-
-.about--section summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media screen and (min-width: 788px) {
-  .about-cv {
-    background-color: #080404;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    margin: auto;
-    max-width: 90%;
-  }
-  .about--section:nth-child(3) {
-    grid-gap: 80px;
-    -ms-grid-column: 2;
-    grid-column: 2;
-    grid-row: -3/-1;
-  }
-  .about--section p {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 10px;
-  }
-  .about--section summary {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
 .navbar__logo {
   font-size: calc(1em * 1.2 * 1.2 * 1.2);
   z-index: 5;
@@ -601,20 +515,20 @@ h2 {
   margin-top: 5px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .navbar__logo {
     font-weight: 500;
     letter-spacing: -0.03em;
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .navbar__logo {
     font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
   }
 }
 
-@media screen and (min-width: null) {
+@media screen and (min-width: 1500px) {
   .navbar__logo {
     font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
   }
@@ -636,7 +550,7 @@ h2 {
   z-index: 9;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .header {
     top: 0;
     margin: auto;
@@ -650,7 +564,7 @@ h2 {
   border-bottom: 1px grey solid;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .navbar__list__item {
     margin: auto;
     padding: 10px;
@@ -676,7 +590,7 @@ h2 {
   z-index: 2;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .navbar .hamburger-menu {
     display: none;
   }
@@ -725,7 +639,7 @@ h2 {
   color: grey;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .navbar_copyright {
     display: none;
   }
@@ -786,7 +700,7 @@ footer p {
   margin-top: 20px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .footer-main div {
     margin-right: 0px;
   }
@@ -800,7 +714,7 @@ footer p {
   letter-spacing: 1px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .footer-main {
     padding: 0 40px 10px 40px;
     -webkit-box-orient: horizontal;
@@ -815,7 +729,7 @@ footer p {
   padding-bottom: 9rem;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   #home {
     padding-top: 10em;
     height: 100vh;
@@ -841,7 +755,7 @@ form input:focus, form textarea:focus {
   margin: auto 7%;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .contact {
     margin: auto 10%;
   }
@@ -881,7 +795,7 @@ form input {
   height: 40px;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   form input {
     height: 80px;
   }
@@ -891,20 +805,20 @@ form textarea {
   height: 100px;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   form textarea {
     height: 200px;
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   form {
     max-width: 65%;
     margin: auto;
   }
 }
 
-@media screen and (min-width: null) {
+@media screen and (min-width: 1500px) {
   form {
     max-width: 50%;
   }
@@ -928,7 +842,7 @@ form textarea {
   border-bottom: 2px solid black;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .social__list {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -939,7 +853,7 @@ form textarea {
   margin: auto 7%;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .about {
     margin: auto 10%;
   }
@@ -957,7 +871,7 @@ form textarea {
   padding-bottom: 30px;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .portfolio-content {
     display: -ms-grid;
     display: grid;
@@ -989,13 +903,13 @@ form textarea {
           justify-content: space-between;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .portfolio-content-index div {
     padding-right: 20px;
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .portfolio-content-index {
     border-right: 2px black solid;
   }
@@ -1056,7 +970,7 @@ form textarea {
           align-items: flex-start;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .wrapper > .book {
     border-radius: 12px;
     -webkit-box-shadow: 5px 5px 13px #d6d6d6, -5px -5px 13px #ffffff;
@@ -1064,7 +978,7 @@ form textarea {
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .wrapper {
     display: -ms-grid;
     display: grid;
@@ -1082,19 +996,19 @@ form textarea {
   padding-bottom: 10px;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .book img {
     max-width: 46vw;
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .book img {
     max-width: 44vw;
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .book img {
     max-width: 21vw;
   }
@@ -1108,7 +1022,7 @@ form textarea {
   margin: auto 7%;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .main-blog {
     margin: auto 10%;
   }
@@ -1126,7 +1040,7 @@ form textarea {
   gap: 20px;
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .blog {
     display: -ms-grid;
     display: grid;
@@ -1135,7 +1049,7 @@ form textarea {
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .blog {
     display: -ms-grid;
     display: grid;
@@ -1182,7 +1096,7 @@ form textarea {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   [class^="grid"] {
     max-width: 500px;
     height: 300px;
@@ -1193,16 +1107,21 @@ form textarea {
   margin: auto 7%;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   #home {
     margin: auto 10%;
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 1500px) {
   #home {
     margin: auto 30%;
   }
+}
+
+.wrap {
+  background-color: plum;
+  z-index: 2;
 }
 
 .home-primary {
@@ -1212,7 +1131,7 @@ form textarea {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .home-primary {
     min-width: 450px;
     max-width: 800px;
@@ -1236,20 +1155,20 @@ form textarea {
           animation: learn-more 0.98s ease infinite alternate;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .home-secondary span {
     -webkit-animation: none;
             animation: none;
   }
 }
 
-@media (min-width: 624px) {
+@media (min-width: 528px) {
   .home-secondary {
     font-size: calc(1em * 1.2 * 1.2);
   }
 }
 
-@media screen and (min-width: 788px) {
+@media screen and (min-width: 980px) {
   .home-secondary {
     font-size: calc(1em * 1.2 * 1.2 * 1.2);
   }
