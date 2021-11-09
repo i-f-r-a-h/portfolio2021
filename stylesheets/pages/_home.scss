@@ -40,6 +40,10 @@
             z-index: -1;
             position: relative;
             animation: learn-more 0.98s ease infinite alternate;
+            @include media-quires('medium') {
+                animation: none;
+            }
+
         }
 
         @include media-quires('small') {

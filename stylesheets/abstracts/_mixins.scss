@@ -5,97 +5,118 @@
 
 // BEM selectors
 @mixin element($element) {
-    &__#{$element} {
-        @content;
-    }
+  &__#{$element} {
+    @content;
+  }
 }
 
 @mixin modifier($modifier) {
-    &-#{$modifier} {
-        @content;
-    }
+  &-#{$modifier} {
+    @content;
+  }
 }
 
 @mixin m($modifier) {
   &--#{$modifier} {
-      @content;
+    @content;
   }
 }
 
 
 //social media color selector
 @mixin social-media($map, $p-el:null) {
-  @each $social, $color in $map {
-      @include m($social) {
-          &:hover {
-              background-color:$color;
-              transition: 0.5s ease-in-out;
-          }
+
+  @each $social,
+  $color in $map {
+    @include m($social) {
+      &:hover {
+        background-color: $color;
+        transition: 0.5s ease-in-out;
       }
+    }
+  }
+}
+
+
+@mixin hero-icon($map, $p-el:null) {
+  @each $social,
+  $color in $map {
+    @include m($social) {
+      background-color: lighten($color, 40);
+      &:hover {
+        background-color: lighten($color, 35);
+        transition: 1s ease-in-out;
+      }
+    }
   }
 }
 
 
 //flex-layout
 @mixin flex-layout($direction:null, $just:null, $aSelf:null) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $just;
-    align-self: $aSelf;
-    @content;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $just;
+  align-self: $aSelf;
+  @content;
 }
 
 //media quires 
 @mixin media-quires($break) {
-    @if $break == "xsmall" {
-      @media (max-width: mq('xsmall')) {
-        @content;
-      }
-    }
-    @else if $break == "small" {
-      @media (min-width: mq('small')) {
-        @content;
-      }
-    }
-    @else if $break == "medium" {
-      @media (min-width: mq('medium')) {
-        @content;
-      }
-    }
-    @else if $break == "large" {
-      @media (min-width: mq('large')) {
-        @content;
-      }
-    }
-    @else if $break == "xl" {
-      @media (min-width: mq('xl')) {
-        @content;
-      }
-    }
-    @else {
-      @error "This is not a valid breakpoint ifrah! `#{$break}`. ";
+  @if $break=="xsmall" {
+    @media (max-width: mq('xsmall')) {
+      @content;
     }
   }
-  
-  //width and height
-  @mixin sizing($width:null,$height:null,$top:null, $right:null, $mrg:null,$pad:null,$brd:null){
-      width:$width;
-      height:$height;
-      top:$top;
-      right:$right;    
-      margin:$mrg;
-      padding:$pad;
-      border-bottom:$brd;
-      @content
+
+  @else if $break=="small" {
+    @media (min-width: mq('small')) {
+      @content;
+    }
   }
 
-
-  // Image replacement
-
-  @mixin img-replace($img, $w, $h, $disp: block) {
-    background-image: url('#{$path--rel}/#{$img}');
-    background-repeat: no-repeat;
-    width: $w;
-    height: $h;
-    display: $disp;
+  @else if $break=="medium" {
+    @media (min-width: mq('medium')) {
+      @content;
+    }
   }
+
+  @else if $break=="large" {
+    @media (min-width: mq('large')) {
+      @content;
+    }
+  }
+
+  @else if $break=="xl" {
+    @media (min-width: mq('xl')) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "This is not a valid breakpoint ifrah! `#{$break}`. ";
+  }
+}
+
+//width and height
+@mixin sizing($width:null, $height:null, $top:null, $right:null, $mrg:null, $pad:null, $brd:null) {
+  width: $width;
+  height: $height;
+  top: $top;
+  right: $right;
+  margin: $mrg;
+  padding: $pad;
+  border-bottom: $brd;
+  @content
+}
+
+
+// Image replacement
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+  background-image: url('#{$path--rel}/#{$img}');
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  display: $disp;
+}

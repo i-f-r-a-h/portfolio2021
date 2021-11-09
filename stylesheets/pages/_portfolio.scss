@@ -1,5 +1,4 @@
-
-.portfolio{
+.portfolio {
     padding: 100px 0;
 }
 
@@ -62,23 +61,25 @@
     margin-right: -10%;
     padding-left: 5%;
     padding-bottom: 40px;
- 
+
 
     li {
         padding-right: 3%;
     }
 
     >.book {
-        padding: 0 20px;
-        width: fill-available;
+        padding: 20px;
+        margin: 20px;
+        width: stretch;
         display: flex;
         gap: 20px;
         flex-direction: column;
         align-items: flex-start;
 
         @include media-quires(large) {
-            border-right: 2px solid rgb(0, 0, 0);
-            border-bottom: 2px solid rgb(0, 0, 0);
+            border-radius: 12px;
+            box-shadow: 5px 5px 13px #d6d6d6,
+                -5px -5px 13px #ffffff;
         }
     }
 
@@ -120,7 +121,7 @@
 // links
 
 .links {
-    :nth-child(1){
+    :nth-child(1) {
         margin-right: 30px;
     }
 }
