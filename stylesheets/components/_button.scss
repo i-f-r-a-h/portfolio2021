@@ -3,11 +3,32 @@
 //===============================================================================
 
 .btn {
-     @include social-media($socials);
+    @include social-media($socials);
 }
 
 [class^="btn--"] {
     padding: 10px;
     border: 2px black solid;
     border-radius: 10px;
+}
+
+
+// cv download button
+
+.download {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 15px 15px;
+    border-radius: 12px;
+    line-height: -1rem;
+    background-color:white;
+    p{
+        font-size: 12px;
+        font-weight:600;
+        word-break: initial;
+    }
+
 }

@@ -16,16 +16,59 @@
 }
 
 .portfolio-nav {
+    display: flex;
+    flex-direction: column;
+
+
     ul {
         margin-top: 30px;
         display: flex;
         gap: 10px;
         padding: 10px 0;
         margin-bottom: 20px;
-        li{
+        @include media-quires(large) {
+            gap: 30px;
+        }
+
+        li {
             border-bottom: 1px solid black;
         }
-     
+
+    }
+
+    P{
+        margin-top: 10px;
+    }
+
+    @include media-quires(medium) {
+
+        p {
+            margin-top: 50px;
+            max-width: 300px;
+        }
+    }
+
+
+
+    @include media-quires(medium) {
+        p {
+            margin-top: 50px;
+            max-width: 300px;
+        }
+    }
+
+    @include media-quires(large) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 40px 20px 0 20px;
+
+        ul {
+            align-items: flex-end;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -82,11 +125,11 @@
         flex-direction: column;
         align-items: flex-start;
 
-        @include media-quires(large) {
-            border-radius: 12px;
-            box-shadow: 5px 5px 13px #d6d6d6,
-                -5px -5px 13px #ffffff;
-        }
+        // @include media-quires(large) {
+        //     border: 1px solid lightgray;
+        // }
+
+      
     }
 
     @include media-quires(large) {
@@ -99,11 +142,13 @@
 }
 
 .book {
+
     // align-self: [start];
     img {
         max-width: 60vw;
         height: auto;
         padding-bottom: 10px;
+
         @include media-quires(small) {
             max-width: 46vw;
         }
@@ -123,7 +168,7 @@
 // portfolio links (navigation)
 
 .links {
-   
+
     :nth-child(1) {
         margin-right: 30px;
     }

@@ -59,7 +59,7 @@
      @include element(item) {
        @include sizing($pad:20px, $brd:1px grey solid);
 
-       @include media-quires('small') {
+       @include media-quires('medium') {
          @include sizing($pad:10px, $brd:0, $mrg:auto);
        }
 
@@ -78,7 +78,7 @@
      z-index: 2;
 
 
-     @include media-quires('small') {
+     @include media-quires('medium') {
        display: none;
      }
 

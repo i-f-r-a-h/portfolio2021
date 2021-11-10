@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <!-- logo -->
-        <a class="navbar__logo" href="#home">Ifrah.</a>
+        <a class="navbar__logo" href="index.html">Ifrah.</a>
         <nav class="navbar" aria-label="Site Menu">
             <!-- hamburger menu -->
             <div class="hamburger-menu">
@@ -52,7 +52,8 @@
     <main class="about">
         <!-- section heading -->
         <div class="marquee">
-            <h2 class="marquee__inner" aria-hidden="true"><span>About me.</span><span>About me.</span><span>About me.</span></h2>
+            <h2 class="marquee__inner" aria-hidden="true"><span>About me.</span><span>About me.</span><span>About
+                    me.</span></h2>
         </div>
 
         <!-- Introduction section -->
@@ -70,40 +71,62 @@
                 interactive animations..</p>
         </section>
 
-        <!-- cv/resume -->
-        <section class="about-cv">
-            <section class="about--section">
-                <h2>Contant Info</h2>
-                <hr>
-                <p><strong>phone</strong> 07721677782</p>
-                <p><strong>email</strong> ifrahabdi@gmail.com</p>
-                <p><strong>linkedin</strong> linkedin.com/in/ifrah-a-37498018a/</p>
-                <p><strong>github</strong> github.com/i-f-r-a-h</p>
-                <p><strong>Location</strong> Central London, UK</p>
+        <!-- cv/resume which uses microformats -->
+        <!-- name -->
+        <header>
+            <h1 class="cv-name p-name">Ifrah Abdi</h1>
+        </header>
+        <!-- start of resume -->
+        <section class="h-resume about-cv">
+            <section class="about--section p-contact h-card">
+                <h2 class="p-title">Contant Info</h2>
+            
+                <p class="p-tel"><strong>phone:</strong> 07721677782</p>
+                <p><strong>email:</strong><a href="mailto:ifrahabdi@gmail.com" class="u-email"> ifrahabdi@gmail.com</a>
+                </p>
+                <p><strong>linkedin:</strong><a href="linkedin.com/in/ifrah-a-37498018a/"
+                        class="u-url"> linkedin.com/in/ifrah-a-37498018a/</a></p>
+                <p><strong>github:</strong><a href="github.com/i-f-r-a-h" class="u-url"> github.com/i-f-r-a-h</a></p>
+                <p class="p-region p-country-name"><strong>Location:</strong> Central London, UK</p>
             </section>
             <!-- tech skills -->
-            <section class="about--section">
-                <h2>About Me</h2>
-                <hr>
-                <p><strong>Technical Skills</strong> HTML5, CSS, JavaScript, SQL , Java, Swift, C++</p>
-                <p><strong>Tools</strong> Figma, Visual Studio Code, Adobe Suite</p>
-                <p><strong>Operating Systems</strong> Mac Os, Windows, Linux</p>
-                <p><strong>Spoken Languages</strong> English, Dutch, conversational proficiency in Somali</p>
-                <p><strong>Interests</strong> Digital Art, Music, Cinematography, Cooking,Design</p>
+            <section class="about--section h-card p-summary">
+                <h2 class="p-title">About Me</h2>
+           
+                <p class="p-skill"><strong>Technical Skills:</strong> HTML5, CSS, JavaScript, SQL , Java, Swift, C++</p>
+                <p class="p-skill"><strong>Tools:</strong> Figma, Visual Studio Code, Adobe Suite</p>
+                <p class="p-skill"><strong>Operating Systems:</strong> Mac Os, Windows, Linux</p>
+                <p class="p-skill"><strong>Spoken Languages:</strong> English, Dutch, conversational proficiency in
+                    Somali</p>
+                <p class="p-skill"><strong>Interests</strong> Digital Art, Music, Cinematography, Cooking,Design</p>
+            </section>
+            <!-- academics -->
+            <section class="about--section h-event p-education">
+                <h2 class="p-title">Academics</h2>
+             
+                <abbr class="p-name" title="Bachelor of Science in Web Development">B.S. in Web Development</abbr>
+                <time class="dt-duration">(2000 - 2000)</time>
+                <div class="h-card">
+                    <ul>
+                        <li class="p-location"><a class="u-url p-fn p-org" href="">Sae Institute</a></li>
+                        <li class="h-adr p-adr"><a class="u-url p-locality p-country-name" href="">Central London,
+                                UK</a></li>
+                        <li class="p-summary"></li>
+                    </ul>
+                </div>
             </section>
             <!-- experience -->
             <section class="about--section">
                 <!-- projects experience -->
                 <div>
-                    <h2>Projects</h2>
-                    <hr>
-                    <details open>
+                    <h2 class="p-title">Projects</h2>
+              
+                    <details class="p-experience h-event" open>
                         <summary class="project-title">
-                            <h3>Very Important Job Title</h3>
-                            <time>(2000 - 2000)</time>
+                            <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                            <time class="dt-duration">(2000 - 2000)</time>
                         </summary>
-                        <div class="project-details">
-                            <p>Utilized: </p>
+                        <div class="project-details p-summary">
                             <ul>
                                 <li>Very important points about the projects</li>
                                 <li>Very important points about the projects</li>
@@ -112,13 +135,13 @@
                         </div>
                     </details>
 
-                    <details open>
+
+                    <details class="p-experience h-event" open>
                         <summary class="project-title">
-                            <h3>Very Important Job Title</h3>
-                            <time>(2000 - 2000)</time>
+                            <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                            <time class="dt-duration">(2000 - 2000)</time>
                         </summary>
-                        <div class="project-details">
-                            <p>Utilized: </p>
+                        <div class="project-details p-summary">
                             <ul>
                                 <li>Very important points about the projects</li>
                                 <li>Very important points about the projects</li>
@@ -127,13 +150,13 @@
                         </div>
                     </details>
 
-                    <details open>
+
+                    <details class="p-experience h-event" open>
                         <summary class="project-title">
-                            <h3>Very Important Job Title</h3>
-                            <time>(2000 - 2000)</time>
+                            <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                            <time class="dt-duration">(2000 - 2000)</time>
                         </summary>
-                        <div class="project-details">
-                            <p>Utilized: </p>
+                        <div class="project-details p-summary">
                             <ul>
                                 <li>Very important points about the projects</li>
                                 <li>Very important points about the projects</li>
@@ -141,66 +164,68 @@
                             </ul>
                         </div>
                     </details>
+
                 </div>
 
-                <div>
-                    <div class="sticky">
+                <div class="sticky">
 
 
-                        <!-- work experience -->
-                        <h2>Work Experience</h2>
-                        <hr>
-                        <details open>
-                            <summary class="project-title">
-                                <h3>Very Important Job Title</h3>
-                                <time>(2000 - 2000)</time>
-                            </summary>
-                            <div class="project-details">
-                                <ul>
-                                    <li>Very important points about the projects</li>
-                                    <li>Very important points about the projects</li>
-                                    <li>Very important points about the projects</li>
-                                </ul>
-                            </div>
-                        </details>
+                    <!-- work experience -->
+                    <h2 class="p-title h-card">Work Experience</h2>
+                    <details class="p-experience h-event" open>
+                        <summary class="project-title">
+                            <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                            <time class="dt-duration">(2000 - 2000)</time>
+                        </summary>
+                        <div class="project-details p-summary">
+                            <ul>
+                                <li>Very important points about the projects</li>
+                                <li>Very important points about the projects</li>
+                                <li>Very important points about the projects</li>
+                            </ul>
+                        </div>
+                    </details>
 
-                        <details open>
-                            <summary class="project-title">
-                                <h3>Very Important Job Title</h3>
-                                <time>(2000 - 2000)</time>
-                            </summary>
-                            <div class="project-details">
-                                <ul>
-                                    <li>Very important points about the projects</li>
-                                    <li>Very important points about the projects</li>
-                                    <li>Very important points about the projects</li>
-                                </ul>
-                            </div>
-                        </details>
+                    <details class="p-experience h-event" open>
+                        <summary class="project-title">
+                            <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                            <time class="dt-duration">(2000 - 2000)</time>
+                        </summary>
+                        <div class="project-details p-summary">
+                            <ul>
+                                <li>Very important points about the projects</li>
+                                <li>Very important points about the projects</li>
+                                <li>Very important points about the projects</li>
+                            </ul>
+                        </div>
+                    </details>
 
-                        <details open>
-                            <summary class="project-title">
-                                <h3>Very Important Job Title</h3>
-                                <time>(2000 - 2000)</time>
-                            </summary>
-                            <div class="project-details">
-                                <ul>
-                                    <li>Very important points about the projects</li>
-                                    <li>Very important points about the projects</li>
-                                    <li>Very important points about the projects</li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
+
+                    <details class="p-experience h-event" open>
+                        <summary class="project-title">
+                            <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                            <time class="dt-duration">(2000 - 2000)</time>
+                        </summary>
+                        <div class="project-details p-summary">
+                            <ul>
+                                <li>Very important points about the projects</li>
+                                <li>Very important points about the projects</li>
+                                <li>Very important points about the projects</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                </div>
                 </div>
             </section>
         </section>
 
         <!-- download -->
-        <section class="download">
+        <button class="download">
             <p>Something a little more concrete?</p>
             <a href="">Download my cv 109kb</a>
-        </section>
+        </button>
+        
     </main>
 
     <footer>
@@ -209,35 +234,31 @@
                 <h6>navigation.</h6>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h6>say hello.</h6>
                 <ul>
-                    <li><a href="contact.html">Contact form</a></li>
-                    <li><a href="">Send an email</a></li>
+                    <li><a target=”_blank” href="contact.html">Contact form</a></li>
+                    <li><a target=”_blank” href="mailto:100100uk@saeinstitute.edu">Send an email</a></li>
                 </ul>
             </div>
             <div>
                 <h6>let's connect.</h6>
                 <ul>
-                    <li><a href="">Github</a></li>
-                    <li><a href="">Codepen</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Linkedin</a></li>
+                    <li><a target=”_blank” href="https://github.com/i-f-r-a-h">Github</a></li>
+                    <li><a target=”_blank” href="https://codepen.io/i-f-r-a-h">Codepen</a></li>
+                    <li><a target=”_blank” href="https://www.instagram.com/iiifra_h/">Instagram</a></li>
+                    <li><a target=”_blank” href="https://www.linkedin.com/in/ifrah-a-37498018a/">Linkedin</a></li>
                 </ul>
             </div>
             <div>
                 <h6>performance.</h6>
-                <a href="https://dreamy-banach-eba0f8.netlify.app/">
-                    <!-- Slower method, but doesn’t require hash -->
-                    <speedlify-score speedlify-url="https://www.speedlify.dev/" url="https://ifrahabdi.netlify.app/">
-                    </speedlify-score>
-                </a>
+
             </div>
 
         </section>
