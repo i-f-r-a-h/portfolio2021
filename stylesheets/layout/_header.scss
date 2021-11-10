@@ -1,3 +1,9 @@
+ // -----------------------------------------------------------------------------//
+ // This file contains styling for the header                                    //
+ // -----------------------------------------------------------------------------//
+
+
+
  // logo
  .navbar__logo {
    font-size: $text-lg;
@@ -24,27 +30,25 @@
 
  // site navigation
  .header {
+   background-color: transparentize($white, 0.05);
+   z-index: 9;
+   border-bottom: 1px solid $grey;
    @include flex-layout($just:space-between);
+   @include margin-padding($p-direction:all, $p-px:0.5rem 1.3rem);
 
-   @include sizing($pad:0.5rem 1.3rem) {
-     border-bottom: 1px solid $grey;
-     position: sticky;
-     top: 0;
-     background-color: transparentize($white, 0.05);
-     z-index: 9;
-   }
-
+   @include position(sticky, $top:0);
 
 
 
    @include media-quires('large') {
-     @include sizing($top:0, $pad:10px 40px 10px 40px, $mrg:auto);
-     max-width: 2000px;
+     @include margin-padding(all, auto, all, 10px 40px);
+     // top:0;
+     @include size(2000px, $maxWidth:mx);
    }
 
 
-  
-  
+
+
  }
 
 
@@ -57,10 +61,12 @@
 
 
      @include element(item) {
-       @include sizing($pad:20px, $brd:1px grey solid);
+       @include margin-padding($p-direction:all, $p-px:20px);
+       border-bottom: 1px grey solid;
 
        @include media-quires('medium') {
-         @include sizing($pad:10px, $brd:0, $mrg:auto);
+         @include margin-padding(all, auto, all, 10px);
+         border-bottom: 0;
        }
 
 
@@ -73,8 +79,8 @@
 
    .hamburger-menu {
      @include flex-layout($direction:column, $just:space-around);
-     @include sizing(1.6rem, 1.6rem, 15px, 30px);
-     position: fixed;
+     @include position(fixed, 15px, 30px);
+     @include size(1.6rem,1.6rem);
      z-index: 2;
 
 
@@ -91,8 +97,7 @@
  }
 
  .change {
-   right: 0;
-   display: grid;
+   @include position(grid, $right:0);
 
    .line {
      &-1 {
@@ -114,7 +119,8 @@
 
  .navbar_copyright {
    @include flex-layout($direction:row, $just:space-between);
-   @include sizing($mrg:0px 0px 90px 10%, $width:80%);
+   @include margin-padding(all, 0px 0px 90px 10%);
+   @include size(80%);
    color: grey;
 
    @include media-quires('small') {

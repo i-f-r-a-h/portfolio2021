@@ -1,27 +1,27 @@
-.contact{
-    padding: 50px 0;
-    margin: auto 7%;
+// -----------------------------------------------------------------------------//
+// This file contains all styling for the cv              //
+// -----------------------------------------------------------------------------//
 
+
+.contact{
+    @include margin-padding(all, auto 7%, all, 50px 0);
     @include media-quires('medium') {
-        margin: auto 10%;
+        @include margin-padding(all, auto 10%);
     }
 }
 
 
 // form
 form {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
+    @include margin-padding(top,40px);
+    @include flex-layout($direction:column);
+    @include size(600px, $maxWidth:mx);
     
 
     label {
-        margin-top: 20px;
-        margin-bottom: 10px;
-
+        @include margin-padding(all, 20px 0px 10px 0px);
         &:nth-child(n+2) {
-            margin-top: 30px;
+            @include margin-padding(top, 30px);
         }
     }
 
@@ -29,9 +29,8 @@ form {
         border: none;
         outline: none;
         background-color: white;
-        margin-top: 20px;
-        padding: 10px;
-        max-width: 200px;
+        @include margin-padding(top, 20px, all, 10px);
+        @include size(600px, $maxWidth:mx);
         border: 2px solid black;
     }
 
@@ -54,11 +53,11 @@ form {
     }
 
     @include media-quires(medium){
-        max-width: 65%;
-        margin: auto;
+        @include size(65%, $maxWidth:mx);
+       
     }
     @include media-quires('xtra-large'){
-        max-width: 50%;
+        @include size(50%, $maxWidth:mx);
     }
 
 }
@@ -66,11 +65,8 @@ form {
 
 // social media banner
 .social__list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 150px 0;
-    padding: 25px 0;
+    @include flex-layout($direction:row, $wrap:wrap, $just:center);
+    @include margin-padding(all, 150px 0px,all, 25px 0px);
     gap: 20px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;

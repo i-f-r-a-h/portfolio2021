@@ -2,38 +2,32 @@
 // This file contains all the placeholders used in this portfolio
 //===============================================================================
 %navbar {
-    width: 100vw;
-    height: 100vh;
+    @include size(100vw,100vh);
     background-color: #e0fffd;
-    position: fixed;
-    right: -100vw;
-    top: 0;
+    @include position(fixed,0,-100vw);
     display: grid;
     transition: right 0.8s cubic-bezier(0.1, 0, 0.1, 0.2);
     z-index: 2;
 
     @include media-quires('medium') {
         background-color:rgba(252, 252, 252, 0.95);
-        width: auto;
-        height: auto;
-        right: auto;
-        position: relative;
+        @include size(auto,auto);
+        @include position(relative, $right:auto);
         transition: none;
     }
 }
 
 %navbar-item-list {
     @include flex-layout($direction:column, $just:center) {
-        width: 80%;
-        margin: 150px 5px auto 10%;
+        @include size(80%);
+        @include margin-padding(all, 150px 5px auto 10%);
         border-top: 1px grey solid;
     }
 
     @include media-quires('medium') {
-        flex-flow: row;
-        width: auto;
-        justify-content: center;
-        margin: 0;
+        @include flex-layout($direction:row,$just:center);
+        @include size(auto);
+        @include margin-padding(all, 0);
         border: 0;
     }
 }

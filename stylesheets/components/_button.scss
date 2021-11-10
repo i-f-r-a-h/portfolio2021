@@ -14,17 +14,16 @@
 
 
 // cv download button
-
 .download {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    margin: 40px auto;
-    padding: 15px 15px;
+    // display: flex;
+    // flex-direction: column;
+    // align-content: center;
+    // align-items: center;
+    @include margin-padding(all,40px auto,all,15px);
     border-radius: 12px;
     line-height: -1rem;
     background-color:white;
+    @include flex-layout($direction:column, $aContent:center, $aItem:center );
     p{
         font-size: 12px;
         font-weight:600;

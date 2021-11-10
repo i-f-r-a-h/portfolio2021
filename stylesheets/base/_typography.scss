@@ -53,6 +53,7 @@ form legend {
 }
 
 .subheading {
+    margin-top: 40px;
     font-weight: 500;
 }
 
@@ -79,18 +80,18 @@ p {
 .marquee {
     overflow: hidden;
     width: 50%;
-    position: relative;
     --offset: 20vw;
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
+    @include position(relative);
 }
 
 .marquee__inner {
     width: fit-content;
-    display: flex;
     transform: translate3d(var(--move-initial), 0, 0);
     animation: marquee 7s linear infinite;
     animation-play-state: running;
+    @include flex-layout;
 }
 
 .marquee span {
@@ -133,18 +134,23 @@ a {
 
 // contact page cv typography
 .about-intro {
-    p{
+    max-width: 800px;
+
+    p {
         margin-bottom: 5px;
         line-height: 1.25rem;
+
         @include media-quires(medium) {
             line-height: 1.4rem;
         }
-        &:nth-child(1){
+
+        &:nth-child(1) {
             margin: 20px 0;
             font-weight: 600;
             font-size: 18px;
             letter-spacing: -.5px;
             line-height: 1.4rem;
+
             @include media-quires(medium) {
                 line-height: 1.6rem;
             }

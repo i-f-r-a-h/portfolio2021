@@ -37,7 +37,7 @@
   }
 }
 
-
+// icons in hero
 @mixin hero-icon($map, $p-el:null) {
   @each $social,
   $color in $map {
@@ -53,11 +53,14 @@
 
 
 //flex-layout
-@mixin flex-layout($direction:null, $just:null, $aSelf:null) {
+@mixin flex-layout($direction:null, $just:null, $aSelf:null, $aContent:null, $aItem:null, $wrap:null) {
   display: flex;
   flex-direction: $direction;
   justify-content: $just;
   align-self: $aSelf;
+  align-content: $aContent;
+  align-items: $aItem;
+  flex-wrap: $wrap;
   @content;
 }
 
@@ -95,19 +98,6 @@
   }
 }
 
-//width and height
-@mixin sizing($width:null, $height:null, $top:null, $right:null, $mrg:null, $pad:null, $brd:null) {
-  width: $width;
-  height: $height;
-  top: $top;
-  right: $right;
-  margin: $mrg;
-  padding: $pad;
-  border-bottom: $brd;
-  @content
-}
-
-
 // Image replacement
 
 @mixin img-replace($img, $w, $h, $disp: block) {
@@ -116,4 +106,61 @@
   width: $w;
   height: $h;
   display: $disp;
+}
+
+//padding and padding
+@mixin margin-padding($m-direction:null, $m-px:null, $p-direction:null, $p-px:null) {
+  @if $m-direction == all {
+    margin: $m-px;
+  } @else {
+    margin-#{$m-direction}: $m-px;
+  }
+  @if $p-direction == all {
+    padding: $p-px;
+  } @else {
+    padding-#{$p-direction}: $p-px;
+  }
+}
+
+//width and height
+@mixin size($width:null, $height:null, $maxWidth:null, $h-specify:null) {
+  @if $maxWidth == mx {
+    max-width: $width;
+  } @else {
+    width: $width;
+  }
+  @if $h-specify == mx {
+    max-height: $height;
+  }@else if $h-specify == mn {
+    min-height: $height;
+  }
+   @else {
+    height: $height;
+  }
+}
+
+//position
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// size which is width and height
+@mixin outer-circle($size){
+  position: absolute;
+  content: " ";
+  width: $size;
+  height:$size;
+  border-radius: 50%;
+  border: 1px solid rgba(225, 225, 225, 0.762);
+}
+
+
+@mixin outer-circle-position($left,$top,$delay:null){
+  left: $left;
+  top: $top;
+  animation-delay: $delay;
 }

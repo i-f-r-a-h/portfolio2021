@@ -1,13 +1,16 @@
+// -----------------------------------------------------------------------------//
+// This file contains all styling for the portfolio              //
+// -----------------------------------------------------------------------------//
+
+
 .portfolio {
-    margin: auto;
-    padding: 100px 10%;
+    @include margin-padding(all, auto, all, 100px 10%);
     background-color: $grey;
 }
 
 .portfolio-content {
     border-top: 2px solid black;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    @include margin-padding($p-direction:all, $p-px:20px 0px 30px 0px);
 
     @include media-quires(large) {
         display: grid;
@@ -16,16 +19,15 @@
 }
 
 .portfolio-nav {
-    display: flex;
-    flex-direction: column;
+    @include flex-layout($direction:column);
+    // display: flex;
+    // flex-direction: column;
 
 
     ul {
-        margin-top: 30px;
-        display: flex;
+        @include margin-padding(all,30px 0px 20px 0px, all, 10px 0px);
+        @include flex-layout;
         gap: 10px;
-        padding: 10px 0;
-        margin-bottom: 20px;
         @include media-quires(large) {
             gap: 30px;
         }
@@ -37,48 +39,38 @@
     }
 
     P{
-        margin-top: 10px;
+        @include margin-padding(top, 10px);
     }
 
     @include media-quires(medium) {
 
         p {
-            margin-top: 50px;
-            max-width: 300px;
-        }
-    }
-
-
-
-    @include media-quires(medium) {
-        p {
-            margin-top: 50px;
-            max-width: 300px;
+            @include margin-padding(top, 50px);
+            @include size(300px, $maxWidth:mx);
         }
     }
 
     @include media-quires(large) {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        margin: 40px 20px 0 20px;
+        @include flex-layout($direction:row-reverse, $just:space-between);
+        @include margin-padding(all, 40px 20px 0px 20px);
+
 
         ul {
-            align-items: flex-end;
+            @include flex-layout($aItem:flex-end);
+
         }
 
         p {
-            margin-bottom: 30px;
+            @include margin-padding(bottom, 30px);
         }
     }
 }
 
 .portfolio-content-index {
     div {
-        display: flex;
-        justify-content: space-between;
-
+        @include flex-layout($just:space-between);
         @include media-quires(large) {
-            padding-right: 20px;
+            @include margin-padding($p-direction:right, $p-px:20px);
         }
     }
 
@@ -88,77 +80,61 @@
 }
 
 .portfolio-index {
-    display: flex;
-    flex-direction: column;
-
+    @include flex-layout($direction:column);
     h3 {
-        width: 100px;
+        @include size(100px);
         line-height: 1.1em;
-        padding: 40px 0px 10px 0;
+        @include margin-padding($p-direction:all, $p-px:40px 0px 10px 10px );
     }
 
     p {
-        padding-bottom: 50px;
+        @include margin-padding($p-direction:bottom, $p-px:50px);
     }
 }
 
 .wrapper {
     position: relative;
-    display: flex;
+    @include flex-layout;
+    @include margin-padding(right, -10%, all, 0px 0px 40px 5%);
     overflow: auto;
     min-width: 100%;
-    margin-right: -10%;
-    padding-left: 5%;
-    padding-bottom: 40px;
+
 
 
     li {
-        padding-right: 3%;
+        @include margin-padding($p-direction:right, $p-px:3%);
     }
 
     >.book {
-        padding: 20px;
-        margin: 20px;
-        width: stretch;
-        display: flex;
+        @include margin-padding(all,20px,all,20px);
+        @include size(stretch);
+        @include flex-layout($direction:column, $aItem:flex-start);
         gap: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-
-        // @include media-quires(large) {
-        //     border: 1px solid lightgray;
-        // }
-
-      
     }
 
     @include media-quires(large) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-right: 0;
-        padding-left: 0;
         justify-items: center;
+        @include margin-padding(right,0px,left,0px);
+       
     }
 }
 
 .book {
-
-    // align-self: [start];
     img {
-        max-width: 60vw;
-        height: auto;
-        padding-bottom: 10px;
-
+        @include margin-padding($p-direction:bottom, $p-px:10px);
+        @include size(60vw,auto,mx);
         @include media-quires(small) {
-            max-width: 46vw;
+            @include size(46vw, $maxWidth:mx);
         }
 
         @include media-quires(medium) {
-            max-width: 44vw;
+            @include size(44vw, $maxWidth:mx);
         }
 
         @include media-quires(large) {
-            max-width: 21vw;
+            @include size(21vw, $maxWidth:mx);
         }
     }
 }

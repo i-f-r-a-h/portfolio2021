@@ -1,39 +1,29 @@
+// -----------------------------------------------------------------------------//
+// This file contains all styling for the blog page             //
+// -----------------------------------------------------------------------------//
+
+
 .main-blog {
-    padding: 50px 0px 100px 0px;
-    margin: auto 7%;
+    @include margin-padding(all,auto 7%, all, 50px 0px 100px 0px);
 
     @include media-quires('medium') {
-        margin: auto 10%;
+        @include margin-padding(all,auto 10%);
     }
 }
 
 .blog {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 0;
+    @include flex-layout($direction:row, $wrap:wrap);
+    @include margin-padding($p-direction:all,$p-px:50px 0);
+    @include size(1100px, $maxWidth:mx);
     gap: 20px;
-
-    @include media-quires(small) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @include media-quires(large) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        max-width: 130em;
-        gap: 40px;
-        padding: 50px 0;
-    }
 }
 
 
 [class^="grid"] {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include margin-padding($p-direction:all,$p-px:20px);
+    @include flex-layout($direction:column, $just:space-around);
     border: 1px solid black;
+    @include size(350px, $maxWidth:mx);
 
     &:hover {
         border-radius: 16px;
@@ -41,15 +31,19 @@
         transition: ease-in-out 0.5s;
     }
 
-    div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 20px;
+    footer {
+        @include flex-layout($direction:row, $just:space-between){
+            @include margin-padding(top,20px);
+        }
     }
 
-    @include media-quires(large) {
-        max-width: 500px;
-        height: 300px;
+    img {
+        @include size(300px);
     }
+}
+
+
+//icon
+.fa-solid {
+    text-decoration: none;
 }

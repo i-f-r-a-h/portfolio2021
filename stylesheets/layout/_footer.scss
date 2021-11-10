@@ -2,14 +2,13 @@
 // This file contains all the stylings for the footer used within the portfolio
 //===============================================================================
 
-footer {
-    min-height: fit-content;
+.site-footer {
+    @include size($h-specify:mn, $height:fit-content);
     background-color: $primary-colour;
     color: $white;
-    display: flex;
-    flex-direction: column;
     border-top:2px solid black;
-    padding-top:30px;
+    @include margin-padding($p-direction:all, $p-px:30px);
+    @include flex-layout($direction:column);
     a {
         color: $white;
         line-height: 24px;
@@ -19,25 +18,21 @@ footer {
     }
     p {
         text-align: center;
-        margin: auto;
-        padding: 20px 30px 10px 30px;                 
+        @include margin-padding(all, auto, all, 20px 30px 10px 30px );         
     }
 }
 
 .footer-main {
-    display: flex;
-    justify-content: space-between;
+    @include flex-layout($just:space-between, $direction:column, $wrap:wrap);
+    @include margin-padding(all, auto 10%, all, 10px 20px);
     gap: 10px;
-    padding: 10px 20px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto 10%;
+
+
   
     div {
-        margin-right: 40px;
-        margin-top: 20px;
+        @include margin-padding(all, 20px 0px 0px 40px);
         @include media-quires(medium) {
-            margin-right: 0px;
+            @include margin-padding(right, 0px);
         }
     
         h6 {
@@ -50,7 +45,7 @@ footer {
     }
 
     @include media-quires(medium) {
-        padding: 0 40px 10px 40px;
+        @include margin-padding($p-direction:all, $p-px: 0px 40px 10px 40px);
         flex-direction: row;
     }
 }
