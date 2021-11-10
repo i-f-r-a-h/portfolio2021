@@ -13,7 +13,7 @@
     z-index: 2;
 
     @include media-quires('medium') {
-        background-color: $white;
+        background-color:rgba(252, 252, 252, 0.95);
         width: auto;
         height: auto;
         right: auto;

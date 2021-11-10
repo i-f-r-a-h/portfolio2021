@@ -51,9 +51,11 @@ form legend {
     letter-spacing: 1px;
     font-size: $text-xl;
 }
-.subheading{
-    font-weight:500;
+
+.subheading {
+    font-weight: 500;
 }
+
 h4 {
     font-size: $text-md;
     font-weight: 600;
@@ -67,7 +69,8 @@ i {
 p {
     line-height: 1.6rem;
     font-size: 14px;
-    @include media-quires(medium){
+
+    @include media-quires(medium) {
         font-size: 16px;
     }
 }
@@ -95,7 +98,8 @@ p {
     padding: 0 2vw;
     letter-spacing: -0.5px;
     width: max-content;
-      @include media-quires('medium') {
+
+    @include media-quires('medium') {
         font-size: 5.0rem;
     }
 
@@ -107,8 +111,9 @@ p {
 
 a {
     color: $primary-colour;
-    &:hover{
-        color: $accent-colour ;
+
+    &:hover {
+        color: $accent-colour;
     }
 }
 
@@ -127,44 +132,64 @@ a {
 
 
 // contact page cv typography
-.cv-name{
+.about-intro {
+    p{
+        margin-bottom: 5px;
+        line-height: 1.25rem;
+        @include media-quires(medium) {
+            line-height: 1.4rem;
+        }
+        &:nth-child(1){
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: -.5px;
+            line-height: 1.4rem;
+            @include media-quires(medium) {
+                line-height: 1.6rem;
+            }
+        }
+    }
+}
+
+.cv-name {
+    margin-top: 30px;
     font-family: $font-primary;
     font-weight: 600;
     letter-spacing: -0.2px;
     text-align: center;
     font-size: 2rem;
-    @include media-quires(medium){
+
+    @include media-quires(medium) {
         font-size: 5vw;
     }
 }
 
 
-.about-cv{
-h2{
-    margin:10px 0 ;
-    border-bottom: $black 2px solid;
-    font-size: 1.5rem;
-    line-height: initial;
+.about-cv {
+    h2 {
+        margin: 10px 0;
+        border-bottom: $black 2px solid;
+        font-size: 1.5rem;
+        line-height: initial;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    p {
+        line-height: 1.3rem;
+    }
+
+    details {
+        line-height: 1.2rem;
+    }
+
+    ul {
+        padding-top: 5px;
+        margin-left: 10px;
+    }
+
 }
-
-h3{
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-p{
-    line-height: 1.3rem;
-}
-
-details{
-    line-height: 1.2rem;
-}
-ul{
-    padding-top: 5px;
-    margin-left: 10px;
-}
-
-}
-
-
-
-
