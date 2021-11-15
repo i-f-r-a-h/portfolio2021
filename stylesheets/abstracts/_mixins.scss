@@ -39,10 +39,12 @@
 
 // icons in hero
 @mixin hero-icon($map, $p-el:null) {
+
   @each $social,
   $color in $map {
     @include m($social) {
       background-color: lighten($color, 40);
+
       &:hover {
         background-color: lighten($color, 35);
         transition: 1s ease-in-out;
@@ -83,16 +85,19 @@
       @content;
     }
   }
+
   @else if $break=="xtra-large" {
     @media screen and (min-width: mq('xtra-large')) {
       @content;
     }
   }
+
   @else if $break=="large" {
-    @media screen and (min-width: mq('large'))  {
+    @media screen and (min-width: mq('large')) {
       @content;
     }
   }
+
   @else {
     @error "This is not a valid breakpoint ifrah! `#{$break}`. ";
   }
@@ -110,31 +115,42 @@
 
 //padding and padding
 @mixin margin-padding($m-direction:null, $m-px:null, $p-direction:null, $p-px:null) {
-  @if $m-direction == all {
+  @if $m-direction==all {
     margin: $m-px;
-  } @else {
+  }
+
+  @else {
     margin-#{$m-direction}: $m-px;
   }
-  @if $p-direction == all {
+
+  @if $p-direction==all {
     padding: $p-px;
-  } @else {
+  }
+
+  @else {
     padding-#{$p-direction}: $p-px;
   }
 }
 
 //width and height
 @mixin size($width:null, $height:null, $maxWidth:null, $h-specify:null) {
-  @if $maxWidth == mx {
+  @if $maxWidth==mx {
     max-width: $width;
-  } @else {
+  }
+
+  @else {
     width: $width;
   }
-  @if $h-specify == mx {
+
+  @if $h-specify==mx {
     max-height: $height;
-  }@else if $h-specify == mn {
+  }
+
+  @else if $h-specify==mn {
     min-height: $height;
   }
-   @else {
+
+  @else {
     height: $height;
   }
 }
@@ -149,18 +165,20 @@
 }
 
 // size which is width and height
-@mixin outer-circle($size){
+@mixin outer-circle($size) {
   position: absolute;
   content: " ";
   width: $size;
-  height:$size;
+  height: $size;
   border-radius: 50%;
   border: 1px solid rgba(225, 225, 225, 0.762);
 }
 
 
-@mixin outer-circle-position($left,$top,$delay:null){
+@mixin outer-circle-position($left, $top, $delay:null) {
   left: $left;
   top: $top;
   animation-delay: $delay;
 }
+
+

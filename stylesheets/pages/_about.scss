@@ -5,14 +5,14 @@
 .about {
     //     padding: 100px;
     //     margin-bottom: 1000px;
-    @include margin-padding(all,auto 7%);
+    @include margin-padding(all, auto 7%);
 
     @include media-quires('medium') {
-        @include margin-padding(all,auto 10%,top,50px);
+        @include margin-padding(all, auto 10%, top, 50px);
+    }
+
+    @include media-quires('xtra-large') {
+        max-width: 1900px;
+        margin: 100px auto;
     }
 }
-
-
-
-
-

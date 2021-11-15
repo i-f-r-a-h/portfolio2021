@@ -6,20 +6,26 @@
     @include size($h-specify:mn, $height:fit-content);
     background-color: $primary-colour;
     color: $white;
-    border-top:2px solid black;
+    border-top: 2px solid black;
     @include margin-padding($p-direction:all, $p-px:30px);
     @include flex-layout($direction:column);
+
     a {
         color: $white;
         line-height: 24px;
-        &:hover{
+
+        &:hover {
             color: $accent-colour;
         }
     }
+
     p {
         text-align: center;
-        @include margin-padding(all, auto, all, 20px 30px 10px 30px );         
+        @include margin-padding(all, auto, all, 20px 30px 10px 30px);
     }
+
+
+
 }
 
 .footer-main {
@@ -28,13 +34,14 @@
     gap: 10px;
 
 
-  
+
     div {
         @include margin-padding(all, 20px 0px 0px 40px);
+
         @include media-quires(medium) {
             @include margin-padding(right, 0px);
         }
-    
+
         h6 {
             color: peachpuff;
             font-weight: 600;
@@ -47,5 +54,11 @@
     @include media-quires(medium) {
         @include margin-padding($p-direction:all, $p-px: 0px 40px 10px 40px);
         flex-direction: row;
+    }
+
+    @include media-quires('xtra-large') {
+        max-width: 2000px;
+        margin: auto;
+        gap: 25rem;
     }
 }

@@ -9,6 +9,10 @@
     @include media-quires('medium') {
         @include margin-padding(all,auto 10%);
     }
+    @include media-quires('xtra-large') {
+        max-width: 1900px;
+        margin: 50px auto;
+    }
 }
 
 .blog {

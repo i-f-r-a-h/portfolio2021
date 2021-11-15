@@ -6,6 +6,13 @@
 .portfolio {
     @include margin-padding(all, auto, all, 100px 10%);
     background-color: $grey;
+.wrap{
+    @include media-quires('xtra-large') {
+        max-width: 1900px;
+        padding: 0;
+        margin: auto;
+    }
+}
 }
 
 .portfolio-content {
@@ -116,7 +123,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
-        @include margin-padding(right,0px,left,0px);
+        overflow: hidden;
+        gap: 0px;
+        @include margin-padding(all,5px,all,5px);
+        width: min-content;
        
     }
 }

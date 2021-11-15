@@ -79,6 +79,25 @@ main {
   }
 }
 
+.change {
+  position: grid;
+  right: 0;
+}
+
+.change .line-1 {
+  -webkit-transform: rotateZ(-405deg) translate(-6px, 6px);
+          transform: rotateZ(-405deg) translate(-6px, 6px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  -webkit-transform: rotateZ(405deg) translate(-6px, -6px);
+          transform: rotateZ(405deg) translate(-6px, -6px);
+}
+
 body {
   font-size: calc(1em / 1.2);
   font-family: "Open Sans", sans-serif;
@@ -610,7 +629,7 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 2000px) {
   .navbar__list a {
     font-size: calc(1em * 1.2 * 1.2 * 1.2);
   }
@@ -698,7 +717,7 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 2000px) {
   .navbar__logo {
     font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
   }
@@ -891,6 +910,14 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .footer-main {
+    max-width: 2000px;
+    margin: auto;
+    gap: 25rem;
+  }
+}
+
 #home {
   padding-top: 5rem;
   padding-bottom: 9rem;
@@ -926,6 +953,13 @@ form input:focus, form textarea:focus {
 @media (min-width: 600px) {
   .contact {
     margin: auto 10%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .contact {
+    max-width: 1900px;
+    margin: 50px auto;
   }
 }
 
@@ -985,7 +1019,7 @@ form textarea {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 2000px) {
   form {
     max-width: 50%;
   }
@@ -1029,10 +1063,25 @@ form textarea {
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .about {
+    max-width: 1900px;
+    margin: 100px auto;
+  }
+}
+
 .portfolio {
   margin: auto;
   padding: 100px 10%;
   background-color: #F7F8FB;
+}
+
+@media screen and (min-width: 2000px) {
+  .portfolio .wrap {
+    max-width: 1900px;
+    padding: 0;
+    margin: auto;
+  }
 }
 
 .portfolio-content {
@@ -1198,8 +1247,13 @@ form textarea {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     justify-items: center;
-    margin-right: 0px;
-    padding-left: 0px;
+    overflow: hidden;
+    gap: 0px;
+    margin: 5px;
+    padding: 5px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
   }
 }
 
@@ -1239,6 +1293,13 @@ form textarea {
 @media (min-width: 600px) {
   .main-blog {
     margin: auto 10%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .main-blog {
+    max-width: 1900px;
+    margin: 50px auto;
   }
 }
 
@@ -1311,9 +1372,10 @@ form textarea {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 2000px) {
   #home {
-    margin: auto 3%;
+    margin: auto;
+    max-width: 1800px;
   }
 }
 

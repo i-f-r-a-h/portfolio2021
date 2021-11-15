@@ -23,3 +23,24 @@
         transform: translate(0, -0px);
     }
 }
+
+
+//hamburger menu
+.change {
+    @include position(grid, $right:0);
+ 
+    .line {
+      &-1 {
+        transform: rotateZ(-405deg) translate(-6px, 6px);
+      }
+ 
+      &-2 {
+        opacity: 0;
+      }
+ 
+      &-3 {
+        transform: rotateZ(405deg) translate(-6px, -6px);
+      }
+    }
+  }
+ 
