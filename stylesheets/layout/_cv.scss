@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------//
+// This file contains all styling for the cv used within the portfolio               //
+// -----------------------------------------------------------------------------//
+
+
+
+// /
+// //mixins
+// @mixin flex-layout2($flow:row, $just:null) {
+//     display: flex;
+//     flex-direction: $flow;
+//     justify-content: $just;
+//     @content
+// }
+
+// @mixin base-layout($margin:auto, $pad:null, $mxw:null) {
+//     margin: $margin;
+//     padding: $pad;
+//     max-width: $mxw;
+//     @content
+// }
+
+
+
+// // start of cv styling
+
+.about--section {
+    details {
+        @include margin-padding(bottom,20px);
+    }
+
+    summary {
+        // display: flex;
+        // flex-direction: column;
+         @include flex-layout($direction:column);
+        @include media-quires(large) {
+            @include flex-layout($direction:row, $just:space-between);
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+        }
+    }
+}
+
+
+
+// // desktop media queries
+@include media-quires(medium) {
+    .about-cv {
+        @include margin-padding(all,30px auto, all, 20px);
+        background-color: rgb(214, 214, 214);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        @include size(900px,1000px,mx,mx);
+        
+
+    }
+
+    .about--section {
+        &:nth-child(4) {
+            grid-column: 2/3;
+            grid-row: 1/-1;
+            @include margin-padding(left,30px);
+        }
+
+        p {
+            @include flex-layout($direction:column);
+            @include margin-padding(bottom,10px);
+        }
+    }
+}
