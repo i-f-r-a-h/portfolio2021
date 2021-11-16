@@ -6,13 +6,14 @@
 .portfolio {
     @include margin-padding(all, auto, all, 100px 10%);
     background-color: $grey;
-.wrap{
-    @include media-quires('xtra-large') {
-        max-width: 1900px;
-        padding: 0;
-        margin: auto;
+
+    .wrap {
+        @include media-quires('large') {
+            @include margin-padding(all, auto, all, 10px 40px);
+            // top:0;
+            @include size(2000px, $maxWidth:mx);
+        }
     }
-}
 }
 
 .portfolio-content {
@@ -32,11 +33,13 @@
 
 
     ul {
-        @include margin-padding(all,30px 0px 20px 0px, all, 10px 0px);
+        @include margin-padding(all, 30px 0px 20px 0px, all, 10px 0px);
         @include flex-layout;
         gap: 10px;
+
         @include media-quires(large) {
             gap: 30px;
+            font-size: 1.1vmin;
         }
 
         li {
@@ -45,17 +48,19 @@
 
     }
 
-    P{
+    P {
         @include margin-padding(top, 10px);
-    }
-
-    @include media-quires(medium) {
-
-        p {
+        @include size(300px, $maxWidth:mx);
+        @include media-quires(medium) {
             @include margin-padding(top, 50px);
-            @include size(300px, $maxWidth:mx);
+        }
+
+        @include media-quires(xtra-large) {
+            @include size(500px, $maxWidth:mx);
         }
     }
+
+
 
     @include media-quires(large) {
         @include flex-layout($direction:row-reverse, $just:space-between);
@@ -76,9 +81,13 @@
 .portfolio-content-index {
     div {
         @include flex-layout($just:space-between);
+
         @include media-quires(large) {
             @include margin-padding($p-direction:right, $p-px:20px);
         }
+    }
+    span{
+        font-size: 16px;
     }
 
     @include media-quires(large) {
@@ -88,15 +97,17 @@
 
 .portfolio-index {
     @include flex-layout($direction:column);
+
     h3 {
         @include size(100px);
         line-height: 1.1em;
-        @include margin-padding($p-direction:all, $p-px:40px 0px 10px 10px );
+        @include margin-padding($p-direction:all, $p-px:40px 0px 10px 10px);
     }
 
     p {
         @include margin-padding($p-direction:bottom, $p-px:50px);
     }
+   
 }
 
 .wrapper {
@@ -113,10 +124,20 @@
     }
 
     >.book {
-        @include margin-padding(all,20px,all,20px);
+
+        @include margin-padding(all, 10px, all, 10px);
         @include size(stretch);
         @include flex-layout($direction:column, $aItem:flex-start);
         gap: 20px;
+
+        @include media-quires(large) {
+            padding: 0;
+
+            &:nth-child(1n+3) {
+                margin-top: 10%;
+            }
+        }
+
     }
 
     @include media-quires(large) {
@@ -125,16 +146,16 @@
         justify-items: center;
         overflow: hidden;
         gap: 0px;
-        @include margin-padding(all,5px,all,5px);
+        @include margin-padding(all, 5px, all, 5px);
         width: min-content;
-       
     }
 }
 
 .book {
     img {
         @include margin-padding($p-direction:bottom, $p-px:10px);
-        @include size(60vw,auto,mx);
+        @include size(60vw, auto, mx);
+
         @include media-quires(small) {
             @include size(46vw, $maxWidth:mx);
         }
@@ -145,6 +166,11 @@
 
         @include media-quires(large) {
             @include size(21vw, $maxWidth:mx);
+        }
+
+        @include media-quires(xtra-large) {
+            width: 21vw;
+            max-width: 50em;
         }
     }
 }
@@ -157,5 +183,11 @@
 
     :nth-child(1) {
         margin-right: 30px;
+    }
+}
+
+.portfolio__index-hide {
+    @include media-quires(large) {
+        display: none;
     }
 }

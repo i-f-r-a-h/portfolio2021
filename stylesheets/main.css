@@ -120,7 +120,7 @@ h1 {
 
 @media screen and (min-width: 980px) {
   h1 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 
@@ -152,11 +152,6 @@ form legend {
   font-size: calc(1em * 1.2 * 1.2 * 1.2 * 1.2);
 }
 
-.subheading {
-  margin-top: 40px;
-  font-weight: 500;
-}
-
 h4 {
   font-size: calc(1em * 1.2 * 1.2);
   font-weight: 600;
@@ -181,7 +176,8 @@ p {
 .marquee {
   overflow: hidden;
   width: 50%;
-  --offset: 20vw;
+  max-width: 50%;
+  --offset: 0rem;
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
   position: relative;
@@ -228,7 +224,7 @@ a {
 }
 
 a:hover {
-  color: #50b978;
+  color: #FFA351;
 }
 
 @-webkit-keyframes marquee {
@@ -282,26 +278,13 @@ a:hover {
   }
 }
 
-.cv-name {
+.about-cv h1 {
+  font-size: 4rem;
   margin-top: 30px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.2px;
+  font-weight: 300;
+  letter-spacing: 1px;
   text-align: center;
-  font-size: 2rem;
-}
-
-@media (min-width: 600px) {
-  .cv-name {
-    font-size: 5vw;
-  }
-}
-
-.about-cv h2 {
-  margin: 10px 0;
-  border-bottom: #0a0d14 2px solid;
-  font-size: 1.5rem;
-  line-height: initial;
 }
 
 .about-cv h3 {
@@ -320,6 +303,31 @@ a:hover {
 .about-cv ul {
   padding-top: 5px;
   margin-left: 10px;
+}
+
+.about-cv .about-hide {
+  display: none;
+}
+
+@media screen and (min-width: 980px) {
+  .about-cv .about-hide {
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .about-cv .about-hide p {
+    font-weight: 400;
+    padding: 70px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background-color: teal;
+  }
 }
 
 .btn--linkedin:hover {
@@ -440,26 +448,26 @@ a:hover {
   [class^="img--"]:nth-of-type(1)::after {
     position: absolute;
     content: " ";
-    width: 40rem;
-    height: 40rem;
+    width: 50rem;
+    height: 50rem;
     border-radius: 50%;
     border: 1px solid rgba(225, 225, 225, 0.762);
   }
   [class^="img--"]:nth-of-type(2) {
-    left: 78%;
-    top: 60%;
+    left: 80%;
+    top: 50%;
   }
   [class^="img--"]:nth-of-type(2)::after {
     position: absolute;
     content: " ";
-    width: 30rem;
-    height: 30rem;
+    width: 35rem;
+    height: 35rem;
     border-radius: 50%;
     border: 1px solid rgba(225, 225, 225, 0.762);
   }
   [class^="img--"]:nth-of-type(3) {
-    left: 10%;
-    top: 70%;
+    left: 5%;
+    top: 60%;
     -webkit-animation-delay: -2000ms;
             animation-delay: -2000ms;
   }
@@ -610,7 +618,7 @@ a:hover {
 }
 
 .navbar__list a:hover {
-  color: #50b978;
+  color: #FFA351;
 }
 
 @media (min-width: 600px) {
@@ -639,6 +647,13 @@ a:hover {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 980px) {
+  .about--section details ul {
+    padding: revert;
+    line-height: 28px;
+  }
+}
+
 .about--section summary {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -664,26 +679,60 @@ a:hover {
   }
 }
 
-@media (min-width: 600px) {
+.cv-background {
+  display: none;
+}
+
+@media screen and (min-width: 980px) {
   .about-cv {
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #d6d6d6;
+    margin: 30px auto 0px auto;
+    padding: 40px 20px 0px 40px;
+    border: 1px solid grey;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    max-width: 900px;
-    max-height: 1000px;
+    -ms-grid-rows: 200px 1fr 1fr 1fr;
+        grid-template-rows: 200px 1fr 1fr 1fr;
+    max-width: 1000px;
+    max-height: 1300px;
+    -webkit-box-shadow: 11px 11px 22px #e8e8e8, -11px -11px 22px #ffffff;
+            box-shadow: 11px 11px 22px #e8e8e8, -11px -11px 22px #ffffff;
   }
-  .about--section:nth-child(4) {
+  .about-cv header {
+    z-index: 3;
+    grid-column: 2/-1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .about--section h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    line-height: initial;
+    border-bottom: #0bb5f4 2px solid;
+  }
+  .about--section:nth-child(3) p {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-family: "Bitter", serif;
+    font-weight: 600;
+  }
+  .about--section:not(:nth-child(7)) {
+    background: peachpuff;
+    padding: 10px;
+  }
+  .about--section:not(:nth-child(7)) h2 {
+    border-bottom: #fcfcfc 2px solid;
+  }
+  .about--section:nth-child(7) {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
-    grid-row: 1/-1;
+    grid-row: 2/-1;
     margin-left: 30px;
+    font-size: 18px;
   }
   .about--section p {
     display: -webkit-box;
@@ -694,6 +743,16 @@ a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 10px;
+  }
+  .cv-background {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 128, 128, 0.434);
+    width: 80%;
+    max-width: 998px;
+    height: 200px;
+    margin-top: -40px;
+    margin-left: -40px;
   }
 }
 
@@ -855,7 +914,7 @@ a:hover {
 }
 
 .site-footer a:hover {
-  color: #50b978;
+  color: #FFA351;
 }
 
 .site-footer p {
@@ -919,14 +978,27 @@ a:hover {
 }
 
 #home {
-  padding-top: 5rem;
-  padding-bottom: 9rem;
+  padding-top: 20%;
+  padding-bottom: 40%;
 }
 
 @media (min-width: 600px) {
   #home {
-    padding-top: 10em;
-    height: 100vh;
+    padding-bottom: 20em;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  #home {
+    padding-top: 20em;
+    padding-bottom: 40em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  #home {
+    padding-top: 20em;
+    padding-bottom: 50em;
   }
 }
 
@@ -939,8 +1011,8 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-  background: #e2f3e8;
-  border-bottom: 3px solid #50b978;
+  background: white;
+  border-bottom: 3px solid #FFA351;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
@@ -959,8 +1031,13 @@ form input:focus, form textarea:focus {
 @media screen and (min-width: 2000px) {
   .contact {
     max-width: 1900px;
-    margin: 50px auto;
+    margin: 100px auto;
   }
+}
+
+.subheading {
+  margin-top: 40px;
+  font-weight: 500;
 }
 
 form {
@@ -989,7 +1066,7 @@ form [type="submit"] {
   background-color: white;
   margin-top: 20px;
   padding: 10px;
-  max-width: 600px;
+  max-width: 200px;
   border: 2px solid black;
 }
 
@@ -1015,40 +1092,14 @@ form textarea {
 
 @media (min-width: 600px) {
   form {
-    max-width: 65%;
+    max-width: 80%;
   }
 }
 
 @media screen and (min-width: 2000px) {
   form {
-    max-width: 50%;
-  }
-}
-
-.social__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 150px 0px;
-  padding: 25px 0px;
-  gap: 20px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-}
-
-@media (min-width: 528px) {
-  .social__list {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    margin-top: 100px;
+    max-width: 70%;
   }
 }
 
@@ -1076,11 +1127,11 @@ form textarea {
   background-color: #F7F8FB;
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 980px) {
   .portfolio .wrap {
-    max-width: 1900px;
-    padding: 0;
     margin: auto;
+    padding: 10px 40px;
+    max-width: 2000px;
   }
 }
 
@@ -1120,6 +1171,7 @@ form textarea {
 @media screen and (min-width: 980px) {
   .portfolio-nav ul {
     gap: 30px;
+    font-size: 1.1vmin;
   }
 }
 
@@ -1129,12 +1181,18 @@ form textarea {
 
 .portfolio-nav P {
   margin-top: 10px;
+  max-width: 300px;
 }
 
 @media (min-width: 600px) {
-  .portfolio-nav p {
+  .portfolio-nav P {
     margin-top: 50px;
-    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .portfolio-nav P {
+    max-width: 500px;
   }
 }
 
@@ -1180,6 +1238,10 @@ form textarea {
   }
 }
 
+.portfolio-content-index span {
+  font-size: 16px;
+}
+
 @media screen and (min-width: 980px) {
   .portfolio-content-index {
     border-right: 2px black solid;
@@ -1222,8 +1284,8 @@ form textarea {
 }
 
 .wrapper > .book {
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
@@ -1238,6 +1300,15 @@ form textarea {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 20px;
+}
+
+@media screen and (min-width: 980px) {
+  .wrapper > .book {
+    padding: 0;
+  }
+  .wrapper > .book:nth-child(1n+3) {
+    margin-top: 10%;
+  }
 }
 
 @media screen and (min-width: 980px) {
@@ -1281,8 +1352,21 @@ form textarea {
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .book img {
+    width: 21vw;
+    max-width: 50em;
+  }
+}
+
 .links :nth-child(1) {
   margin-right: 30px;
+}
+
+@media screen and (min-width: 980px) {
+  .portfolio__index-hide {
+    display: none;
+  }
 }
 
 .main-blog {
@@ -1314,8 +1398,25 @@ form textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 50px 0;
-  max-width: 1100px;
   gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .blog {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .blog {
+    margin-top: 100px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
 }
 
 [class^="grid"] {
@@ -1330,12 +1431,12 @@ form textarea {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border: 1px solid black;
-  max-width: 350px;
+  height: 400px;
 }
 
 [class^="grid"]:hover {
   border-radius: 16px;
-  background-color: #50b978;
+  background-color: #FFA351;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
@@ -1363,6 +1464,8 @@ form textarea {
 }
 
 #home {
+  position: relative;
+  overflow: hidden;
   margin: auto 7%;
 }
 
@@ -1376,6 +1479,7 @@ form textarea {
   #home {
     margin: auto;
     max-width: 1800px;
+    overflow: visible;
   }
 }
 

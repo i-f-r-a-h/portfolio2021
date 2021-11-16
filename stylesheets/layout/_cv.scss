@@ -1,72 +1,115 @@
 // -----------------------------------------------------------------------------//
-// This file contains all styling for the cv used within the portfolio               //
+// This file contains all styling for the cv used within the portfolio          //
 // -----------------------------------------------------------------------------//
 
+// -----------------------------------------------------------------------------//
+// This file contains all styling for the cv used within the portfolio          //
+// -----------------------------------------------------------------------------//
 
-
-// /
-// //mixins
-// @mixin flex-layout2($flow:row, $just:null) {
-//     display: flex;
-//     flex-direction: $flow;
-//     justify-content: $just;
-//     @content
-// }
-
-// @mixin base-layout($margin:auto, $pad:null, $mxw:null) {
-//     margin: $margin;
-//     padding: $pad;
-//     max-width: $mxw;
-//     @content
-// }
-
-
+// design inspired by https://codepen.io/mavrK/pen/PzGvdJ
 
 // // start of cv styling
 
 .about--section {
     details {
-        @include margin-padding(bottom,20px);
+        @include margin-padding(bottom, 20px);
+        @include media-quires(large) {
+            ul{
+                padding: revert;
+                line-height: 28px;
+            }
+        }
     }
 
     summary {
-        // display: flex;
-        // flex-direction: column;
-         @include flex-layout($direction:column);
+        @include flex-layout($direction:column);
+
         @include media-quires(large) {
             @include flex-layout($direction:row, $just:space-between);
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
+
         }
     }
 }
 
 
+.cv-background {
+    display: none;
+}
 
 // // desktop media queries
-@include media-quires(medium) {
+@include media-quires(large) {
+
     .about-cv {
-        @include margin-padding(all,30px auto, all, 20px);
-        background-color: rgb(214, 214, 214);
+        @include margin-padding(all, 30px auto 0px auto, all, 40px 20px 0px 40px);
+        border: 1px solid grey;
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        @include size(900px,1000px,mx,mx);
-        
+        grid-template-rows: 200px 1fr 1fr 1fr;
 
+        @include size(1000px, 1300px, mx, mx);
+        box-shadow: 11px 11px 22px #e8e8e8,
+            -11px -11px 22px #ffffff;
+
+        header {
+            z-index: 3;
+            grid-column: 2/-1;
+            grid-row: 1/2;
+        }
     }
 
+
     .about--section {
-        &:nth-child(4) {
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            line-height: initial;
+            border-bottom: #0bb5f4 2px solid;
+        }
+
+        &:nth-child(3) {
+            p {
+                color: white;
+                font-size: 3rem;
+                letter-spacing: 2px;
+                font-family: $font-secondary;
+                font-weight: 600;
+            }
+
+        }
+
+        // left column
+        &:not(:nth-child(7)) {
+            background: peachpuff;
+            padding: 10px;
+
+
+            h2 {
+                border-bottom: $white 2px solid;
+            }
+        }
+
+        &:nth-child(7) {
             grid-column: 2/3;
-            grid-row: 1/-1;
-            @include margin-padding(left,30px);
+            grid-row: 2/-1;
+            @include margin-padding(left, 30px);
+            font-size: 18px;
         }
 
         p {
             @include flex-layout($direction:column);
-            @include margin-padding(bottom,10px);
+            @include margin-padding(bottom, 10px);
         }
+    }
+
+    .cv-background {
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 128, 128, 0.434);
+        width: 80%;
+        max-width: 998px;
+        height: 200px;
+        margin-top: -40px;
+        margin-left: -40px;
     }
 }

@@ -10,18 +10,20 @@
     }
     @include media-quires('xtra-large') {
         max-width: 1900px;
-        margin: 50px auto;
+        margin: 100px auto;
     }
 }
 
+.subheading {
+    margin-top: 40px;
+    font-weight: 500;
+}
 
 // form
 form {
     @include margin-padding(top,40px);
     @include flex-layout($direction:column);
     @include size(600px, $maxWidth:mx);
-    
-
     label {
         @include margin-padding(all, 20px 0px 10px 0px);
         &:nth-child(n+2) {
@@ -34,11 +36,9 @@ form {
         outline: none;
         background-color: white;
         @include margin-padding(top, 20px, all, 10px);
-        @include size(600px, $maxWidth:mx);
+        @include size(200px, $maxWidth:mx);
         border: 2px solid black;
     }
-
-
 
     input {
         @extend %form-styling;
@@ -57,25 +57,26 @@ form {
     }
 
     @include media-quires(medium){
-        @include size(65%, $maxWidth:mx);
+        @include size(80%, $maxWidth:mx);
        
     }
     @include media-quires('xtra-large'){
-        @include size(50%, $maxWidth:mx);
-    }
+        margin-top: 100px;
+        @include size(70%, $maxWidth:mx);
 
+    }
 }
 
 
 // social media banner
-.social__list {
-    @include flex-layout($direction:row, $wrap:wrap, $just:center);
-    @include margin-padding(all, 150px 0px,all, 25px 0px);
-    gap: 20px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+// .social__list {
+//     @include flex-layout($direction:row, $wrap:wrap, $just:center);
+//     @include margin-padding(all, 150px 0px,all, 25px 0px);
+//     gap: 20px;
+//     border-top: 2px solid black;
+//     border-bottom: 2px solid black;
 
-    @include media-quires(small) {
-        justify-content: space-around;
-    }
-}
+//     @include media-quires(small) {
+//         justify-content: space-around;
+//     }
+// }
