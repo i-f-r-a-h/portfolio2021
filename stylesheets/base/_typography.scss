@@ -114,7 +114,7 @@ a {
     color: $primary-colour;
 
     &:hover {
-        color: $accent-colour;
+        color: teal;
     }
 }
 
@@ -143,6 +143,9 @@ a {
         @include media-quires(medium) {
             line-height: 1.4rem;
         }
+        @include media-quires(large) {
+            line-height: 1.8rem;
+        }
 
         &:nth-child(1) {
             margin: 20px 0;
@@ -152,7 +155,7 @@ a {
             line-height: 1.4rem;
 
             @include media-quires(medium) {
-                line-height: 1.6rem;
+                line-height: 2.2rem;
             }
         }
     }
@@ -197,7 +200,7 @@ a {
             align-items: flex-end;
             p{
                 font-weight: 400;
-                padding: 70px;
+                padding: 65px;
                 border-radius:30% 70% 70% 30% / 30% 30% 70% 70% ;
                 background-color: teal;
 

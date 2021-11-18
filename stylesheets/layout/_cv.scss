@@ -13,8 +13,9 @@
 .about--section {
     details {
         @include margin-padding(bottom, 20px);
+
         @include media-quires(large) {
-            ul{
+            ul {
                 padding: revert;
                 line-height: 28px;
             }
@@ -40,7 +41,7 @@
 @include media-quires(large) {
 
     .about-cv {
-        @include margin-padding(all, 30px auto 0px auto, all, 40px 20px 0px 40px);
+        @include margin-padding(all, 30px auto 0px auto, all, 40px 30px 0px 40px);
         border: 1px solid grey;
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -61,10 +62,10 @@
     .about--section {
 
         h2 {
-            margin: 10px 0;
             font-size: 1.5rem;
             line-height: initial;
-            border-bottom: #0bb5f4 2px solid;
+            border-bottom: $black 2px solid;
+          
         }
 
         &:nth-child(3) {
@@ -81,11 +82,12 @@
         // left column
         &:not(:nth-child(7)) {
             background: peachpuff;
-            padding: 10px;
-
+            padding: 20px;
 
             h2 {
-                border-bottom: $white 2px solid;
+                margin: 10px auto;
+                width: 50%;
+                text-align: center;
             }
         }
 
@@ -94,6 +96,10 @@
             grid-row: 2/-1;
             @include margin-padding(left, 30px);
             font-size: 18px;
+            h2 {
+                margin: 10px 0;
+                width: 80%;
+            }
         }
 
         p {
