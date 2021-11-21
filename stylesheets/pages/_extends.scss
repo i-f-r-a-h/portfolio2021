@@ -14,6 +14,19 @@
 	}
 }
 
+%main-wrapper{
+	@include margin-padding(all, auto 7%, top, 50px);
+
+    @include media-quires('medium') {
+        @include margin-padding(all, auto 10%, top, 50px);
+    }
+
+    @include media-quires('xtra-large') {
+        max-width: 1900px;
+        margin: 100px auto;
+    }
+}
+
 %form-styling {
 	padding: 10px;
 	border: none;
