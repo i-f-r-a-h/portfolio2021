@@ -51,6 +51,7 @@
     P {
         @include margin-padding(top, 10px);
         @include size(300px, $maxWidth:mx);
+
         @include media-quires(medium) {
             @include margin-padding(top, 50px);
         }
@@ -86,7 +87,8 @@
             @include margin-padding($p-direction:right, $p-px:20px);
         }
     }
-    span{
+
+    span {
         font-size: 16px;
     }
 
@@ -107,7 +109,7 @@
     p {
         @include margin-padding($p-direction:bottom, $p-px:50px);
     }
-   
+
 }
 
 .wrapper {
@@ -180,9 +182,14 @@
 // portfolio links (navigation)
 
 .links {
-
-    :nth-child(1) {
-        margin-right: 30px;
+    a {
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+        i{
+            margin-right: 5px;
+        }
+        
     }
 }
 
