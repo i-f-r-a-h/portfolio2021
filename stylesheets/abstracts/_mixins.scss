@@ -85,6 +85,11 @@
       @content;
     }
   }
+  @else if $break=="regular" {
+    @media (min-width: mq('regular')) {
+      @content;
+    }
+  }
 
   @else if $break=="xtra-large" {
     @media screen and (min-width: mq('xtra-large')) {

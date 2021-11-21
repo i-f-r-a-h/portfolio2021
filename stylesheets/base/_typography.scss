@@ -75,40 +75,6 @@ p {
     }
 }
 
-// create partial for this
-.marquee {
-    overflow: hidden;
-    width: 50%;
-    max-width: 50%;
-    --offset: 0rem;
-    --move-initial: calc(-25% + var(--offset));
-    --move-final: calc(-50% + var(--offset));
-    @include position(relative);
-}
-
-.marquee__inner {
-    width: fit-content;
-    transform: translate3d(var(--move-initial), 0, 0);
-    animation: marquee 7s linear infinite;
-    animation-play-state: running;
-    @include flex-layout;
-}
-
-.marquee span {
-    font-size: 12vw;
-    padding: 0 2vw;
-    letter-spacing: -0.5px;
-    width: max-content;
-
-    @include media-quires('medium') {
-        font-size: 5.0rem;
-    }
-
-    @include media-quires('large') {
-        font-size: 6.4rem;
-    }
-}
-
 
 a {
     color: $primary-colour;
@@ -119,16 +85,6 @@ a {
 }
 
 
-
-@keyframes marquee {
-    0% {
-        transform: translate3d(var(--move-initial), 0, 0);
-    }
-
-    100% {
-        transform: translate3d(var(--move-final), 0, 0);
-    }
-}
 
 
 
