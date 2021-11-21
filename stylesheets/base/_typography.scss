@@ -11,9 +11,6 @@ body {
     line-height: $body-line-height;
 }
 
-
-
-
 h1 {
     font-size: 12vw;
     line-height: 1.7em;
@@ -23,7 +20,6 @@ h1 {
         font-size: 5.2rem;
         line-height: $heading-line-height;
     }
-
     @include media-quires('large') {
         font-size: 7rem;
     }
@@ -32,11 +28,11 @@ h1 {
 h2 {
     font-weight: 400;
     padding: 5px 0;
-    font-size: 4.2rem;
+    font-size: 2.2rem;
     line-height: 5rem;
 
     @include media-quires('medium') {
-        font-size: 5.0rem;
+        font-size: 3.2rem;
     }
 
     @include media-quires('large') {
@@ -73,6 +69,10 @@ p {
     @include media-quires(medium) {
         font-size: 16px;
     }
+
+    @include media-quires(large) {
+        font-size: 18px;
+    }
 }
 
 
@@ -88,37 +88,9 @@ a {
 
 
 
+
+
 // contact page cv typography
-.about-intro {
-    max-width: 800px;
-
-    p {
-        margin-bottom: 5px;
-        line-height: 1.25rem;
-
-        @include media-quires(medium) {
-            line-height: 1.4rem;
-        }
-        @include media-quires(large) {
-            line-height: 1.8rem;
-        }
-
-        &:nth-child(1) {
-            margin: 20px 0;
-            font-weight: 600;
-            font-size: 18px;
-            letter-spacing: -.5px;
-            line-height: 1.4rem;
-
-            @include media-quires(medium) {
-                line-height: 2.2rem;
-            }
-        }
-    }
-}
-
-
-
 
 .about-cv {
     h1 {
@@ -146,23 +118,6 @@ a {
     ul {
         padding-top: 5px;
         margin-left: 10px;
-    }
-    .about-hide{
-        display: none;
-        @include media-quires(large){
-            z-index: 3;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            p{
-                font-weight: 400;
-                padding: 65px;
-                border-radius:30% 70% 70% 30% / 30% 30% 70% 70% ;
-                background-color: teal;
-
-            }
-       
-        }
     }
 
 }

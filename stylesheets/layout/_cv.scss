@@ -2,13 +2,61 @@
 // This file contains all styling for the cv used within the portfolio          //
 // -----------------------------------------------------------------------------//
 
-// -----------------------------------------------------------------------------//
-// This file contains all styling for the cv used within the portfolio          //
-// -----------------------------------------------------------------------------//
 
 // design inspired by https://codepen.io/mavrK/pen/PzGvdJ
 
+
+
+// base layout
+.about-cv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    [class$="hide"] {
+        display: none;
+    }
+
+    @include media-quires(large) {
+        @include margin-padding(all, 120px auto 0px auto, all, 40px 30px 0px 40px);
+        border: 1px solid grey;
+        display: grid;
+        gap: 0px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 200px 1fr 1fr 1fr;
+        @include size(1000px, 1300px, mx, mx);
+        box-shadow: 11px 11px 22px #e8e8e8,
+            -11px -11px 22px #ffffff;
+
+        header {
+            z-index: 3;
+            grid-column: 2/-1;
+            grid-row: 1/2;
+        }
+
+        .about-hide {
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            p {
+                font-weight: 400;
+                padding: 65px;
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                background-color: teal;
+
+            }
+        }
+    }
+}
+
 .about--section {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+
     details {
         @include margin-padding(bottom, 20px);
 
@@ -28,68 +76,10 @@
 
         }
     }
-}
 
 
-.cv-background {
-    display: none;
-}
 
-.about-cv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-}
-
-.about--section {
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 20px;
-}
-
-// // desktop media queries
-@include media-quires(large) {
-
-    .about-cv {
-        @include margin-padding(all, 120px auto 0px auto, all, 40px 30px 0px 40px);
-        border: 1px solid grey;
-        display: grid;
-        gap: 0px;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 200px 1fr 1fr 1fr;
-        @include size(1000px, 1300px, mx, mx);
-        box-shadow: 11px 11px 22px #e8e8e8,
-            -11px -11px 22px #ffffff;
-
-        header {
-            z-index: 3;
-            grid-column: 2/-1;
-            grid-row: 1/2;
-        }
-        .about-hide {
-            display: none;
-    
-            @include media-quires(large) {
-                z-index: 3;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-    
-                p {
-                    font-weight: 400;
-                    padding: 65px;
-                    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-                    background-color: teal;
-    
-                }
-    
-            }
-        }
-    }
-
-
-    .about--section {
+    @include media-quires(large) {
         border: none;
 
         h2 {
@@ -138,9 +128,21 @@
             @include flex-layout($direction:column);
             @include margin-padding(bottom, 10px);
         }
-    }
 
-    .cv-background {
+    }
+}
+
+
+
+
+
+
+
+// header backdrop
+.cv-background {
+    display: none;
+
+    @include media-quires(large) {
         display: block;
         position: absolute;
         background-color: rgba(0, 128, 128, 0.434);

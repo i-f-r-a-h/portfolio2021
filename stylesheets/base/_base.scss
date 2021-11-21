@@ -19,7 +19,10 @@ main {
     min-height: calc(100vh - 89px);
 }
 
+a{
+    i{
+        text-decoration: none;
+    }
+}
 
-.fa:hover {
-    text-decoration: none;
-  }
+

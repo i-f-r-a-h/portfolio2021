@@ -2,7 +2,7 @@
 // This file contains all styling for the about page             //
 // -----------------------------------------------------------------------------//
 
-.about{
+.about {
     @extend %main-wrapper;
 }
 
@@ -11,6 +11,7 @@
     flex-direction: column;
     max-width: 900px;
     margin-top: 2rem;
+    margin-left: auto;
 
     p {
         margin-bottom: 5px;
@@ -19,6 +20,7 @@
         @include media-quires(medium) {
             line-height: 1.4rem;
         }
+
         @include media-quires(large) {
             line-height: 2rem;
         }
@@ -33,6 +35,7 @@
             @include media-quires(medium) {
                 line-height: 2.2rem;
             }
+
             @include media-quires(large) {
                 font-size: 20px;
             }
@@ -40,3 +43,103 @@
     }
 }
 
+.about-title {
+    padding-top: 60px;
+    text-align: center;
+
+    @include media-quires(medium) {
+        padding-top: 100px;
+        text-align: left;
+        border-bottom: 2px solid black;
+    }
+
+    @include media-quires(large) {
+        width: 23rem;
+        text-align: left;
+        border-bottom: none;
+        line-height: $heading-line-height;
+        padding-top: 0;
+    }
+}
+
+
+
+// lists
+.list-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.about-skills {
+
+    ul {
+        margin-bottom: 30px;
+        @include media-quires(large) {
+        &:last-of-type{
+            margin-left: 2vw;
+        }
+        }
+
+    }
+
+    li {
+        font-size: 18px;
+        padding: 2px 0;
+
+        a {
+            text-decoration: underline;
+            text-decoration-color: lighten(black, 60);
+            color: $accent-colour;
+
+            &:hover {
+                text-decoration-color: $accent-colour;
+                color: $black;
+                transition: ease-in-out 0.2s;
+            }
+        }
+    }
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: baseline;
+    @include media-quires(large) {
+        flex-flow: row wrap;
+        padding-top: 100px;
+        gap: 100px;
+    }
+
+    div {
+        @include media-quires(large) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+}
+
+.about-list {
+    li {
+        font-size: 18px;
+
+        a {
+            text-decoration-color: lighten(black, 60);
+            color: $black;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration-color: $accent-colour;
+                color: $accent-colour;
+                transition: ease-in-out 0.2s;
+            }
+        }
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+    @include media-quires(large) {
+        flex-flow: row wrap;
+        padding-top: 100px;
+        gap: 100px;
+    }
+}
