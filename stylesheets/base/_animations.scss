@@ -1,7 +1,6 @@
 // -----------------------------------------------------------------------------//
 // This file contains all the animations used within the portfolio               //
 // -----------------------------------------------------------------------------//
-
 @keyframes learn-more {
     0%   {top: 0px; }
     0%   {top: -5px; }
@@ -43,4 +42,22 @@
       }
     }
   }
+ 
+
+
+
+  @keyframes marquee {
+    0% {
+        transform: translate(5%, 0);
+    }    
+    50% {
+        transform: translate(-100%, 0);
+    }
+    50.001% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(0%, 0);
+    }
+}
  
