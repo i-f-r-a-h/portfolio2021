@@ -62,3 +62,14 @@
         gap: 25rem;
     }
 }
+
+
+
+
+.footer-contact{
+    @media (min-width:1200px) and (min-height:1500px){
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+}

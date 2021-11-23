@@ -1,82 +1,83 @@
-// -----------------------------------------------------------------------------//
-// This file contains all styling for the cv              //
-// -----------------------------------------------------------------------------//
+// -----------------------------------------------------------------------------------------------------------------------------------------//
+// This file contains all styling for the cv . Design inspired by https://dribbble.com/shots/14121188/attachments/5744076?mode=media        //
+// -----------------------------------------------------------------------------------------------------------------------------------------//
 
 
-.contact{
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: baseline;
+    overflow: hidden;
     @include margin-padding(all, auto 7%, all, 50px 0);
+
     @include media-quires('medium') {
         @include margin-padding(all, auto 10%);
     }
+
     @include media-quires('xtra-large') {
         max-width: 1900px;
         margin: 100px auto;
     }
+    @media (min-width:1200px) and (min-height:1500px){
+      min-height:max-content;
+    }
 }
 
 .subheading {
-    margin-top: 40px;
+    font-size: clamp(1rem, 5vw, 3rem); 
     font-weight: 500;
+    min-width: 100px;
+    max-width: 80%;
 }
+
+
 
 // form
 form {
-    @include margin-padding(top,40px);
+    // @include margin-padding(top,40px);
     @include flex-layout($direction:column);
-    @include size(600px, $maxWidth:mx);
-    label {
-        @include margin-padding(all, 20px 0px 10px 0px);
-        &:nth-child(n+2) {
-            @include margin-padding(top, 30px);
-        }
-    }
+    max-width: 200px;
 
-    [type="submit"] {
-        border: none;
-        outline: none;
-        background-color: white;
-        @include margin-padding(top, 20px, all, 10px);
-        @include size(200px, $maxWidth:mx);
-        border: 2px solid black;
+    label {
+        @include margin-padding(all, 20px 0px 0px 0px);
     }
 
     input {
         @extend %form-styling;
-        height: 40px;
-        @include media-quires(large){
-            height: 80px;
-        }
     }
 
     textarea {
         @extend %form-styling;
-        height: 100px;
-        @include media-quires(large){
-            height: 200px;
-        }
     }
 
-    @include media-quires(medium){
-        @include size(80%, $maxWidth:mx);
-       
-    }
-    @include media-quires('xtra-large'){
-        margin-top: 100px;
-        @include size(70%, $maxWidth:mx);
-
+    [type="submit"] {
+        background-color: rgb(0, 0, 0);
+        color: $white;
+        @include margin-padding(top, 20px, all, 10px);
+        @include size(150px, $maxWidth:mx);
+        border-radius: 13px;
     }
 }
 
+// contacts section
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    gap: 3rem;
+    padding-top: 3rem;
 
-// social media banner
-// .social__list {
-//     @include flex-layout($direction:row, $wrap:wrap, $just:center);
-//     @include margin-padding(all, 150px 0px,all, 25px 0px);
-//     gap: 20px;
-//     border-top: 2px solid black;
-//     border-bottom: 2px solid black;
 
-//     @include media-quires(small) {
-//         justify-content: space-around;
-//     }
-// }
+    h3 {
+        font-weight: 400;
+        text-decoration: underline;
+    }
+
+    li {
+        line-height: 2rem;
+    }
+
+    @include media-quires(medium) {
+        gap: 0rem;
+        padding-top: 10rem;
+    }
+}

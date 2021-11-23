@@ -19,7 +19,7 @@
     }
 
     @include media-quires(large) {
-        @include margin-padding(all, 120px auto 0px auto, all, 40px 30px 0px 40px);
+        @include margin-padding(all, 80px auto 0px auto, all, 40px 30px 0px 40px);
         border: 1px solid grey;
         display: grid;
         gap: 0px;
@@ -48,6 +48,9 @@
                 background-color: teal;
 
             }
+        }
+        .cv-hide{
+            display: block;
         }
     }
 }

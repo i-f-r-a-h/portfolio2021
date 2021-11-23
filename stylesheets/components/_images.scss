@@ -53,3 +53,12 @@
 
 
 
+.contact-lightbulb{
+    width: 50vw;
+    max-width: 500px;
+    margin: 40px 0;
+    align-self: flex-end;
+    @include media-quires(medium){
+        align-self: flex-start;
+    }
+}

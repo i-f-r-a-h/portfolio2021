@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Hello!
+    <meta name="description"
+        content="Hello!
     I'm Ifrah. A front-end web developer, designer and student focusing on creating immersive and user-driven experiences on the web">
     <meta name="keywords" content="Portfolio, Web Developer, Ifrah, Front-end ">
     <meta name="author" content="Ifrah Abdi">
@@ -55,54 +56,57 @@
 
     </header>
 
-    <main>
+    <main class="contact">
         <!-- contact me section -->
-        <section class="contact">
-            <!-- section heading -->
-            <h2 class="marquee home-m-width">
-                <span>Contact</span>
-                <span>Contact</span>
-                <span>Contact</span>
-                <span>Contact</span>
-            </h2>
-            <h4 class="subheading">Don't hesitate to say hi.</h4>
-            <div>
 
-           <!-- form -->
+        <section class="contact-left">
+                <!-- section heading -->
+                <h2 class="marquee home-m-width">
+                    <span>Contact</span>
+                    <span>Contact</span>
+                    <span>Contact</span>
+                    <span>Contact</span>
+                </h2>
+
+                <h3 class="subheading">Don't hesitate to say hi and get in touch!</h3>
+                <img class="contact-lightbulb" src="images/08.png" alt="">
+        </section>
+        <section>
+            <!-- form -->
             <form action="index.html" method="post">
 
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name" placeholder="who are you?">
-        
+                <input type="text" id="name" name="user_name" placeholder="Type your name">
+
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="user_email" placeholder="Enter your email here">
+                <input type="email" id="email" name="user_email" placeholder="Type you email">
 
                 <label for="comment">Comment:</label>
-                <textarea id="comment" name="user_comment" placeholder="Enter your message here"></textarea>
+                <textarea id="comment" name="user_comment" placeholder="Type your message here"></textarea>
 
                 <button type="submit">Send Message</button>
             </form>
-    
-        </section>
-        <!-- social media list -->
-        <!-- <section class="social">
-            <nav>
-                <ul class="social__list">
-                    <li class="btn--linkedin"><a href="">Linkedin</a></li>
-                    <li class="btn--instagram"><a href="">Instagram</a></li>
-                    <li class="btn--spotify"><a href="">Spotify</a></li>
-                    <li class="btn--github"><a href="">Github</a></li>
-                    <li class="btn--codepen"><a href="">Codepen</a></li>
-                    <li class="btn--dribble"><a href="">Dribble</a></li>
-                    <li class="btn--email"><a href="">emailaddress@email.com</a></li>
-                    <li class="btn--location"><a href="">based in central London,UK</a></li>
+
+            <section class="contacts">
+                <ul>
+                    <h3>Socials</h3>
+                    <li><a target=”_blank” href="https://github.com/i-f-r-a-h">Github</a></li>
+                    <li><a target=”_blank” href="https://codepen.io/i-f-r-a-h">Codepen</a></li>
+                    <li><a target=”_blank” href="https://www.instagram.com/iiifra_h/">Instagram</a></li>
+                    <li><a target=”_blank” href="https://www.linkedin.com/in/ifrah-a-37498018a/">Linkedin</a></li>
                 </ul>
-            </nav>
-        </section> -->
+                <ul>
+                    <h3>Contacts</h3>
+                    <li><a target=”_blank” href="https://github.com/i-f-r-a-h">Github</a></li>
+                    <li><a target=”_blank” href="https://codepen.io/i-f-r-a-h">Codepen</a></li>
+                    <li><a target=”_blank” href="https://www.instagram.com/iiifra_h/">Instagram</a></li>
+                </ul>
+            </section>
+        </section>
     </main>
 
 
-    <footer class="site-footer">
+    <footer class="site-footer footer-contact">
         <section class="footer-main">
             <div>
                 <h2>navigation.</h2>
@@ -132,7 +136,7 @@
             </div>
             <div>
                 <h2>performance.</h2>
-                
+
             </div>
 
         </section>
