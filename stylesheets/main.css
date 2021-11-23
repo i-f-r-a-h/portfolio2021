@@ -1080,6 +1080,7 @@ a:hover {
 }
 
 form input, form textarea {
+  width: 100%;
   padding: 10px;
   border: none;
   outline: none;
@@ -1096,18 +1097,22 @@ form input:focus, form textarea:focus {
 
 form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
   font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
 }
 
 form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
   font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
 }
 
 form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
   font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
 }
 
 form input::placeholder, form textarea::placeholder {
   font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
 }
 
 .contact {
@@ -1115,24 +1120,30 @@ form input::placeholder, form textarea::placeholder {
   display: grid;
   -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   overflow: hidden;
+  padding-bottom: 50px;
   margin: auto 7%;
-  padding: 50px 0;
+}
+
+.contact section:last-child {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 @media (min-width: 600px) {
   .contact {
     margin: auto 10%;
+    gap: 100px;
   }
 }
 
 @media screen and (min-width: 2000px) {
   .contact {
     max-width: 1900px;
-    margin: 100px auto;
+    margin: 100px 12%;
   }
 }
 
@@ -1148,7 +1159,13 @@ form input::placeholder, form textarea::placeholder {
   font-size: clamp(1rem, 5vw, 3rem);
   font-weight: 500;
   min-width: 100px;
-  max-width: 80%;
+  max-width: 550px;
+}
+
+@media screen and (min-width: 980px) {
+  .subheading {
+    margin-top: 10%;
+  }
 }
 
 form {
@@ -1159,7 +1176,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 200px;
 }
 
 form label {
@@ -1176,12 +1192,15 @@ form [type="submit"] {
 }
 
 .contacts {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(17rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 3rem;
-  padding-top: 3rem;
+  padding-top: 7rem;
 }
 
 .contacts h3 {
@@ -1197,6 +1216,11 @@ form [type="submit"] {
   .contacts {
     gap: 0rem;
     padding-top: 10rem;
+    padding-bottom: 5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(17rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(17rem, 1fr));
   }
 }
 

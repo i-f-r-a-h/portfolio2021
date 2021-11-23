@@ -28,6 +28,7 @@
 }
 
 %form-styling {
+	width: 100%;
 	padding: 10px;
 	border: none;
 	outline: none;
@@ -41,5 +42,6 @@
 
 	&::placeholder{
 		font-family: $font-primary;
+		letter-spacing: 2px;
 	}
 }

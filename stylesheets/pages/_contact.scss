@@ -6,37 +6,49 @@
 .contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    align-items: baseline;
+    align-items: start;
     overflow: hidden;
-    @include margin-padding(all, auto 7%, all, 50px 0);
+    padding-bottom: 50px;
+
+    section {
+        &:last-child {
+            align-self: flex-end;
+        }
+    }
+
+    @include margin-padding(all, auto 7%);
 
     @include media-quires('medium') {
         @include margin-padding(all, auto 10%);
+        gap: 100px;
     }
 
     @include media-quires('xtra-large') {
         max-width: 1900px;
-        margin: 100px auto;
+        margin: 100px 12%;
     }
-    @media (min-width:1200px) and (min-height:1500px){
-      min-height:max-content;
+
+    @media (min-width:1200px) and (min-height:1500px) {
+        min-height: max-content;
     }
 }
 
 .subheading {
-    font-size: clamp(1rem, 5vw, 3rem); 
+    font-size: clamp(1rem, 5vw, 3rem);
     font-weight: 500;
     min-width: 100px;
-    max-width: 80%;
+    max-width:550px;
+    @include media-quires('large') {
+        margin-top: 10%;
+    }
 }
 
 
 
 // form
 form {
-    // @include margin-padding(top,40px);
+
     @include flex-layout($direction:column);
-    max-width: 200px;
 
     label {
         @include margin-padding(all, 20px 0px 0px 0px);
@@ -61,10 +73,10 @@ form {
 
 // contacts section
 .contacts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
-    padding-top: 3rem;
+    padding-top: 7rem;
 
 
     h3 {
@@ -79,5 +91,8 @@ form {
     @include media-quires(medium) {
         gap: 0rem;
         padding-top: 10rem;
+        padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(17rem, 1fr));
     }
 }
