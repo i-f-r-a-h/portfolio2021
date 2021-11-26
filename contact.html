@@ -10,13 +10,17 @@
     <meta name="keywords" content="Portfolio, Web Developer, Ifrah, Front-end ">
     <meta name="author" content="Ifrah Abdi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site title -->
+    <title>Ifrah's Portfolio | Contact me</title>
+    <!-- favicon -->
     <link rel="icon"
         href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/waving-hand_1f44b.png">
+    <!-- font awesome kit-->
     <script src="https://kit.fontawesome.com/d61adcebb6.js" crossorigin="anonymous"></script>
-
+    <!-- stylesheets -->
     <link rel="stylesheet" href="stylesheets/main.css">
 
-    <title>Ifrah's Portfolio | Contact me</title>
+
 </head>
 
 <body>
@@ -33,21 +37,22 @@
             <!-- site navigation -->
             <ul class="navbar__list">
                 <li class="navbar__list__item">
-                    <a href="index.html">Home.</a>
+                    <a href="index.html">home</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="index.html#portfolio">portfolio.</a>
+                    <a href="index.html#portfolio">portfolio</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="about.html">about.</a>
+                    <a href="about.html">about</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="blog.html">blog.</a>
+                    <a href="blog.html">blog</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="contact.html">contact.</a>
+                    <a href="contact.html">contact</a>
                 </li>
             </ul>
+            <!-- site copyright -->
             <ul class="navbar_copyright">
                 <li><a href="https://github.com/i-f-r-a-h">GitHub</a></li>
                 <li>21©</li>
@@ -57,23 +62,21 @@
     </header>
 
     <main class="contact">
-        <!-- contact me section -->
-
+        <!-- section heading -->
         <section class="contact-left">
-                <!-- section heading -->
-                <h2 class="marquee home-m-width">
-                    <span>Contact</span>
-                    <span>Contact</span>
-                    <span>Contact</span>
-                    <span>Contact</span>
-                </h2>
-
-                <h3 class="subheading">Don't hesitate to say hi and get in touch!</h3>
-                <img class="contact-lightbulb" src="images/08.png" alt="">
+            <h2 class="marquee home-m-width">
+                <span>Contact</span>
+                <span>Contact</span>
+                <span>Contact</span>
+                <span>Contact</span>
+            </h2>
+            <h3 class="subheading">Don't hesitate to say hi and get in touch!</h3>
+            <img class="contact-lightbulb" src="images/08.png" alt="illustration of a lightbulb in a coat watering a plant">
         </section>
+
         <section>
             <!-- form -->
-            <form action="index.html" method="post">
+            <form action="index.html" method="post" data-netlify="true">
 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" placeholder="Type your name">
@@ -84,9 +87,11 @@
                 <label for="comment">Comment:</label>
                 <textarea id="comment" name="user_comment" placeholder="Type your message here"></textarea>
 
+                <div data-netlify-recap="true"></div>
+
                 <button type="submit">Send Message</button>
             </form>
-
+            <!-- contact links  -->
             <section class="contacts">
                 <ul>
                     <h3>Socials</h3>
@@ -137,14 +142,13 @@
             <div>
                 <h2>performance.</h2>
 
-            </div>
-
+            </div> 
         </section>
         <!-- copyright and boring stuff -->
-
         <p>Site developed and designed by Ifrah Abdi - © 2021 Ifrah Abdi </p>
-
     </footer>
+
+    <!-- js stylesheet -->
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 

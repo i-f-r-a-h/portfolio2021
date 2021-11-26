@@ -84,6 +84,7 @@
 
 // skills section
 .about-skills {
+
     display: flex;
     flex-direction: column;
 
@@ -102,6 +103,7 @@
         }
     }
 
+
     li {
         font-size: 18px;
         padding: 2px 0;
@@ -116,7 +118,17 @@
                 color: $black;
                 transition: ease-in-out 0.2s;
             }
+
         }
+
+        @include media-quires(large) {
+            margin-top: 2rem;
+
+            &:first-of-type {
+                margin-top: 1rem;
+            }
+        }
+
     }
 
 
@@ -146,6 +158,16 @@
     li {
         font-size: 18px;
 
+        &::before {
+            content: " ";
+            height: 0.6rem;
+            width: 0.6rem;
+            border-radius: 50%;
+            background-color: grey;
+            margin: auto 0;
+            margin-right: 20px;
+        }
+
         a {
             text-decoration-color: lighten(black, 60);
             color: $black;
@@ -156,6 +178,10 @@
                 color: $accent-colour;
                 transition: ease-in-out 0.2s;
             }
+        }
+
+        @include media-quires(large) {
+            margin-top: 2rem;
         }
     }
 
@@ -194,6 +220,7 @@
     .divider {
         display: none;
     }
+
     figure {
         flex-shrink: 0;
         width: fit-content;

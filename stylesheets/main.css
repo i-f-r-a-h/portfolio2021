@@ -439,6 +439,7 @@ a:hover {
     height: 35rem;
     border-radius: 50%;
     border: 1px solid rgba(225, 225, 225, 0.762);
+    overflow: hidden;
   }
   [class^="img--"]:nth-of-type(3) {
     left: 5%;
@@ -543,7 +544,7 @@ a:hover {
 .navbar {
   width: 100vw;
   height: 100vh;
-  background-color: #e0fffd;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
   right: -100vw;
@@ -556,7 +557,6 @@ a:hover {
 
 @media (min-width: 600px) {
   .navbar {
-    background-color: rgba(252, 252, 252, 0.95);
     width: auto;
     height: auto;
     position: relative;
@@ -833,7 +833,7 @@ a:hover {
 }
 
 .header {
-  background-color: rgba(252, 252, 252, 0.95);
+  background-color: white;
   z-index: 9;
   border-bottom: 1px solid #F7F8FB;
   display: -webkit-box;
@@ -1048,7 +1048,7 @@ a:hover {
 
 @media screen and (min-width: 980px) {
   #home {
-    padding-top: 20em;
+    padding-top: 10em;
     padding-bottom: 40em;
   }
 }
@@ -1142,8 +1142,8 @@ form input::placeholder, form textarea::placeholder {
 
 @media screen and (min-width: 2000px) {
   .contact {
-    max-width: 1900px;
-    margin: 100px 12%;
+    max-width: 1800px;
+    margin: 100px auto;
   }
 }
 
@@ -1366,6 +1366,15 @@ form [type="submit"] {
 }
 
 @media screen and (min-width: 980px) {
+  .about-skills li {
+    margin-top: 2rem;
+  }
+  .about-skills li:first-of-type {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 980px) {
   .about-skills div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1406,6 +1415,16 @@ form [type="submit"] {
   font-size: 18px;
 }
 
+.about-list li::before {
+  content: " ";
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background-color: grey;
+  margin: auto 0;
+  margin-right: 20px;
+}
+
 .about-list li a {
   -webkit-text-decoration-color: #999999;
           text-decoration-color: #999999;
@@ -1419,6 +1438,12 @@ form [type="submit"] {
   color: #FFA351;
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
+}
+
+@media screen and (min-width: 980px) {
+  .about-list li {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 980px) {
@@ -1817,9 +1842,16 @@ form [type="submit"] {
   .blog {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(27rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .blog {
+    -ms-grid-columns: (minmax(20rem, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(20rem, 1fr));
   }
 }
 
@@ -1876,6 +1908,7 @@ form [type="submit"] {
 @media (min-width: 600px) {
   #home {
     margin: auto 10%;
+    overflow: visible;
   }
 }
 
@@ -1883,7 +1916,6 @@ form [type="submit"] {
   #home {
     margin: auto;
     max-width: 1800px;
-    overflow: visible;
   }
 }
 

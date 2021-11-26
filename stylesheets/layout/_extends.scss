@@ -3,14 +3,13 @@
 //===============================================================================
 %navbar {
     @include size(100vw,100vh);
-    background-color: #e0fffd;
+    background-color: #ffffff;
     @include position(fixed,0,-100vw);
     display: grid;
     transition: right 0.8s cubic-bezier(0.1, 0, 0.1, 0.2);
     z-index: 2;
 
     @include media-quires('medium') {
-        background-color:rgba(252, 252, 252, 0.95);
         @include size(auto,auto);
         @include position(relative, $right:auto);
         transition: none;

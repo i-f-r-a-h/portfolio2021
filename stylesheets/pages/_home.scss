@@ -11,11 +11,11 @@
 
     @include media-quires('medium') {
         @include margin-padding(all, auto 10%);
+        overflow: visible;
     }
     @include media-quires('xtra-large') {
        margin: auto;
        max-width: 1800px;
-       overflow: visible;
      }
 }
 

@@ -21,9 +21,12 @@
     gap: 50px;
     @include media-quires('regular') {
         display: grid;
-        grid-template-columns:repeat(auto-fill, minmax(27rem, 1fr));
+        grid-template-columns:repeat(auto-fill, minmax(20rem, 1fr));
         margin-top: 5rem;
  }
+ @include media-quires('xtra-large') {
+    grid-template-columns:repeat(4, minmax(20rem, 1fr));
+}
 }
 
 

@@ -24,8 +24,8 @@
     }
 
     @include media-quires('xtra-large') {
-        max-width: 1900px;
-        margin: 100px 12%;
+        max-width: 1800px;
+        margin: 100px auto;
     }
 
     @media (min-width:1200px) and (min-height:1500px) {

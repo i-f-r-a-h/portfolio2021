@@ -23,7 +23,9 @@
             @include outer-circle-position(80%, 50%,);
             &::after {
                 @include outer-circle(35rem);
+                overflow: hidden;
             }
+            
         }
 
         &:nth-of-type(3) {

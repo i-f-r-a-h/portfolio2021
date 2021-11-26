@@ -10,15 +10,21 @@
     <meta name="keywords" content="Portfolio, Web Developer, Ifrah, Front-end ">
     <meta name="author" content="Ifrah Abdi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site title -->
+    <title>Ifrah's Portfolio | About me</title>
+    <!-- favicon -->
     <link rel="icon"
         href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/waving-hand_1f44b.png">
+    <!-- font awesome kit-->
     <script src="https://kit.fontawesome.com/bf205f5846.js" crossorigin="anonymous"></script>
+    <!-- stylesheets -->
     <link rel="stylesheet" href="stylesheets/main.css">
-
-    <title>Ifrah's Portfolio | About me</title>
 </head>
 
+
 <body>
+
+
     <header class="header">
         <!-- logo -->
         <a class="navbar__logo" href="index.html">Ifrah.</a>
@@ -32,33 +38,32 @@
             <!-- site navigation -->
             <ul class="navbar__list">
                 <li class="navbar__list__item">
-                    <a href="index.html">Home.</a>
+                    <a href="index.html">home</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="index.html#portfolio">portfolio.</a>
+                    <a href="index.html#portfolio">portfolio</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="about.html">about.</a>
+                    <a href="about.html">about</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="blog.html">blog.</a>
+                    <a href="blog.html">blog</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="contact.html">contact.</a>
+                    <a href="contact.html">contact</a>
                 </li>
             </ul>
+            <!-- site copyright -->
             <ul class="navbar_copyright">
                 <li><a href="https://github.com/i-f-r-a-h">GitHub</a></li>
                 <li>21©</li>
             </ul>
         </nav>
-
     </header>
+
 
     <main class="about">
         <!-- section heading -->
-
-
         <h2 class="marquee about-m-width">
             <span>About Ifrah</span>
             <span>About Ifrah</span>
@@ -79,34 +84,34 @@
             <p>I’m able to swiftly learn new tools and technologies when relevant and enjoy the challenges that come
                 with itCurrently, when i am creating products i am fascinated by performance, accessability and
                 interactive animations..</p>
-
         </section>
+
         <!-- backgrund about me -->
         <section class="about-background">
             <h2 class="about-title brd-bottom">Background</h2>
             <div class="about-location">
                 <span class="divider"></span>
-              
-                    <figure>
-                        <img src="images/holland.jpg" alt="">
-                        <figcaption class="right">Holland <span>- rised and grew up (01)</span></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/holland.jpg" alt="">
-                        <figcaption class="right">Holland - rised and grew up (02)</figcaption>
-                    </figure>
-    
-                    <figure>
-                        <img src="images/holland.jpg" alt="">
-                        <figcaption class="right">Holland - rised and grew up (03)</figcaption>
-                    </figure>
+                <figure>
+                    <img src="images/holland.jpg" alt="">
+                    <figcaption class="right">Holland <span>- rised and grew up (01)</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="images/holland.jpg" alt="">
+                    <figcaption class="right">Holland - rised and grew up (02)</figcaption>
+                </figure>
 
+                <figure>
+                    <img src="images/holland.jpg" alt="">
+                    <figcaption class="right">Holland - rised and grew up (03)</figcaption>
+                </figure>
             </div>
         </section>
 
+        <!-- Skills and tools section -->
         <section class="about-skills">
             <h2 class="about-title">Skills & Tools</h2>
             <div>
+                <!-- skills column -->
                 <ul>
                     <p class="list-title">My current skill set:</p>
                     <li>
@@ -138,7 +143,7 @@
                         scripting language
                     </li>
                 </ul>
-
+                <!-- tools column -->
                 <ul>
                     <p class="list-title">Tools that i frequently use:</p>
                     <li><a target=”_blank” class="skills__link--active" href="https://www.notion.so/">Notion</a> - Todo
@@ -162,6 +167,7 @@
             </div>
         </section>
 
+        <!-- my interests section -->
         <section class="about-list">
             <h2 class="about-title">Current Interests</h2>
             <div>
@@ -237,10 +243,6 @@
             </div>
         </section>
 
-
-
-
-
         <!-- cv/resume which uses microformats -->
         <h2 class="about-title">Résumé</h2>
         <!-- start of resume -->
@@ -295,8 +297,20 @@
             <!-- experience -->
             <section class="about--section">
                 <!-- projects experience -->
-
                 <h2 class="p-title">Projects</h2>
+                <details class="p-experience h-event" open>
+                    <summary class="project-title">
+                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
+                        <time class="dt-duration">(2000 - 2000)</time>
+                    </summary>
+                    <div class="project-details p-summary">
+                        <ul>
+                            <li>Very important points about the projects</li>
+                            <li>Very important points about the projects</li>
+                            <li>Very important points about the projects</li>
+                        </ul>
+                    </div>
+                </details>
 
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
@@ -312,7 +326,6 @@
                     </div>
                 </details>
 
-
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
                         <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
@@ -326,25 +339,6 @@
                         </ul>
                     </div>
                 </details>
-
-
-                <details class="p-experience h-event" open>
-                    <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
-                    </summary>
-                    <div class="project-details p-summary">
-                        <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                        </ul>
-                    </div>
-                </details>
-
-
-
-
 
 
                 <!-- work experience -->
@@ -377,7 +371,6 @@
                     </div>
                 </details>
 
-
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
                         <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
@@ -391,13 +384,16 @@
                         </ul>
                     </div>
                 </details>
-
                 </div>
-
             </section>
         </section>
 
-        <!-- download -->
+        <!-- download cv button -->
+        <button class="download">
+            <p>Something a little more concrete?</p>
+            <a href="">Download my cv 109kb</a>
+        </button>
+        <!-- Cover letter button -->
         <button class="download">
             <p>Something a little more concrete?</p>
             <a href="">Download my cv 109kb</a>
@@ -440,11 +436,11 @@
 
         </section>
         <!-- copyright and boring stuff -->
-
         <p>Site developed and designed by Ifrah Abdi - © 2021 Ifrah Abdi </p>
-
     </footer>
 
+    
+    <!-- js stylesheet -->
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 

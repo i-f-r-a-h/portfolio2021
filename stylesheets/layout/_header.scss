@@ -30,7 +30,7 @@
 
  // site navigation
  .header {
-   background-color: transparentize($white, 0.05);
+   background-color: white;
    z-index: 9;
    border-bottom: 1px solid $grey;
    @include flex-layout($just:space-between);
@@ -80,7 +80,7 @@
    .hamburger-menu {
      @include flex-layout($direction:column, $just:space-around);
      @include position(fixed, 15px, 30px);
-     @include size(1.6rem,1.6rem);
+     @include size(1.6rem, 1.6rem);
      z-index: 2;
 
 
@@ -127,4 +127,3 @@
      display: none;
    }
  }
-
