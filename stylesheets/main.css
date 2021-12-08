@@ -1717,8 +1717,8 @@ form [type="submit"] {
   gap: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   margin-top: 5rem;
 }
 
@@ -1742,7 +1742,7 @@ form [type="submit"] {
       justify-content: space-around;
   border: 1px solid black;
   border-radius: 18px;
-  height: 450px;
+  height: 400px;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }

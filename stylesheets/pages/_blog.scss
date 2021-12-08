@@ -25,7 +25,7 @@
 .blog {
     gap: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     margin-top: 5rem;
   
     @include media-quires('xtra-large') {
@@ -40,7 +40,7 @@
     @include flex-layout($direction:column, $just:space-around);
     border: 1px solid black;
     border-radius: 18px;
-    height: 450px;
+    height: 400px;
     transition: ease-in-out 0.5s;
     &:hover {
         margin-top: -10px;
