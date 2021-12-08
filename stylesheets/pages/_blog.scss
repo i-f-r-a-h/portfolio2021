@@ -4,56 +4,61 @@
 
 
 .main-blog {
-    @include margin-padding(all,auto 7%, all, 50px 0px 100px 0px);
+    @include margin-padding(all, auto 7%, all, 50px 0px 100px 0px);
+ 
 
     @include media-quires('medium') {
-        @include margin-padding(all,auto 10%);
+        h3{
+            padding-top: 50px;
+        }
+        @include margin-padding(all, auto 10%);
     }
+
     @include media-quires('xtra-large') {
         max-width: 1900px;
         margin: 50px auto;
     }
 }
 
+
+
 .blog {
-    @include flex-layout($direction:row, $wrap:wrap);
-    @include margin-padding($p-direction:all,$p-px:50px 0);
     gap: 50px;
-    @include media-quires('regular') {
-        display: grid;
-        grid-template-columns:repeat(auto-fill, minmax(20rem, 1fr));
-        margin-top: 5rem;
- }
- @include media-quires('xtra-large') {
-    grid-template-columns:repeat(4, minmax(20rem, 1fr));
-}
-}
-
-
-
-[class^="grid"] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    margin-top: 5rem;
   
-    @include margin-padding($p-direction:all,$p-px:20px);
+    @include media-quires('xtra-large') {
+        grid-template-columns: repeat(4, minmax(20rem, 1fr));
+    }
+}
+
+
+// articles
+[class^="grid"] {
+    @include margin-padding($p-direction:all, $p-px:30px);
     @include flex-layout($direction:column, $just:space-around);
     border: 1px solid black;
-    border-radius: 12px;
-    height: 400px;
-
-
+    border-radius: 18px;
+    height: 450px;
+    transition: ease-in-out 0.5s;
     &:hover {
-        border-radius: 16px;
         background-color: $accent-colour;
+        margin-top: -10px;
         transition: ease-in-out 0.5s;
     }
 
     footer {
-        @include flex-layout($direction:row, $just:space-between){
-            @include margin-padding(top,20px);
+        @include flex-layout($direction:row) {
+            gap: 10px;
+            @include margin-padding(top, 20px);
         }
     }
 
-    img {
-        @include size(300px);
+
+    // view more
+    &:last-child{
+        align-items: center;
     }
 }
 
@@ -61,4 +66,6 @@
 //icon
 .fa-solid {
     text-decoration: none;
+    margin:auto 0;
+    font-size: 18px;
 }

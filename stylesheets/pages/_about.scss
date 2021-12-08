@@ -68,7 +68,8 @@
     @include media-quires(xtra-large) {
         line-height: 7.2rem;
         font-size: 7.2rem;
-        min-width: 40rem;
+        max-width: 30rem;
+        margin-right: 3em;
     }
 }
 
@@ -213,40 +214,53 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2em;
-    padding: 10em 0;
+    padding: 5em 0;
 
     article {
-        border-radius: 14px;
+        border-radius: 18px;
         width: 90%;
         height: 400px;
         margin: auto;
         text-align: center;
-        padding: 0 20px;
-        @include flex-layout($direction:column,$just:center,$aItem:center);
+        padding: 0 30px;
+        @include flex-layout($direction:column, $just:center, $aItem:center);
 
         // colours of buttons
-        &:first-child{
-            background-color: lighten(complement($accent-colour),20);
-        }
-        &:nth-child(2){
-            background-color: lighten($primary-colour,80);
-        }
-        &:last-child{
-            background-color: lighten($accent-colour,20);
+        &:first-child {
+            background-color: lighten(complement($accent-colour), 25);
         }
 
+        &:nth-child(2) {
+            background-color: lighten($primary-colour, 80);
+        }
+
+        &:last-child {
+            background-color: lighten($accent-colour, 20);
+        }
 
 
 
 
-        header{
+
+        header {
             padding-bottom: 10px;
         }
-        footer{
-            @include flex-layout{
+        p{
+            width: 80%;
+        }
+
+        footer {
+            @include flex-layout {
                 gap: 20px;
                 padding: 1em 0;
             }
         }
+
+    }
+
+
+
+    @include media-quires(large) {
+        padding-top: 10em;
     }
 }
