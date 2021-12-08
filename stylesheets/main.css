@@ -1748,7 +1748,6 @@ form [type="submit"] {
 }
 
 [class^="grid"]:hover {
-  background-color: #FFA351;
   margin-top: -10px;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
