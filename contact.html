@@ -64,19 +64,14 @@
     <main class="contact">
         <!-- section heading -->
         <section class="contact-left">
-            <h2 class="marquee home-m-width">
-                <span>Contact</span>
-                <span>Contact</span>
-                <span>Contact</span>
-                <span>Contact</span>
-            </h2>
+            <h2>Contact</h2>
             <h3 class="subheading">Don't hesitate to say hi and get in touch!</h3>
             <img class="contact-lightbulb" src="images/08.png" alt="illustration of a lightbulb in a coat watering a plant">
         </section>
 
         <section>
-            <!-- form -->
-            <form action="index.html" method="post" data-netlify="true">
+            <!-- form ( hosted with netlify)-->
+            <form method="post" data-netlify="true">
 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" placeholder="Type your name">
@@ -87,7 +82,7 @@
                 <label for="comment">Comment:</label>
                 <textarea id="comment" name="user_comment" placeholder="Type your message here"></textarea>
 
-                <div data-netlify-recap="true"></div>
+                <div data-netlify-recaptcha="true"></div>
 
                 <button type="submit">Send Message</button>
             </form>

@@ -46,18 +46,5 @@
 
 
 
-  @keyframes marquee {
-    0% {
-        transform: translate(5%, 0);
-    }    
-    50% {
-        transform: translate(-100%, 0);
-    }
-    50.001% {
-        transform: translate(100%, 0);
-    }
-    100% {
-        transform: translate(0%, 0);
-    }
-}
+ 
  

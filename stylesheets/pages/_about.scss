@@ -10,9 +10,8 @@
 .about-intro {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
+    max-width: 1000px;
     margin-top: 2rem;
-    margin-left: auto;
 
     p {
         margin-bottom: 5px;
@@ -205,88 +204,49 @@
 
 
 
-.about-background {
-    margin-top: 120px;
-}
 
-.about-location {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-    max-width: 1400px;
-    margin: auto;
 
-    .divider {
-        display: none;
-    }
 
-    figure {
-        flex-shrink: 0;
-        width: fit-content;
 
-        &:nth-child(3) {
-            align-self: flex-end;
-            margin: -70px 0 -100px 0;
+
+.about-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2em;
+    padding: 10em 0;
+
+    article {
+        border-radius: 14px;
+        width: 90%;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+        padding: 0 20px;
+        @include flex-layout($direction:column,$just:center,$aItem:center);
+
+        // colours of buttons
+        &:first-child{
+            background-color: lighten(complement($accent-colour),20);
+        }
+        &:nth-child(2){
+            background-color: lighten($primary-colour,80);
+        }
+        &:last-child{
+            background-color: lighten($accent-colour,20);
         }
 
-        figcaption {
-            width: 40%;
+
+
+
+
+        header{
+            padding-bottom: 10px;
         }
-
-        .right {
-            margin-left: auto;
-        }
-    }
-
-    img {
-        width: 50vw;
-    }
-
-
-    @include media-quires(medium) {
-
-        img {
-            width: 30vw;
-            max-width: 500px;
-        }
-
-        figure {
-            &:nth-child(3) {
-                align-self: center;
-                margin: -200px 0 -300px 0;
+        footer{
+            @include flex-layout{
+                gap: 20px;
+                padding: 1em 0;
             }
-
-            &:nth-child(2) {
-                align-self: flex-end;
-                margin: 30px 0 -100px 0;
-            }
-
-            figcaption {
-                width: 50%;
-            }
-
         }
-
-        .right {
-            margin-left: auto;
-        }
-
-        .divider {
-            display: block;
-            position: absolute;
-            width: 2px;
-            height: 800px;
-            background-color: black;
-            left: 50%;
-            z-index: -1;
-        }
-
-    }
-}
-
-@include media-quires(large) {
-    .brd-bottom {
-        border-bottom: 1px solid black;
     }
 }

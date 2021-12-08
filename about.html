@@ -64,12 +64,7 @@
 
     <main class="about">
         <!-- section heading -->
-        <h2 class="marquee about-m-width">
-            <span>About Ifrah</span>
-            <span>About Ifrah</span>
-            <span>About Ifrah</span>
-            <span>About Ifrah</span>
-        </h2>
+        <h2>About Ifrah</h2>
 
         <!-- Introduction section -->
         <section class="about-intro">
@@ -86,25 +81,42 @@
                 interactive animations..</p>
         </section>
 
-        <!-- backgrund about me -->
-        <section class="about-background">
-            <h2 class="about-title brd-bottom">Background</h2>
-            <div class="about-location">
-                <span class="divider"></span>
-                <figure>
-                    <img src="images/holland.jpg" alt="">
-                    <figcaption class="right">Holland <span>- rised and grew up (01)</span></figcaption>
-                </figure>
-                <figure>
-                    <img src="images/holland.jpg" alt="">
-                    <figcaption class="right">Holland - rised and grew up (02)</figcaption>
-                </figure>
+        <!-- links to cv, cover letter and pdp -->
+        <section class="about-links">
+            <!-- resume -->
+            <article>
+                <header>
+                    <i class="about-icon far fa-file"></i> 
+                    <h3>Resume/CV</h3>
+                </header>
+                <p>View a more concise state what a cv is </p>
+                <footer>
+                    <p>View</p>
+                    <p>Download</p>
+                </footer>
+            </article>
+            <!-- cover letter -->
+            <article>
+                <header>
+                    <i class="about-icon  far fa-envelope-open"></i> 
+                    <h3>Cover Letter</h3>
+                </header>
+                <footer>
+                    <a target=”_blank” href="assets/docs/letter.pdf">Cover Letter</a>
+                </footer>
+            </article>
+            <!-- professional development plan -->
+            <article>
+                <header>
+                    <i class="about-icon far fa-list-alt"></i>
+                    <h3>Professional Development Plan</h3>
+                </header>
 
-                <figure>
-                    <img src="images/holland.jpg" alt="">
-                    <figcaption class="right">Holland - rised and grew up (03)</figcaption>
-                </figure>
-            </div>
+                <footer>
+                    <a target=”_blank” href="assets/docs/pdp.pdf">PDP</a>
+                </footer>
+            </article>
+
         </section>
 
         <!-- Skills and tools section -->
@@ -282,17 +294,13 @@
             <!-- academics -->
             <section class="about--section h-event p-education">
                 <h2 class="p-title">Academics</h2>
+                <ul>
+                    <li>BSc (Hons) Web Development</li>
+                    <li>4 A Levels AAAB</li>
+                    <li>11 GSCE A*-B</li>
+                </ul>
 
-                <abbr class="p-name" title="Bachelor of Science in Web Development">B.S. in Web Development</abbr>
-                <time class="dt-duration">(2000 - 2000)</time>
-                <div class="h-card">
-                    <ul>
-                        <li class="p-location"><a class="u-url p-fn p-org" href="">Sae Institute</a></li>
-                        <li class="h-adr p-adr"><a class="u-url p-locality p-country-name" href="">Central London,
-                                UK</a></li>
-                        <li class="p-summary"></li>
-                    </ul>
-                </div>
+
             </section>
             <!-- experience -->
             <section class="about--section">
@@ -300,104 +308,78 @@
                 <h2 class="p-title">Projects</h2>
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
+                        <h3 class="p-fn p-org h-card">Personal Portfolio</h3>
+                        <time class="dt-duration">(December 2021)</time>
                     </summary>
+
                     <div class="project-details p-summary">
+                        <p class="p-fn p-org h-card">Live Link</p>
+                        <p class="p-fn p-org h-card">Utilized: HTML5,Sass, Figma, Netlify</p>
                         <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
+                            <li>Designed and developed a website to showcase all the projects that I create.</li>
+                            <li>Fixed bugs and implemented modern practices to enhance user experience (ux).</li>
+                            <li>Uploaded on GitHub which allowed me to become more proficient in using git.</li>
                         </ul>
                     </div>
                 </details>
 
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
+                        <h3 class="p-fn p-org h-card">Responsive Book Shelf</h3>
+                        <time class="dt-duration">(November 2021)</time>
                     </summary>
                     <div class="project-details p-summary">
+                        <p class="p-fn p-org h-card">Live Link</p>
+                        <p class="p-fn p-org h-card">Utilized: HTML5, Sass, Netlify</p>
                         <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
+                            <li>Responsive book shelf using modern sass practices</li>
+                            <li>Hosted on netlify and github</li>
+                            <li>completed as part of a class project</li>
                         </ul>
                     </div>
                 </details>
 
-                <details class="p-experience h-event" open>
-                    <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
-                    </summary>
-                    <div class="project-details p-summary">
-                        <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                        </ul>
-                    </div>
-                </details>
+
 
 
                 <!-- work experience -->
                 <h2 class="p-title h-card">Work Experience</h2>
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
+                        <h3 class="p-fn p-org h-card">Team Leader (Joe and the Juice)</h3>
+                        <time class="dt-duration">(2018 - 2021)</time>
                     </summary>
                     <div class="project-details p-summary">
                         <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
+                            <li>Collaborated with a small team to provide excellent customer service to customers.
+                                Conversating with regulars and creating
+                                rapport with new customers.</li>
+                            <li>Use flexibility and analytical skills whilst preparing and stocking products in the most
+                                efficient way to prevent long queues and low
+                                customer satisfaction.</li>
+                            <li>Within 2 months, I helped to increase customer satisfaction from 94% to 98%.</li>
                         </ul>
                     </div>
                 </details>
 
                 <details class="p-experience h-event" open>
                     <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
+                        <h3 class="p-fn p-org h-card">Leisure Center</h3>
+                        <time class="dt-duration">(2016 - 2018)</time>
                     </summary>
                     <div class="project-details p-summary">
                         <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                        </ul>
-                    </div>
-                </details>
-
-                <details class="p-experience h-event" open>
-                    <summary class="project-title">
-                        <h3 class="p-fn p-org h-card">Very Important Job Title</h3>
-                        <time class="dt-duration">(2000 - 2000)</time>
-                    </summary>
-                    <div class="project-details p-summary">
-                        <ul>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
-                            <li>Very important points about the projects</li>
+                            <li>Led an 8-member team to serve 100+ customers a day.</li>
+                            <li>Resolving customer and team issues using communication and adaptability skills in
+                                fast-paced environment.</li>
+                            <li>Cash handling with accuracy and maintaining department cleanliness by following
+                                regulations and laws set.</li>
                         </ul>
                     </div>
                 </details>
                 </div>
             </section>
         </section>
-
-        <!-- download cv button -->
-        <button class="download">
-            <p>Something a little more concrete?</p>
-            <a href="">Download my cv 109kb</a>
-        </button>
-        <!-- Cover letter button -->
-        <button class="download">
-            <p>Something a little more concrete?</p>
-            <a href="">Download my cv 109kb</a>
-        </button>
 
     </main>
 
@@ -439,7 +421,7 @@
         <p>Site developed and designed by Ifrah Abdi - © 2021 Ifrah Abdi </p>
     </footer>
 
-    
+
     <!-- js stylesheet -->
     <script type="text/javascript" src="js/index.js"></script>
 </body>

@@ -36,6 +36,7 @@
     @include margin-padding($p-direction:all,$p-px:20px);
     @include flex-layout($direction:column, $just:space-around);
     border: 1px solid black;
+    border-radius: 12px;
     height: 400px;
 
 

@@ -1,9 +1,16 @@
-//===============================================================================
-// This file contains all the mixins used in this portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
+
+    1.BEM selectors
+    2.social media color selector
+    3.hero icons
+    4.flex-layout
+    5.media quires 
+    6.hero outer sections
+===============================================================================*/
 
 
-// BEM selectors
+// 1.BEM selectors
 @mixin element($element) {
   &__#{$element} {
     @content;
@@ -23,7 +30,7 @@
 }
 
 
-//social media color selector
+// 2.social media color selector
 @mixin social-media($map, $p-el:null) {
 
   @each $social,
@@ -37,7 +44,7 @@
   }
 }
 
-// icons in hero
+// 3.hero icons
 @mixin hero-icon($map, $p-el:null) {
 
   @each $social,
@@ -54,7 +61,9 @@
 }
 
 
-//flex-layout
+
+
+// 4.flex-layout
 @mixin flex-layout($direction:null, $just:null, $aSelf:null, $aContent:null, $aItem:null, $wrap:null) {
   display: flex;
   flex-direction: $direction;
@@ -66,7 +75,7 @@
   @content;
 }
 
-//media quires 
+// 5.media quires 
 @mixin media-quires($break) {
   @if $break=="xsmall" {
     @media (max-width: mq('xsmall')) {
@@ -109,7 +118,6 @@
 }
 
 // Image replacement
-
 @mixin img-replace($img, $w, $h, $disp: block) {
   background-image: url('#{$path--rel}/#{$img}');
   background-repeat: no-repeat;
@@ -169,7 +177,7 @@
   left: $left;
 }
 
-// size which is width and height
+// 6.hero outer sections
 @mixin outer-circle($size) {
   position: absolute;
   content: " ";
@@ -185,5 +193,9 @@
   top: $top;
   animation-delay: $delay;
 }
+
+
+
+
 
 

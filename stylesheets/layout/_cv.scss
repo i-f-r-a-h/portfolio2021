@@ -81,9 +81,9 @@
     }
 
 
-
     @include media-quires(large) {
         border: none;
+        border-radius:0;
 
         h2 {
             font-size: 1.5rem;
