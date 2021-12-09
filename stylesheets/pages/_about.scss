@@ -182,7 +182,8 @@
         a {
             text-decoration: underline;
             text-decoration-color: lighten(black, 60);
-            color: $accent-colour;
+            font-weight: 600;
+            color: $secondary-colour;
 
             &:hover {
                 text-decoration-color: $accent-colour;

@@ -51,6 +51,11 @@
         color: $secondary-colour;
         margin-left: 10px;
         transition: ease-in-out 0.5s;
+        @include media-quires('medium') {
+            margin-left: 25px;
+            margin-right: 5px;
+        }
+
        }
     
     @include media-quires('medium') {

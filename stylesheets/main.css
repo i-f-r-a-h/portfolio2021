@@ -651,6 +651,13 @@ body.dark-theme .home-secondary {
 }
 
 @media (min-width: 600px) {
+  .navbar__list a:hover {
+    margin-left: 25px;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 600px) {
   .navbar__list a {
     font-size: calc(1em / 1.2);
     margin-left: 1.05vw;
@@ -787,6 +794,10 @@ body.dark-theme .home-secondary {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.about--section h3 {
+  color: #008080;
 }
 
 @media screen and (min-width: 980px) {
@@ -1513,7 +1524,8 @@ form label {
   text-decoration: underline;
   -webkit-text-decoration-color: #999999;
           text-decoration-color: #999999;
-  color: #FFA351;
+  font-weight: 600;
+  color: #008080;
 }
 
 .about-skills li a:hover {
@@ -1853,6 +1865,12 @@ form label {
 
 .links a i {
   margin-right: 5px;
+}
+
+@media (min-width: 600px) {
+  .links a {
+    font-size: 1vmin;
+  }
 }
 
 .portfolio__index-hide {

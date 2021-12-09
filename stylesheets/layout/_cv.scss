@@ -85,6 +85,10 @@
         }
     }
 
+    h3{
+        color: $secondary-colour;
+    }
+
 
     @include media-quires(large) {
         border: none;
