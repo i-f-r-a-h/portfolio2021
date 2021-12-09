@@ -34,7 +34,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img width="1440" alt="Screenshot 2021-12-09 at 17 09 55" src="https://user-images.githubusercontent.com/90143819/145479147-5920abad-ff56-4919-baad-15290cd53f06.png">
+![Screenshot 2021-12-09 at 21 58 28](https://user-images.githubusercontent.com/90143819/145482300-7b5fc00e-1f72-4c9f-8210-3a55fe493b54.png)
 
 This is my portfolio that i build to showcase projects that i make as will as a blog. It is being updated and improved over time. 
 
