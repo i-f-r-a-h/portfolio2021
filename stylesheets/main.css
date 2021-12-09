@@ -535,6 +535,10 @@ body.dark-theme .navbar {
   background-color: #0a0d14;
 }
 
+body.dark-theme [class^="line"] {
+  background-color: #fcfcfc !important;
+}
+
 body.dark-theme h1,
 body.dark-theme h2,
 body.dark-theme h3,

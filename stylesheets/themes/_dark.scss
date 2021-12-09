@@ -22,6 +22,10 @@ body.dark-theme {
     background-color: $black;
   }
 
+  [class^="line"] {
+    background-color: $white !important;
+  }
+
   //3.typography
   h1,
   h2,
@@ -64,6 +68,8 @@ body.dark-theme {
   .home-secondary {
     border-color: $white;
   }
+
+
 
 
 
