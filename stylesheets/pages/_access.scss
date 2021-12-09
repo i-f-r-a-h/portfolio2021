@@ -1,0 +1,36 @@
+/*===============================================================================
+    Table of contents
+
+    1.base styling
+    2.table styling
+    
+===============================================================================*/
+
+
+
+//1.base styling
+.access{
+    @extend %main-wrapper;
+
+    p{
+        padding: 40px 0;
+    }
+}
+
+
+//2.table styling
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    th{
+        background-color: $accent-colour;
+    }
+
+    td,th{
+        border: 1px solid $black;
+        padding: 8px;
+    }
+}
+

@@ -1,0 +1,70 @@
+/*===============================================================================
+    Table of contents
+
+    1.body
+    2.main nav
+    3.typography
+    4.links
+    5.home page
+    6.portfolio section
+    
+===============================================================================*/
+
+//1.body
+body.dark-theme {
+  color: $white;
+  background: $black;
+
+
+  //2.main nav
+  .header,
+  .navbar {
+    background-color: $black;
+  }
+
+  //3.typography
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  a {
+    color: $white;
+  }
+
+  //4.links
+  a {
+    &:hover {
+      color: $accent-colour;
+    }
+  }
+
+
+
+  //5.home page
+  .section-home {
+    a {
+      color: $accent-colour;
+    }
+
+    .home-secondary {
+      border-color: $white;
+    }
+  }
+
+  //6.portfolio section
+  .portfolio {
+    background-color: lighten($black, 5);
+  }
+
+  .portfolio-content,
+  .portfolio-content-index,
+  a,
+  .home-secondary {
+    border-color: $white;
+  }
+
+
+
+}
