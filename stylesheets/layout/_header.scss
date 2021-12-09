@@ -35,14 +35,12 @@
    border-bottom: 1px solid $grey;
    @include flex-layout($just:space-between);
    @include margin-padding($p-direction:all, $p-px:0.5rem 1.3rem);
-
    @include position(sticky, $top:0);
 
 
 
    @include media-quires('large') {
      @include margin-padding(all, auto, all, 10px 40px);
-     // top:0;
      @include size(2000px, $maxWidth:mx);
    }
 
@@ -53,23 +51,15 @@
 
 
  .navbar {
-
    @extend %navbar;
 
    @include element(list) {
      @extend %navbar-item-list;
-
-
      @include element(item) {
        @include margin-padding($p-direction:all, $p-px:20px);
-       border-bottom: 1px grey solid;
-
        @include media-quires('medium') {
          @include margin-padding(all, auto, all, 10px);
-         border-bottom: 0;
        }
-
-
      }
 
      a {
@@ -77,53 +67,29 @@
      }
    }
 
+  // hamburger menu
    .hamburger-menu {
      @include flex-layout($direction:column, $just:space-around);
      @include position(fixed, 15px, 30px);
      @include size(1.6rem, 1.6rem);
      z-index: 2;
 
-
-     @include media-quires('medium') {
-       display: none;
-     }
-
      [class^="line"] {
        height: 3px;
        background-color: rgb(0, 0, 0);
        transition: all 0.9s;
      }
+
+     @include media-quires('medium') {
+      display: none;
+    }
    }
  }
 
  .change {
    @include position(grid, $right:0);
-
-   .line {
-     &-1 {
-       transform: rotateZ(-405deg) translate(-6px, 6px);
-     }
-
-     &-2 {
-       opacity: 0;
-     }
-
-     &-3 {
-       transform: rotateZ(405deg) translate(-6px, -6px);
-     }
-   }
  }
 
 
 
 
- .navbar_copyright {
-   @include flex-layout($direction:row, $just:space-between);
-   @include margin-padding(all, 0px 0px 90px 10%);
-   @include size(80%);
-   color: grey;
-
-   @include media-quires('small') {
-     display: none;
-   }
- }
