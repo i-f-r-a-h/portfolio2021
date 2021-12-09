@@ -25,7 +25,6 @@
     <li>
       <a href="#Features-that-i-am-working-on">Features that i am working on</a>
     </li>
-    <li><a href="#valid">Site Validation</a></li>
   </ol>
 </details>
 
