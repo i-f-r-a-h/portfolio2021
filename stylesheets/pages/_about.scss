@@ -4,6 +4,7 @@
 
 .about {
     @extend %main-wrapper;
+    margin-bottom: 100px;
 }
 
 // intro text
@@ -209,10 +210,10 @@
 
 
 
-
+// 3 button layout of links
 .about-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
     gap: 2em;
     padding: 5em 0;
 

@@ -8,7 +8,7 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: start;
     overflow: hidden;
-    padding-bottom: 50px;
+    padding: 50px 0;
 
     section {
         &:last-child {
@@ -21,8 +21,8 @@
     @include media-quires('medium') {
         @include margin-padding(all, auto 10%);
         gap: 100px;
+        align-items: end;
     }
-
     @include media-quires('xtra-large') {
         max-width: 1800px;
         margin: 100px auto;
@@ -51,7 +51,7 @@ form {
     @include flex-layout($direction:column);
 
     label {
-        @include margin-padding(all, 20px 0px 0px 0px);
+        @include margin-padding(all, 50px 0px 0px 0px);
     }
 
     input {
@@ -61,21 +61,13 @@ form {
     textarea {
         @extend %form-styling;
     }
-
-    [type="submit"] {
-        background-color: rgb(0, 0, 0);
-        color: $white;
-        @include margin-padding(top, 20px, all, 10px);
-        @include size(150px, $maxWidth:mx);
-        border-radius: 13px;
-    }
 }
+
 
 // contacts section
 .contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(11rem, 1fr));
     padding-top: 7rem;
 
 
@@ -89,10 +81,7 @@ form {
     }
 
     @include media-quires(medium) {
-        gap: 0rem;
-        padding-top: 10rem;
+        padding-top: 5rem;
         padding-bottom: 5rem;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(17rem, 1fr));
     }
 }

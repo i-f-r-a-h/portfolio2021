@@ -32,11 +32,13 @@
 	padding: 10px;
 	border: none;
 	outline: none;
-	height: 100px;
-	border-bottom: 2px solid black;
+	height: 80px;
+	border: 1px solid black; 
+	border-radius: 12px;
+	margin-top: 10px;
 	&:focus {
 		background: lighten($accent-colour, 40);
-		border-bottom: 3px solid $accent-colour;
+		border: 3px solid $accent-colour;
 		transition: 0.2s ease-out;
 	}
 

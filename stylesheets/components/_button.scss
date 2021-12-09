@@ -15,9 +15,26 @@
 
 // About Icons
 .about-icon {
-   
     @include flex-layout($direction:column,$just:center,$aItem:center){
         font-size: 2rem;
         padding-bottom: 20px;
     }
+}
+
+
+//submit button
+[type="submit"] {
+    @include margin-padding(top, 30px, all, 15px);
+    @include size(150px, $maxWidth:mx);
+    border-radius: 12px;
+    border: none;
+    background-color: $accent-colour;
+    font-weight: 600;
+    transition: ease-in-out .7s;
+
+    &:hover{
+        background-color: $tertiary-colour;
+        transition: ease-in-out .7s;
+    }
+
 }
