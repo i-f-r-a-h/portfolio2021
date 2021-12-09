@@ -1,8 +1,6 @@
 /* Font stack */
 /* Text used this as reference - https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd */
-/* spacing values */
 /* Colours */
-/* Media Quires*/
 /*===============================================================================
     Table of contents
 
@@ -294,6 +292,38 @@ a:hover {
           align-items: center;
   font-size: 2rem;
   padding-bottom: 20px;
+}
+
+.view-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  width: 300px;
+  margin: auto 90px;
+  height: 100%;
+}
+
+.view-more i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.view-more:hover {
+  color: teal;
+}
+
+@media (min-width: 600px) {
+  .view-more {
+    margin: auto 0px;
+  }
 }
 
 [type="submit"] {
@@ -597,7 +627,7 @@ a:hover {
     -ms-grid-rows: 200px 1fr 1fr 1fr;
         grid-template-rows: 200px 1fr 1fr 1fr;
     max-width: 1000px;
-    max-height: 1300px;
+    max-height: 1400px;
     -webkit-box-shadow: 11px 11px 22px #e8e8e8, -11px -11px 22px #ffffff;
             box-shadow: 11px 11px 22px #e8e8e8, -11px -11px 22px #ffffff;
   }
@@ -912,6 +942,7 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    font-size: calc(1em * 1.2 * 1.2);
   }
 }
 
@@ -1081,6 +1112,7 @@ form {
 
 form label {
   margin: 50px 0px 0px 0px;
+  font-size: 20px;
 }
 
 .contacts {
@@ -1097,7 +1129,8 @@ form label {
 }
 
 .contacts li {
-  line-height: 2rem;
+  font-size: 20px;
+  line-height: 2.5rem;
 }
 
 @media (min-width: 600px) {
@@ -1357,6 +1390,10 @@ form label {
       grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
   gap: 2em;
   padding: 5em 0;
+}
+
+.about-links a {
+  font-size: 18px;
 }
 
 .about-links article {
@@ -1665,6 +1702,11 @@ form label {
   margin-right: 5px;
 }
 
+.portfolio__index-hide {
+  color: #008080;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 980px) {
   .portfolio__index-hide {
     display: none;
@@ -1746,6 +1788,16 @@ form label {
   transition: ease-in-out 0.5s;
 }
 
+[class^="grid"] h5 {
+  font-size: 18px;
+}
+
+@media (min-width: 600px) {
+  [class^="grid"] h4 {
+    font-size: 28px;
+  }
+}
+
 [class^="grid"] footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1762,6 +1814,10 @@ form label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+[class^="grid"]:last-child p {
+  font-size: 30px;
 }
 
 .fa-solid {

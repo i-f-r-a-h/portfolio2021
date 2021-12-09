@@ -34,47 +34,19 @@ $text-xxl: calc(#{$text-base-size} * #{$text-scale-ratio} * #{$text-scale-ratio}
 $heading-line-height: 1.2;
 $body-line-height: 1.4;
 
-//spacing
-$baseline: 24px;
-  
-/* spacing values */
-$space-sm:   calc($baseline/2);
-$space-md:   $baseline;
-$space-lg:   calc($baseline*2);
-$space-xl:   calc($baseline*3);
 
 /* Colours */
-// Explicit Colours used
-// // Base styling
-// /* SASS */
-// // $swatch_1: #fcfcfc;
-// // $swatch_2: #0b0e16;
-// // $swatch_3: #29304a;
-// // $swatch_4: #3e5359;
-// // $swatch_5: #b7b5ae;
-// // $swatch_6: #5d49ac;
-// // $swatch_7: #5eeda9;
-// // $swatch_8: #4fb978;
-
-
 $grey:#F7F8FB;
 $black:#0a0d14;
 $white:#fcfcfc;
 
-$ocean-green:#50b978;
-$studio:#5d49ab;
-$milan:#ffffa8;
-$martinique:#2a314c;
-$vulcan:#0a0d14;
-
-// Colours used
+// Colour scheme used
 $primary-colour:#0a0d14;
 $secondary-colour:#008080;
 $tertiary-colour:#5d49ab;
 $accent-colour:#FFA351;
-$heading-colour:$martinique;
 
-/* Media Quires*/
+
 
 
 

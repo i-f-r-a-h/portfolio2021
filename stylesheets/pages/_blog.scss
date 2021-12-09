@@ -47,6 +47,16 @@
         transition: ease-in-out 0.5s;
     }
 
+    h5{
+        font-size: 18px;
+    }
+
+    h4{
+        @include media-quires('medium') {
+        font-size: 28px;
+        }
+    }
+
     footer {
         @include flex-layout($direction:row) {
             gap: 10px;
@@ -58,6 +68,10 @@
     // view more
     &:last-child{
         align-items: center;
+        p{
+            font-size: 30px;
+        }
+        
     }
 }
 

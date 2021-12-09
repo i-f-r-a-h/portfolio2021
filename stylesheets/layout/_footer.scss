@@ -54,6 +54,7 @@
     @include media-quires(medium) {
         @include margin-padding($p-direction:all, $p-px: 0px 40px 10px 40px);
         flex-direction: row;
+        font-size: $text-md;
     }
 
     @include media-quires('xtra-large') {

@@ -190,10 +190,13 @@
 }
 
 .portfolio__index-hide {
+    color: $secondary-colour;
+    font-weight: 700;
     @include media-quires(large) {
         display: none;
     }
 }
+
 
 
 

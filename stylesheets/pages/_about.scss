@@ -210,12 +210,17 @@
 
 
 
+
 // 3 button layout of links
 .about-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
     gap: 2em;
     padding: 5em 0;
+
+    a{
+        font-size: 18px;
+    }
 
     article {
         border-radius: 18px;
