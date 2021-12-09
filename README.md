@@ -61,8 +61,5 @@ This portfolio is built with the following:
 * add javascript once practiced
 
 
-
-  ```
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
