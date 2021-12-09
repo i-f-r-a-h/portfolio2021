@@ -50,7 +50,7 @@
 
         @include media-quires(large) {
             gap: 30px;
-            font-size: 1.1vmin;
+            font-size:clamp(1rem, 1.3vw, 1.2rem);
         }
 
         li {
