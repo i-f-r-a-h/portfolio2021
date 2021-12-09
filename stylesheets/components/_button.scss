@@ -1,19 +1,15 @@
-//===============================================================================
-// This file contains button styling in this portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
 
-.btn {
-    @include social-media($socials);
-}
+    1.About icons
+    2.View more portfolio
+    3.Submit button
+    4.Floating icons of landing page 
 
-[class^="btn--"] {
-    padding: 10px;
-    border: 2px black solid;
-    border-radius: 10px;
-}
+===============================================================================*/
 
 
-// About Icons
+// 1.About icons
 .about-icon {
     @include flex-layout($direction:column,$just:center,$aItem:center){
         font-size: 2rem;
@@ -23,12 +19,10 @@
 
 
 
-// view more portfolio
+// 2.View more portfolio
 .view-more{
-    display: flex;
-    align-items: center;
+    @include flex-layout($just:center, $aItem:center);
     text-align: center;
-    justify-content: center;
     font-size: 20px;
     width: 300px;
     margin: auto 90px;
@@ -52,11 +46,7 @@
 
 
 
-
-
-
-
-//submit button
+//3.Submit button
 [type="submit"] {
     @include margin-padding(top, 30px, all, 15px);
     @include size(150px, $maxWidth:mx);
@@ -71,4 +61,64 @@
         transition: ease-in-out .7s;
     }
 
+}
+
+
+// 4.Floating icons of landing page 
+[class^="img--"] {
+    display: none;
+}
+
+@include media-quires(large) {
+    [class^="img--"] {
+        position: absolute;
+        padding: 20px;
+        border-radius: 50%;
+        @include flex-layout($just:center, $aItem:center);
+        &:nth-of-type(1) {
+            @include outer-circle-position(55%, 15%, -1333ms);
+            &::after {
+                @include outer-circle(50rem);
+            }
+
+        }
+
+        &:nth-of-type(2) {
+            @include outer-circle-position(80%, 50%,);
+            &::after {
+                @include outer-circle(35rem);
+                overflow: hidden;
+            }
+            
+        }
+
+        &:nth-of-type(3) {
+            @include outer-circle-position(5%, 60%, -2000ms);
+            &::after {
+                @include outer-circle(20rem);
+            }
+        }
+
+        animation-name: floating;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transition:all 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(0.9);
+            padding: 40px;
+        }
+    }
+
+    .img {
+        @include hero-icon($socials);
+    }
+
+}
+
+
+.btn-toggle{
+    margin-top: 10px;
+    padding: 8px;
 }

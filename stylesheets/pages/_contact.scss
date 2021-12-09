@@ -1,28 +1,34 @@
-// -----------------------------------------------------------------------------------------------------------------------------------------//
-// This file contains all styling for the cv . Design inspired by https://dribbble.com/shots/14121188/attachments/5744076?mode=media        //
-// -----------------------------------------------------------------------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
 
+    1.page layout
+    2.subheading
+    3.form
+    4.two-column contact links
+    
+===============================================================================*/
 
+//1.page layout
 .contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: start;
     overflow: hidden;
-    padding: 50px 0;
+    padding-bottom: 50px;
+    @include margin-padding(all, auto 7%);
 
-    section {
-        &:last-child {
+    aside{
             align-self: flex-end;
         }
-    }
-
-    @include margin-padding(all, auto 7%);
+    
+    
 
     @include media-quires('medium') {
         @include margin-padding(all, auto 10%);
         gap: 100px;
-        align-items: end;
+        align-self: flex-end;
     }
+
     @include media-quires('xtra-large') {
         max-width: 1800px;
         margin: 100px auto;
@@ -33,10 +39,12 @@
     }
 }
 
+
+//2.subheading
 .subheading {
     font-size: clamp(1rem, 5vw, 3rem);
     font-weight: 500;
-    min-width: 100px;
+    width: 65%;
     max-width:550px;
     @include media-quires('large') {
         margin-top: 10%;
@@ -45,14 +53,13 @@
 
 
 
-// form
+//3.form
 form {
 
     @include flex-layout($direction:column);
 
     label {
-        @include margin-padding(all, 50px 0px 0px 0px);
-        font-size: 20px;
+        @include margin-padding(all, 20px 0px 0px 0px);
     }
 
     input {
@@ -62,13 +69,13 @@ form {
     textarea {
         @extend %form-styling;
     }
+
 }
 
-
-// contacts section
+//4.two-column contact links
 .contacts {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(11rem, 1fr));
+    @include flex-layout(column);
+    gap: 3rem;
     padding-top: 7rem;
 
 
@@ -78,12 +85,18 @@ form {
     }
 
     li {
-        font-size: 20px;
-        line-height: 2.5rem;
+        line-height: 2rem;
     }
 
     @include media-quires(medium) {
-        padding-top: 5rem;
+        gap: 0rem;
+        padding-top: 10rem;
         padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(17rem, 1fr));
     }
 }
+
+
+
+

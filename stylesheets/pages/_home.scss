@@ -1,8 +1,13 @@
-// -----------------------------------------------------------------------------//
-// This file contains all styling for the landing page            //
-// -----------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
 
+    1.page wrapper
+    2.main text 
+    3.sub text 
+    
+===============================================================================*/
 
+//1.page wrapper
 #home {
     position: relative;
     overflow: hidden;
@@ -20,32 +25,25 @@
 }
 
 
-.home {
 
+
+.home {
+//2.main text 
     &-primary {
-        // font-size: 1.875rem;
         font-family: $font-secondary;
         font-size: 2.1rem;
         line-height: 2.5rem;
         @include margin-padding(bottom, 40px);
 
-
-
         @include media-quires('large') {
-            // min-width: 450px;
             max-width: 800px;
-            // font-size: 50px;
             font-size: 2.4rem;
-
         }
-
     }
 
-
+//3.sub text 
     &-secondary {
-
         font-size: $text-reg;
-        // font-size: 1.875rem;
         border-bottom: 1px solid black;
         @include size(max-content);
         @include margin-padding($p-direction:bottom, $p-px:8px);

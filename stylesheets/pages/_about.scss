@@ -1,16 +1,25 @@
-// -----------------------------------------------------------------------------//
-// This file contains all styling for the about page             //
-// -----------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
 
+    1.page wrapper
+    2.intro text
+    3.intro subheadings 
+    4.button layout of links
+    5.sections titles
+    6.skills section
+    7.favorites section
+
+===============================================================================*/
+
+//1.page wrapper
 .about {
     @extend %main-wrapper;
     margin-bottom: 100px;
 }
 
-// intro text
+//2.intro text
 .about-intro {
-    display: flex;
-    flex-direction: column;
+    @include flex-layout(column);
     max-width: 1000px;
     margin-top: 2rem;
 
@@ -45,7 +54,7 @@
 }
 
 
-// subheadings 
+//3. intro subheadings 
 .about-title {
     padding-top: 80px;
     text-align: center;
@@ -76,142 +85,7 @@
 
 
 
-// lists
-.list-title {
-    font-weight: 600;
-    font-size: 20px;
-    padding-top: 20px;
-}
-
-// skills section
-.about-skills {
-
-    display: flex;
-    flex-direction: column;
-
-    @include media-quires(large) {
-        flex-direction: row;
-        margin-top: 12rem;
-    }
-
-    ul {
-        margin-bottom: 30px;
-
-        @include media-quires(large) {
-            &:last-of-type {
-                margin-left: 2vw;
-            }
-        }
-    }
-
-
-    li {
-        font-size: 18px;
-        padding: 2px 0;
-
-        a {
-            text-decoration: underline;
-            text-decoration-color: lighten(black, 60);
-            color: $accent-colour;
-
-            &:hover {
-                text-decoration-color: $accent-colour;
-                color: $black;
-                transition: ease-in-out 0.2s;
-            }
-
-        }
-
-        @include media-quires(large) {
-            margin-top: 2rem;
-
-            &:first-of-type {
-                margin-top: 1rem;
-            }
-        }
-
-    }
-
-
-
-
-    div {
-        @include media-quires(large) {
-            display: flex;
-            flex-direction: row;
-            flex-basis: 900px;
-            justify-content: space-between;
-        }
-    }
-}
-
-
-// favorites section
-.about-list {
-    display: flex;
-    flex-direction: column;
-
-    @include media-quires(large) {
-        flex-direction: row;
-        margin: 12rem 0;
-    }
-
-    li {
-        font-size: 18px;
-
-        &::before {
-            content: " ";
-            height: 0.6rem;
-            width: 0.6rem;
-            border-radius: 50%;
-            background-color: grey;
-            margin: auto 0;
-            margin-right: 20px;
-        }
-
-        a {
-            text-decoration-color: lighten(black, 60);
-            color: $black;
-            text-decoration: underline;
-
-            &:hover {
-                text-decoration-color: $accent-colour;
-                color: $accent-colour;
-                transition: ease-in-out 0.2s;
-            }
-        }
-
-        @include media-quires(large) {
-            margin-top: 2rem;
-        }
-    }
-
-
-    div {
-        @include media-quires(large) {
-            flex-basis: 900px;
-
-            li {
-                display: flex;
-                padding-top: 10px;
-            }
-
-            .list-title {
-                width: 300px;
-                padding-top: 0px;
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-// 3 button layout of links
+//4.button layout of links
 .about-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
@@ -270,3 +144,138 @@
         padding-top: 10em;
     }
 }
+
+
+
+//5.sections titles
+.list-title {
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+
+//6.skills section
+.about-skills {
+    @include flex-layout(column);
+
+    @include media-quires(large) {
+        flex-direction: row;
+        margin-top: 12rem;
+    }
+
+    ul {
+        margin-bottom: 30px;
+
+        @include media-quires(large) {
+            &:last-of-type {
+                margin-left: 2vw;
+            }
+        }
+    }
+
+
+    li {
+        font-size: 18px;
+        padding: 2px 0;
+
+        a {
+            text-decoration: underline;
+            text-decoration-color: lighten(black, 60);
+            color: $accent-colour;
+
+            &:hover {
+                text-decoration-color: $accent-colour;
+                color: $black;
+                transition: ease-in-out 0.2s;
+            }
+
+        }
+
+        @include media-quires(large) {
+            margin-top: 2rem;
+
+            &:first-of-type {
+                margin-top: 1rem;
+            }
+        }
+
+    }
+
+
+
+
+    div {
+        @include media-quires(large) {
+            @include flex-layout(row,space-between){
+                flex-basis: 900px;
+            }
+        }
+    }
+}
+
+
+//7.favorites section
+.about-list {
+    @include flex-layout(column);
+
+    @include media-quires(large) {
+        flex-direction: row;
+        margin: 12rem 0;
+    }
+
+    li {
+        font-size: 18px;
+
+        &::before {
+            content: " ";
+            height: 0.6rem;
+            width: 0.6rem;
+            border-radius: 50%;
+            background-color: grey;
+            margin: auto 0;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration-color: lighten(black, 60);
+            color: $black;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration-color: $accent-colour;
+                color: $accent-colour;
+                transition: ease-in-out 0.2s;
+            }
+        }
+
+        @include media-quires(large) {
+            margin-top: 2rem;
+        }
+    }
+
+
+    div {
+        @include media-quires(large) {
+            flex-basis: 900px;
+
+            li {
+                @include flex-layout;
+                padding-top: 10px;
+            }
+
+            .list-title {
+                width: 300px;
+                padding-top: 0px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

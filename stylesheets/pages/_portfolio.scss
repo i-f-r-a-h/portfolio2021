@@ -1,8 +1,20 @@
-// -----------------------------------------------------------------------------//
-// This file contains all styling for the portfolio              //
-// -----------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
+
+    1.page wrapper
+    2.project sections
+    3.portfolio navigation
+    4.section heading / left column
+    5.section title
+    6.projects
+    7.project text
+    8.project links
+    9.tools utilised in projects list
+    
+===============================================================================*/
 
 
+//1.page wrapper
 .portfolio {
     @include margin-padding(all, auto, all, 100px 10%);
     background-color: $grey;
@@ -16,6 +28,7 @@
     }
 }
 
+//2.project sections
 .portfolio-content {
     border-top: 2px solid black;
     @include margin-padding($p-direction:all, $p-px:20px 0px 30px 0px);
@@ -27,7 +40,7 @@
 }
 
 
-// portfolio navigation
+//3.portfolio navigation
 .portfolio-nav {
     @include flex-layout($direction:column);
     ul {
@@ -74,6 +87,9 @@
     }
 }
 
+
+
+//4.section heading / left column
 .portfolio-content-index {
     div {
         @include flex-layout($just:space-between);
@@ -92,6 +108,8 @@
     }
 }
 
+
+//5.section title
 .portfolio-index {
     @include flex-layout($direction:column);
 
@@ -106,6 +124,8 @@
     }
 }
 
+
+//6.projects
 .wrapper {
     position: relative;
     @include flex-layout;
@@ -119,7 +139,7 @@
         @include margin-padding($p-direction:right, $p-px:3%);
     }
 
-    >.book {
+    >.project {
 
         @include margin-padding(all, 10px, all, 10px);
         @include size(stretch);
@@ -147,28 +167,8 @@
     }
 }
 
-.book {
-    img {
-        @include margin-padding($p-direction:bottom, $p-px:10px);
-        @include size(60vw, auto, mx);
-
-        @include media-quires(small) {
-            @include size(46vw, $maxWidth:mx);
-        }
-
-        @include media-quires(medium) {
-            @include size(44vw, $maxWidth:mx);
-        }
-
-        @include media-quires(large) {
-            @include size(21vw, $maxWidth:mx);
-        }
-
-        @include media-quires(xtra-large) {
-            width: 21vw;
-            max-width: 50em;
-        }
-    }
+//7.project text
+.project {
     p{
         width: 80%;
     }
@@ -176,7 +176,7 @@
 
 
 
-// portfolio links (navigation)
+// 8.project links
 .links {
     a {
         &:not(:last-of-type) {
@@ -200,10 +200,9 @@
 
 
 
-//tools
+//9.tools utilised in projects list
 .project-tools{
-    display: flex;
-    flex-flow:row wrap;
+    @include flex-layout($direction:row, $wrap:wrap);
     gap: 4px;
     width: 98%;
     margin-bottom: 20px;

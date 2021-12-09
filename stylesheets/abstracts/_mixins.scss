@@ -17,39 +17,21 @@
   }
 }
 
-@mixin modifier($modifier) {
-  &-#{$modifier} {
-    @content;
-  }
-}
 
-@mixin m($modifier) {
+@mixin modifier($modifier) {
   &--#{$modifier} {
     @content;
   }
 }
 
 
-// 2.social media color selector
-@mixin social-media($map, $p-el:null) {
 
-  @each $social,
-  $color in $map {
-    @include m($social) {
-      &:hover {
-        background-color: $color;
-        transition: 0.5s ease-in-out;
-      }
-    }
-  }
-}
-
-// 3.hero icons
+// 2.hero icons
 @mixin hero-icon($map, $p-el:null) {
 
   @each $social,
   $color in $map {
-    @include m($social) {
+    @include modifier($social) {
       background-color: lighten($color, 40);
 
       &:hover {
@@ -59,7 +41,6 @@
     }
   }
 }
-
 
 
 

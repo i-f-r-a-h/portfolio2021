@@ -1,59 +1,13 @@
+/*===============================================================================
+    Table of contents
 
-// floating icons of landing page 
-[class^="img--"] {
-    display: none;
-}
+    1.Contact page
+    2.project image1
 
-@include media-quires(large) {
-    [class^="img--"] {
-        position: absolute;
-        padding: 20px;
-        border-radius: 50%;
-        @include flex-layout($just:center, $aItem:center);
-        &:nth-of-type(1) {
-            @include outer-circle-position(55%, 15%, -1333ms);
-            &::after {
-                @include outer-circle(50rem);
-            }
-
-        }
-
-        &:nth-of-type(2) {
-            @include outer-circle-position(80%, 50%,);
-            &::after {
-                @include outer-circle(35rem);
-                overflow: hidden;
-            }
-            
-        }
-
-        &:nth-of-type(3) {
-            @include outer-circle-position(5%, 60%, -2000ms);
-            &::after {
-                @include outer-circle(20rem);
-            }
-        }
-
-        animation-name: floating;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        transition:all 0.5s ease-in-out;
-
-        &:hover {
-            transform: scale(0.9);
-            padding: 40px;
-        }
-    }
-
-    .img {
-        @include hero-icon($socials);
-    }
-
-}
+===============================================================================*/
 
 
-// contact page image
+// 1.Contact page
 .contact-lightbulb{
     width: 50vw;
     max-width: 500px;
@@ -61,5 +15,35 @@
     align-self: flex-end;
     @include media-quires(medium){
         align-self: flex-start;
+    }
+}
+
+
+
+//2.project image
+.project {
+    img {
+        @include margin-padding($p-direction:bottom, $p-px:10px);
+        @include size(60vw, auto, mx);
+
+        @include media-quires(small) {
+            @include size(46vw, $maxWidth:mx);
+        }
+
+        @include media-quires(medium) {
+            @include size(44vw, $maxWidth:mx);
+        }
+
+        @include media-quires(large) {
+            @include size(21vw, $maxWidth:mx);
+        }
+
+        @include media-quires(xtra-large) {
+            width: 21vw;
+            max-width: 50em;
+        }
+    }
+    p{
+        width: 80%;
     }
 }

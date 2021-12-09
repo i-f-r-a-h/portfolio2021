@@ -1,7 +1,13 @@
-//===============================================================================
-// This file contains all the stylings for the footer used within the portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
 
+    1.base footer styling
+    2.column styling
+    3.contact page styling
+
+===============================================================================*/
+
+//1.base footer styling
 .site-footer {
     @include size($h-specify:mn, $height:fit-content);
     background-color: $primary-colour;
@@ -28,6 +34,7 @@
 
 }
 
+//2.column styling
 .footer-main {
     @include flex-layout($just:space-between, $direction:column, $wrap:wrap);
     @include margin-padding(all, auto 10%, all, 10px 20px);
@@ -66,7 +73,7 @@
 
 
 
-
+//3.contact page styling
 .footer-contact {
     @media (min-width:1200px) and (min-height:1500px) {
         position: absolute;

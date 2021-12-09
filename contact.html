@@ -37,26 +37,26 @@
             <!-- site navigation -->
             <ul class="navbar__list">
                 <li class="navbar__list__item">
-                    <a href="index.html">home</a>
+                    <a accesskey="0" href="index.html">home</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="index.html#portfolio">portfolio</a>
+                    <a accesskey="1" href="index.html#portfolio">portfolio</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="about.html">about</a>
+                    <a accesskey="2" href="about.html">about</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="blog.html">blog</a>
+                    <a accesskey="3"  href="blog.html">blog</a>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="contact.html">contact</a>
+                    <a accesskey="4" href="contact.html">contact</a>
                 </li>
             </ul>
         </nav>
 
     </header>
 
-    <main class="contact">
+    <main class="contact" accesskey="5">
         <!-- section heading -->
         <section class="contact-left">
             <h2>Contact</h2>
@@ -66,21 +66,21 @@
         </section>
 
         <aside>
-            <!-- form ( hosted with netlify)-->
+            <!-- form ( hosted with netlify) with access keys-->
             <form method="post" data-netlify="true">
 
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name" placeholder="Type your name">
+                <input accessKey="N" type="text" id="name" name="user_name" placeholder="Type your name">
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="user_email" placeholder="Type you email">
+                <input accessKey="E" type="email" id="email" name="user_email" placeholder="Type you email">
 
                 <label for="comment">Comment:</label>
-                <textarea id="comment" name="user_comment" placeholder="Type your message here"></textarea>
+                <textarea accessKey="M" id="comment" name="user_comment" placeholder="Type your message here"></textarea>
 
                 <div data-netlify-recaptcha="true"></div>
 
-                <button type="submit">Send Message</button>
+                <button accessKey="S" type="submit">Send Message</button>
             </form>
             <!-- contact links  -->
             <section class="contacts">
@@ -113,8 +113,8 @@
             <div>
                 <h2>navigation.</h2>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -142,6 +142,8 @@
                     <li><a target=”_blank”
                             href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fifrahabdi.netlify.app%2Fcontact.html">Page
                             Validation</a></li>
+                            <li><a target=”_blank” href="access.html">Access Keys</a></li>
+                            <li><button accessKey="T" class="btn-toggle">Dark Mode (Contrast Option)</button></li>
                 </ul>
             </div>
         </section>

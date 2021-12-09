@@ -1,6 +1,13 @@
-//===============================================================================
-// This file contains all the placeholders used in this portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
+
+    1.Header navigation bar
+    2.Header navigation list
+    3.Header navigation links
+
+===============================================================================*/
+
+//1.Header navigation bar
 %navbar {
     @include size(100vw,100vh);
     background-color: $white;
@@ -16,6 +23,7 @@
     }
 }
 
+//2.Header navigation list
 %navbar-item-list {
     @include flex-layout($direction:column, $just:center) {
         @include size(80%);
@@ -30,6 +38,7 @@
     }
 }
 
+//3.Header navigation links
 %nav-item-link {
     text-decoration: none;
     font-size: 6vw;

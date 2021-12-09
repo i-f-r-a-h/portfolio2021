@@ -1,19 +1,22 @@
-// -----------------------------------------------------------------------------//
-// This file contains all styling for the cv used within the portfolio          //
-// -----------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
+
+    1.Base layout
+    2.Sections
+    3.header backdrop
+
+    design inspired by https://codepen.io/mavrK/pen/PzGvdJ
+
+===============================================================================*/
 
 
-// design inspired by https://codepen.io/mavrK/pen/PzGvdJ
 
 
-
-// base layout
+// 1.base layout
 .about-cv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    
+    @include flex-layout(column,center){
+        gap: 20px;
+    }    
 
     [class$="hide"] {
         display: none;
@@ -37,10 +40,10 @@
         }
 
         .about-hide {
-            z-index: 3;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            @include flex-layout($just:center,$aItem:flex-end){
+                z-index: 3;
+            }
+        
 
             p {
                 font-weight: 400;
@@ -56,6 +59,7 @@
     }
 }
 
+//2.Sections
 .about--section {
     border: 2px solid black;
     border-radius: 5px;
@@ -142,7 +146,7 @@
 
 
 
-// header backdrop
+//3.header backdrop
 .cv-background {
     display: none;
 

@@ -1,6 +1,22 @@
-/* Font stack */
+/*===============================================================================
+    Table of contents
+
+    1.Font stack
+    2.Text base values
+    2.1.Text values
+    3.Line height
+    4.Base colours
+    5.Colour scheme
+===============================================================================*/
+/* 1.Font stack */
 /* Text used this as reference - https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd */
-/* Colours */
+/*===============================================================================
+    Table of contents
+
+    1.Media quires
+    2.Social media background for floating icons on landing page
+
+===============================================================================*/
 /*===============================================================================
     Table of contents
 
@@ -10,6 +26,15 @@
     4.flex-layout
     5.media quires 
     6.hero outer sections
+===============================================================================*/
+/*===============================================================================
+    Table of contents
+
+    1.Universal styling
+    2.HTML styling
+    3.Main styling
+    4.A/link styling
+
 ===============================================================================*/
 * {
   list-style-type: none;
@@ -33,6 +58,14 @@ a i {
   text-decoration: none;
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.Landing page button
+    2.Landing page icons
+    3.Hamburger menu
+    
+===============================================================================*/
 @-webkit-keyframes learn-more {
   0% {
     top: 0px;
@@ -44,7 +77,6 @@ a i {
     top: 2px;
   }
 }
-
 @keyframes learn-more {
   0% {
     top: 0px;
@@ -106,6 +138,26 @@ a i {
           transform: rotateZ(405deg) translate(-6px, -6px);
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.Body
+    2.H1
+    3.H2
+    4.H3
+    5.H4
+    6.Icons
+    7.Paragraph
+    8.a links
+   
+    CV Typography
+    9.Cv h1
+    10.Cv h3
+    11.Cv p
+    12.Cv details
+    12.Cv ul
+    
+===============================================================================*/
 body {
   font-size: calc(1em / 1.2);
   font-family: "Open Sans", sans-serif;
@@ -222,60 +274,15 @@ a:hover {
   margin-left: 10px;
 }
 
-.btn--linkedin:hover {
-  background-color: #0b9eff;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
+/*===============================================================================
+    Table of contents
 
-.btn--instagram:hover {
-  background-color: red;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
+    1.About icons
+    2.View more portfolio
+    3.Submit button
+    4.Floating icons of landing page 
 
-.btn--spotify:hover {
-  background-color: lime;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.btn--github:hover {
-  background-color: #33d533;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.btn--codepen:hover {
-  background-color: lightblue;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.btn--dribble:hover {
-  background-color: pink;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.btn--email:hover {
-  background-color: orange;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.btn--location:hover {
-  background-color: yellow;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-[class^="btn--"] {
-  padding: 10px;
-  border: 2px black solid;
-  border-radius: 10px;
-}
-
+===============================================================================*/
 .about-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,13 +305,13 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-size: 20px;
   width: 300px;
   margin: auto 90px;
@@ -427,43 +434,11 @@ a:hover {
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }
-  .img--instagram {
-    background-color: #ffcccc;
-  }
-  .img--instagram:hover {
-    background-color: #ffb3b3;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-  }
-  .img--spotify {
-    background-color: #ccffcc;
-  }
-  .img--spotify:hover {
-    background-color: #b3ffb3;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-  }
   .img--github {
     background-color: #dcf8dc;
   }
   .img--github:hover {
     background-color: #c7f3c7;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-  }
-  .img--codepen {
-    background-color: white;
-  }
-  .img--codepen:hover {
-    background-color: white;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-  }
-  .img--dribble {
-    background-color: white;
-  }
-  .img--dribble:hover {
-    background-color: white;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }
@@ -475,16 +450,20 @@ a:hover {
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }
-  .img--location {
-    background-color: #ffffcc;
-  }
-  .img--location:hover {
-    background-color: #ffffb3;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-  }
 }
 
+.btn-toggle {
+  margin-top: 10px;
+  padding: 8px;
+}
+
+/*===============================================================================
+    Table of contents
+
+    1.Contact page
+    2.project image1
+
+===============================================================================*/
 .contact-lightbulb {
   width: 50vw;
   max-width: 500px;
@@ -500,6 +479,103 @@ a:hover {
   }
 }
 
+.project img {
+  padding-bottom: 10px;
+  max-width: 60vw;
+  height: auto;
+}
+
+@media (min-width: 528px) {
+  .project img {
+    max-width: 46vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .project img {
+    max-width: 44vw;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .project img {
+    max-width: 21vw;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .project img {
+    width: 21vw;
+    max-width: 50em;
+  }
+}
+
+.project p {
+  width: 80%;
+}
+
+/*===============================================================================
+    Table of contents
+
+    1.body
+    2.main nav
+    3.typography
+    4.links
+    5.home page
+    6.portfolio section
+    
+===============================================================================*/
+body.dark-theme {
+  color: #eee;
+  background: #0a0d14;
+}
+
+body.dark-theme .header,
+body.dark-theme .navbar {
+  background-color: #0a0d14;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme p,
+body.dark-theme a {
+  color: #fcfcfc;
+}
+
+body.dark-theme a:hover {
+  color: #FFA351;
+}
+
+body.dark-theme .section-home a {
+  color: #FFA351;
+}
+
+body.dark-theme .section-home .home-secondary {
+  border-color: #fcfcfc;
+}
+
+body.dark-theme .portfolio {
+  background-color: #131825;
+}
+
+body.dark-theme .portfolio-content,
+body.dark-theme .portfolio-content-index,
+body.dark-theme a,
+body.dark-theme .home-secondary {
+  border-color: #fcfcfc;
+}
+
+/*===============================================================================
+    Table of contents
+
+    1.Header navigation bar
+    2.Header navigation list
+    3.Header navigation links
+
+===============================================================================*/
 .navbar {
   width: 100vw;
   height: 100vh;
@@ -596,6 +672,16 @@ a:hover {
   }
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.Base layout
+    2.Sections
+    3.header backdrop
+
+    design inspired by https://codepen.io/mavrK/pen/PzGvdJ
+
+===============================================================================*/
 .about-cv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,7 +725,6 @@ a:hover {
     grid-row: 1/2;
   }
   .about-cv .about-hide {
-    z-index: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -649,6 +734,7 @@ a:hover {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    z-index: 3;
   }
   .about-cv .about-hide p {
     font-weight: 400;
@@ -770,6 +856,15 @@ a:hover {
   }
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.logo
+    2.site header
+    3.site navigation
+    3.1 hamburger menu
+
+===============================================================================*/
 .navbar__logo {
   font-size: calc(1em * 1.2 * 1.2 * 1.2);
   z-index: 5;
@@ -867,6 +962,14 @@ a:hover {
   right: 0;
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.base footer styling
+    2.column styling
+    3.contact page styling
+
+===============================================================================*/
 .site-footer {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -962,6 +1065,77 @@ a:hover {
   }
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.page wrapper
+    2.form styling 
+	3.section padding
+    
+===============================================================================*/
+.access, .about {
+  margin: auto 7%;
+  padding-top: 50px;
+}
+
+@media (min-width: 600px) {
+  .access, .about {
+    margin: auto 10%;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .access, .about {
+    max-width: 1900px;
+    margin: 100px auto;
+  }
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  height: 80px;
+  border-bottom: 2px solid black;
+  margin-top: 10px;
+}
+
+form input:focus, form textarea:focus {
+  background: white;
+  border-bottom: 3px solid #FFA351;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+form input::placeholder, form textarea::placeholder {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 600px) {
+  form input, form textarea {
+    border-radius: 12px;
+    border: 1px solid black;
+  }
+}
+
 #home {
   padding-top: 20%;
   padding-bottom: 40%;
@@ -987,63 +1161,41 @@ a:hover {
   }
 }
 
-.about {
-  margin: auto 7%;
-  padding-top: 50px;
+/*===============================================================================
+    Table of contents
+
+    1.base styling
+    2.table styling
+    
+===============================================================================*/
+.access p {
+  padding: 40px 0;
 }
 
-@media (min-width: 600px) {
-  .about {
-    margin: auto 10%;
-    padding-top: 50px;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .about {
-    max-width: 1900px;
-    margin: 100px auto;
-  }
-}
-
-form input, form textarea {
+table {
   width: 100%;
-  padding: 10px;
-  border: none;
-  outline: none;
-  height: 80px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table th {
+  background-color: #FFA351;
+}
+
+table td, table th {
   border: 1px solid black;
-  border-radius: 12px;
-  margin-top: 10px;
+  padding: 8px;
 }
 
-form input:focus, form textarea:focus {
-  background: white;
-  border: 3px solid #FFA351;
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-}
+/*===============================================================================
+    Table of contents
 
-form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2px;
-}
-
-form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2px;
-}
-
-form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2px;
-}
-
-form input::placeholder, form textarea::placeholder {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 2px;
-}
-
+    1.page layout
+    2.subheading
+    3.form
+    4.two-column contact links
+    
+===============================================================================*/
 .contact {
   display: -ms-grid;
   display: grid;
@@ -1053,11 +1205,11 @@ form input::placeholder, form textarea::placeholder {
       -ms-flex-align: start;
           align-items: start;
   overflow: hidden;
-  padding: 50px 0;
+  padding-bottom: 50px;
   margin: auto 7%;
 }
 
-.contact section:last-child {
+.contact aside {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -1066,9 +1218,8 @@ form input::placeholder, form textarea::placeholder {
   .contact {
     margin: auto 10%;
     gap: 100px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
@@ -1090,7 +1241,7 @@ form input::placeholder, form textarea::placeholder {
 .subheading {
   font-size: clamp(1rem, 5vw, 3rem);
   font-weight: 500;
-  min-width: 100px;
+  width: 65%;
   max-width: 550px;
 }
 
@@ -1111,15 +1262,18 @@ form {
 }
 
 form label {
-  margin: 50px 0px 0px 0px;
-  font-size: 20px;
+  margin: 20px 0px 0px 0px;
 }
 
 .contacts {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(11rem, 1fr))[2];
-      grid-template-columns: repeat(2, minmax(11rem, 1fr));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
   padding-top: 7rem;
 }
 
@@ -1129,17 +1283,33 @@ form label {
 }
 
 .contacts li {
-  font-size: 20px;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 
 @media (min-width: 600px) {
   .contacts {
-    padding-top: 5rem;
+    gap: 0rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(17rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(17rem, 1fr));
   }
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.page wrapper
+    2.intro text
+    3.intro subheadings 
+    4.button layout of links
+    5.sections titles
+    6.skills section
+    7.favorites section
+
+===============================================================================*/
 .about {
   margin-bottom: 100px;
 }
@@ -1229,6 +1399,75 @@ form label {
   }
 }
 
+.about-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  gap: 2em;
+  padding: 5em 0;
+}
+
+.about-links a {
+  font-size: 18px;
+}
+
+.about-links article {
+  border-radius: 18px;
+  width: 90%;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-links article:first-child {
+  background-color: #d1e9ff;
+}
+
+.about-links article:nth-child(2) {
+  background-color: #cfd6e7;
+}
+
+.about-links article:last-child {
+  background-color: #ffd9b7;
+}
+
+.about-links article header {
+  padding-bottom: 10px;
+}
+
+.about-links article p {
+  width: 80%;
+}
+
+.about-links article footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  padding: 1em 0;
+}
+
+@media screen and (min-width: 980px) {
+  .about-links {
+    padding-top: 10em;
+  }
+}
+
 .list-title {
   font-weight: 600;
   font-size: 20px;
@@ -1303,11 +1542,11 @@ form label {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-preferred-size: 900px;
-        flex-basis: 900px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-preferred-size: 900px;
+        flex-basis: 900px;
   }
 }
 
@@ -1383,75 +1622,20 @@ form label {
   }
 }
 
-.about-links {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(25em, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
-  gap: 2em;
-  padding: 5em 0;
-}
+/*===============================================================================
+    Table of contents
 
-.about-links a {
-  font-size: 18px;
-}
-
-.about-links article {
-  border-radius: 18px;
-  width: 90%;
-  height: 400px;
-  margin: auto;
-  text-align: center;
-  padding: 0 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about-links article:first-child {
-  background-color: #d1e9ff;
-}
-
-.about-links article:nth-child(2) {
-  background-color: #cfd6e7;
-}
-
-.about-links article:last-child {
-  background-color: #ffd9b7;
-}
-
-.about-links article header {
-  padding-bottom: 10px;
-}
-
-.about-links article p {
-  width: 80%;
-}
-
-.about-links article footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-  padding: 1em 0;
-}
-
-@media screen and (min-width: 980px) {
-  .about-links {
-    padding-top: 10em;
-  }
-}
-
+    1.page wrapper
+    2.project sections
+    3.portfolio navigation
+    4.section heading / left column
+    5.section title
+    6.projects
+    7.project text
+    8.project links
+    9.tools utilised in projects list
+    
+===============================================================================*/
 .portfolio {
   margin: auto;
   padding: 100px 10%;
@@ -1614,7 +1798,7 @@ form label {
   padding-right: 3%;
 }
 
-.wrapper > .book {
+.wrapper > .project {
   margin: 10px;
   padding: 10px;
   width: -webkit-fill-available;
@@ -1634,10 +1818,10 @@ form label {
 }
 
 @media screen and (min-width: 980px) {
-  .wrapper > .book {
+  .wrapper > .project {
     padding: 0;
   }
-  .wrapper > .book:nth-child(1n+3) {
+  .wrapper > .project:nth-child(1n+3) {
     margin-top: 10%;
   }
 }
@@ -1659,38 +1843,7 @@ form label {
   }
 }
 
-.book img {
-  padding-bottom: 10px;
-  max-width: 60vw;
-  height: auto;
-}
-
-@media (min-width: 528px) {
-  .book img {
-    max-width: 46vw;
-  }
-}
-
-@media (min-width: 600px) {
-  .book img {
-    max-width: 44vw;
-  }
-}
-
-@media screen and (min-width: 980px) {
-  .book img {
-    max-width: 21vw;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .book img {
-    width: 21vw;
-    max-width: 50em;
-  }
-}
-
-.book p {
+.project p {
   width: 80%;
 }
 
@@ -1719,14 +1872,25 @@ form label {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 4px;
   width: 98%;
   margin-bottom: 20px;
   margin-top: -5px;
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.page wrapper
+    2.articles grid layout
+    3.article styling
+    4.icon
+    
+===============================================================================*/
 .main-blog {
   margin: auto 7%;
   padding: 50px 0px 100px 0px;
@@ -1826,6 +1990,14 @@ form label {
   font-size: 18px;
 }
 
+/*===============================================================================
+    Table of contents
+
+    1.page wrapper
+    2.main text 
+    3.sub text 
+    
+===============================================================================*/
 #home {
   position: relative;
   overflow: hidden;

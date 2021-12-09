@@ -1,10 +1,16 @@
- // -----------------------------------------------------------------------------//
- // This file contains styling for the header                                    //
- // -----------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
+
+    1.logo
+    2.site header
+    3.site navigation
+    3.1 hamburger menu
+
+===============================================================================*/
 
 
 
- // logo
+ // 1.logo
  .navbar__logo {
    font-size: $text-lg;
    z-index: 5;
@@ -28,7 +34,7 @@
 
 
 
- // site navigation
+ //2.site header
  .header {
    background-color: white;
    z-index: 9;
@@ -43,13 +49,10 @@
      @include margin-padding(all, auto, all, 10px 40px);
      @include size(2000px, $maxWidth:mx);
    }
-
-
-
-
  }
 
 
+ //3.site navigation
  .navbar {
    @extend %navbar;
 
@@ -67,7 +70,7 @@
      }
    }
 
-  // hamburger menu
+    //3.1 hamburger menu
    .hamburger-menu {
      @include flex-layout($direction:column, $just:space-around);
      @include position(fixed, 15px, 30px);

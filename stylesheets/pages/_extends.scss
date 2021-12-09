@@ -1,19 +1,13 @@
-%section-padding {
-	padding-top: 20%;
-	padding-bottom: 40%;
-	@include media-quires('medium') {
-		padding-bottom: 20em;
-	}
-	@include media-quires('large') {
-		padding-top: 10em;
-		padding-bottom: 40em;
-	}
-	@include media-quires('xtra-large') {
-		padding-top: 20em;
-		padding-bottom: 50em;
-	}
-}
+/*===============================================================================
+    Table of contents
 
+    1.page wrapper
+    2.form styling 
+	3.section padding
+    
+===============================================================================*/
+
+//1.page wrapper
 %main-wrapper{
 	@include margin-padding(all, auto 7%, top, 50px);
 
@@ -27,23 +21,53 @@
     }
 }
 
+
+//2.form styling
 %form-styling {
 	width: 100%;
 	padding: 10px;
 	border: none;
 	outline: none;
 	height: 80px;
-	border: 1px solid black; 
-	border-radius: 12px;
+	border-bottom: 2px solid black;
 	margin-top: 10px;
 	&:focus {
 		background: lighten($accent-colour, 40);
-		border: 3px solid $accent-colour;
+		border-bottom: 3px solid $accent-colour;
 		transition: 0.2s ease-out;
 	}
 
 	&::placeholder{
 		font-family: $font-primary;
 		letter-spacing: 2px;
+	}
+
+
+
+
+	@include media-quires(medium){
+		border-radius: 12px;
+		border: 1px solid black;
+	}
+}
+
+
+
+
+
+//3.section padding
+%section-padding {
+	padding-top: 20%;
+	padding-bottom: 40%;
+	@include media-quires('medium') {
+		padding-bottom: 20em;
+	}
+	@include media-quires('large') {
+		padding-top: 10em;
+		padding-bottom: 40em;
+	}
+	@include media-quires('xtra-large') {
+		padding-top: 20em;
+		padding-bottom: 50em;
 	}
 }

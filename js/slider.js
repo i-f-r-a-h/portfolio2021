@@ -23,7 +23,7 @@ slider.addEventListener("mouseleave", () => {
 
 slider.addEventListener("mouseup", e => {
   isDown = false;
-  const elements = document.getElementsByClassName("book");
+  const elements = document.getElementsByClassName("project");
   if (isDragged) {
     for (let i = 0; i < elements.length; i++) {
       elements[i].addEventListener("click", preventClick);
@@ -46,6 +46,6 @@ slider.addEventListener("mousemove", e => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
-document.getElementsByClassName("book").ondragstart = function () {
+document.getElementsByClassName("project").ondragstart = function () {
   console.log("Drag start");
 };

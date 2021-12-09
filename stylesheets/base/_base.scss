@@ -1,7 +1,14 @@
-//===============================================================================
-// This file contains all the very basic foundation styling of the portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
 
+    1.Universal styling
+    2.HTML styling
+    3.Main styling
+    4.A/link styling
+
+===============================================================================*/
+
+//1.Universal styling
 * {
     list-style-type: none;
     text-decoration: none;
@@ -10,15 +17,19 @@
     padding: 0;
 }
 
+//2.HTML styling
 html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
 }
 
+//3.Main styling
 main {
     min-height: calc(100vh - 89px);
 }
 
+
+//4.A/link styling
 a{
     i{
         text-decoration: none;
@@ -26,3 +37,5 @@ a{
 }
 
 
+
+  

@@ -1,6 +1,13 @@
-// -----------------------------------------------------------------------------//
-// This file contains all the animations used within the portfolio               //
-// -----------------------------------------------------------------------------//
+/*===============================================================================
+    Table of contents
+
+    1.Landing page button
+    2.Landing page icons
+    3.Hamburger menu
+    
+===============================================================================*/
+
+//1.Landing page button
 @keyframes learn-more {
     0%   {top: 0px; }
     0%   {top: -5px; }
@@ -8,7 +15,7 @@
   }
 
 
-
+//2.Landing page icons
   @keyframes floating {
     0% {
         transform: translate(0, 0px);
@@ -24,7 +31,7 @@
 }
 
 
-//hamburger menu
+//3.Hamburger menu
 .change {
     @include position(grid, $right:0);
  

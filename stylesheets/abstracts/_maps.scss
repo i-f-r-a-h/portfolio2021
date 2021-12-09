@@ -1,7 +1,12 @@
-//===============================================================================
-// This file contains all the maps used in this portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
 
+    1.Media quires
+    2.Social media background for floating icons on landing page
+
+===============================================================================*/
+
+// 1.Media quires
 $breakpoints:(
 'xsmall':476px,
 'small':528px,
@@ -12,16 +17,11 @@ $breakpoints:(
 );
 
 
-// social media buttons found in the contact page
+// 2.Social media background for floating icons on landing page
 $socials: (
     linkedin:rgb(11, 158, 255),
-    instagram:red,
-    spotify:lime,
     github:rgb(51, 213, 51),
-    codepen:lightblue,
-    dribble:pink,
     email:orange,
-    location:yellow,
 );
 
 

@@ -1,9 +1,16 @@
-//===============================================================================
-// This file contains all the global configs and variables used in this portfolio
-//===============================================================================
+/*===============================================================================
+    Table of contents
+
+    1.Font stack
+    2.Text base values
+    2.1.Text values
+    3.Line height
+    4.Base colours
+    5.Colour scheme
+===============================================================================*/
 
 
-/* Font stack */
+/* 1.Font stack */
 $font-primary-url :'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap';
 $font-secondary-url :'https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&display=swap';
 $font-primary: 'Open Sans', sans-serif;
@@ -14,11 +21,11 @@ $font-secondary: 'Bitter',serif;
 
 /* Text used this as reference - https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd */
 
-// text base values
+// 2.Text base values
 $text-base-size:1em;
 $text-scale-ratio:1.2;
 
-//text
+// 2.1.Text values
 $text-xxs: calc(#{$text-base-size} / #{$text-scale-ratio} / #{$text-scale-ratio} / #{$text-scale-ratio});
 $text-xs: calc(#{$text-base-size} / #{$text-scale-ratio} / #{$text-scale-ratio});
 $text-s: calc(#{$text-base-size} / #{$text-scale-ratio});
@@ -30,17 +37,17 @@ $text-xxl: calc(#{$text-base-size} * #{$text-scale-ratio} * #{$text-scale-ratio}
 
 
 
-//line height
+//3.Line height
 $heading-line-height: 1.2;
 $body-line-height: 1.4;
 
 
-/* Colours */
+//4.Base colours
 $grey:#F7F8FB;
 $black:#0a0d14;
 $white:#fcfcfc;
 
-// Colour scheme used
+//5.Colour scheme
 $primary-colour:#0a0d14;
 $secondary-colour:#008080;
 $tertiary-colour:#5d49ab;
