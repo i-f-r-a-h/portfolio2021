@@ -42,7 +42,7 @@
 %nav-item-link {
     text-decoration: none;
     font-size: 6vw;
-    color: rgb(0, 0, 0);
+    color: $black;
     letter-spacing: 2px;
     transition: ease-in-out 0.5s;
 
@@ -62,7 +62,7 @@
         font-size: $text-s;
         margin-left: 1.05vw;
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        color: $black;
         letter-spacing: 2px;
     }
 

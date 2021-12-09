@@ -244,7 +244,7 @@ a {
 }
 
 a:hover {
-  color: teal;
+  color: #008080;
 }
 
 .about-cv h1 {
@@ -324,7 +324,7 @@ a:hover {
 }
 
 .view-more:hover {
-  color: teal;
+  color: #008080;
 }
 
 @media (min-width: 600px) {
@@ -526,7 +526,7 @@ a:hover {
     
 ===============================================================================*/
 body.dark-theme {
-  color: #eee;
+  color: #fcfcfc;
   background: #0a0d14;
 }
 
@@ -637,7 +637,7 @@ body.dark-theme .home-secondary {
 .navbar__list a {
   text-decoration: none;
   font-size: 6vw;
-  color: black;
+  color: #0a0d14;
   letter-spacing: 2px;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
@@ -662,7 +662,7 @@ body.dark-theme .home-secondary {
     font-size: calc(1em / 1.2);
     margin-left: 1.05vw;
     text-decoration: none;
-    color: black;
+    color: #0a0d14;
     letter-spacing: 2px;
   }
 }
@@ -711,7 +711,7 @@ body.dark-theme .home-secondary {
   .about-cv {
     margin: 80px auto 0px auto;
     padding: 40px 30px 0px 40px;
-    border: 1px solid grey;
+    border: 1px solid #F7F8FB;
     display: -ms-grid;
     display: grid;
     gap: 0px;
@@ -747,7 +747,7 @@ body.dark-theme .home-secondary {
     font-weight: 400;
     padding: 65px;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background-color: teal;
+    background-color: #008080;
   }
   .about-cv .cv-hide {
     display: block;
@@ -755,7 +755,7 @@ body.dark-theme .home-secondary {
 }
 
 .about--section {
-  border: 2px solid black;
+  border: 2px solid #0a0d14;
   border-radius: 5px;
   padding: 20px;
 }
@@ -811,14 +811,14 @@ body.dark-theme .home-secondary {
     border-bottom: #0a0d14 2px solid;
   }
   .about--section:nth-child(3) p {
-    color: white;
+    color: #fcfcfc;
     font-size: 3rem;
     letter-spacing: 2px;
     font-family: "Bitter", serif;
     font-weight: 600;
   }
   .about--section:not(:nth-child(7)) {
-    background: peachpuff;
+    background-color: #ffbe84;
     padding: 20px;
   }
   .about--section:not(:nth-child(7)) h2 {
@@ -858,7 +858,7 @@ body.dark-theme .home-secondary {
   .cv-background {
     display: block;
     position: absolute;
-    background-color: rgba(0, 128, 128, 0.434);
+    background-color: rgba(0, 128, 128, 0.42);
     width: 80%;
     max-width: 998px;
     height: 200px;
@@ -903,7 +903,7 @@ body.dark-theme .home-secondary {
 }
 
 .header {
-  background-color: white;
+  background-color: #fcfcfc;
   z-index: 9;
   border-bottom: 1px solid #F7F8FB;
   display: -webkit-box;
@@ -957,7 +957,7 @@ body.dark-theme .home-secondary {
 
 .navbar .hamburger-menu [class^="line"] {
   height: 3px;
-  background-color: black;
+  background-color: #0a0d14;
   -webkit-transition: all 0.9s;
   transition: all 0.9s;
 }
@@ -987,7 +987,7 @@ body.dark-theme .home-secondary {
   min-height: fit-content;
   background-color: #0a0d14;
   color: #fcfcfc;
-  border-top: 2px solid black;
+  border-top: 2px solid #0a0d14;
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1042,7 +1042,7 @@ body.dark-theme .home-secondary {
 }
 
 .footer-main div h2 {
-  color: peachpuff;
+  color: #FFA351;
   font-weight: 600;
   line-height: 29px;
   font-size: 18px;
@@ -1109,7 +1109,7 @@ form input, form textarea {
   border: none;
   outline: none;
   height: 80px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #0a0d14;
   margin-top: 10px;
 }
 
@@ -1143,7 +1143,7 @@ form input::placeholder, form textarea::placeholder {
 @media (min-width: 600px) {
   form input, form textarea {
     border-radius: 12px;
-    border: 1px solid black;
+    border: 1px solid #0a0d14;
   }
 }
 
@@ -1194,7 +1194,7 @@ table th {
 }
 
 table td, table th {
-  border: 1px solid black;
+  border: 1px solid #0a0d14;
   padding: 8px;
 }
 
@@ -1216,6 +1216,7 @@ table td, table th {
       -ms-flex-align: start;
           align-items: start;
   overflow: hidden;
+  padding-top: 50px;
   padding-bottom: 50px;
   margin: auto 7%;
 }
@@ -1250,7 +1251,7 @@ table td, table th {
 }
 
 .subheading {
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: clamp(1rem, 2.3vw, 3rem);
   font-weight: 500;
   width: 65%;
   max-width: 550px;
@@ -1295,6 +1296,7 @@ form label {
 
 .contacts li {
   line-height: 2rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -1522,8 +1524,8 @@ form label {
 
 .about-skills li a {
   text-decoration: underline;
-  -webkit-text-decoration-color: #999999;
-          text-decoration-color: #999999;
+  -webkit-text-decoration-color: #8b9cc5;
+          text-decoration-color: #8b9cc5;
   font-weight: 600;
   color: #008080;
 }
@@ -1591,14 +1593,14 @@ form label {
   height: 0.6rem;
   width: 0.6rem;
   border-radius: 50%;
-  background-color: grey;
+  background-color: #F7F8FB;
   margin: auto 0;
   margin-right: 20px;
 }
 
 .about-list li a {
-  -webkit-text-decoration-color: #999999;
-          text-decoration-color: #999999;
+  -webkit-text-decoration-color: #8b9cc5;
+          text-decoration-color: #8b9cc5;
   color: #0a0d14;
   text-decoration: underline;
 }
@@ -1663,7 +1665,7 @@ form label {
 }
 
 .portfolio-content {
-  border-top: 2px solid black;
+  border-top: 2px solid #0a0d14;
   padding: 20px 0px 30px 0px;
 }
 
@@ -1703,7 +1705,7 @@ form label {
 }
 
 .portfolio-nav ul li {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0a0d14;
 }
 
 .portfolio-nav P {
@@ -1771,7 +1773,7 @@ form label {
 
 @media screen and (min-width: 980px) {
   .portfolio-content-index {
-    border-right: 2px black solid;
+    border-right: 2px #0a0d14 solid;
   }
 }
 
@@ -1957,7 +1959,7 @@ form label {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  border: 1px solid black;
+  border: 1px solid #0a0d14;
   border-radius: 18px;
   height: 400px;
   -webkit-transition: ease-in-out 0.5s;
@@ -2052,7 +2054,7 @@ form label {
 
 .home-secondary {
   font-size: calc(1em * 1.2);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #0a0d14;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;

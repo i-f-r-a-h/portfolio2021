@@ -14,6 +14,7 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: start;
     overflow: hidden;
+    padding-top: 50px;
     padding-bottom: 50px;
     @include margin-padding(all, auto 7%);
 
@@ -42,7 +43,7 @@
 
 //2.subheading
 .subheading {
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size:clamp(1rem, 2.3vw, 3rem);
     font-weight: 500;
     width: 65%;
     max-width:550px;
@@ -55,7 +56,6 @@
 
 //3.form
 form {
-
     @include flex-layout($direction:column);
 
     label {
@@ -69,7 +69,6 @@ form {
     textarea {
         @extend %form-styling;
     }
-
 }
 
 //4.two-column contact links
@@ -86,6 +85,7 @@ form {
 
     li {
         line-height: 2rem;
+        font-size:1rem;
     }
 
     @include media-quires(medium) {

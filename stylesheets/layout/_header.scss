@@ -36,7 +36,7 @@
 
  //2.site header
  .header {
-   background-color: white;
+   background-color: $white;
    z-index: 9;
    border-bottom: 1px solid $grey;
    @include flex-layout($just:space-between);
@@ -79,7 +79,7 @@
 
      [class^="line"] {
        height: 3px;
-       background-color: rgb(0, 0, 0);
+       background-color: $black;
        transition: all 0.9s;
      }
 

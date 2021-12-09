@@ -30,7 +30,7 @@
 
 //2.project sections
 .portfolio-content {
-    border-top: 2px solid black;
+    border-top: 2px solid $black;
     @include margin-padding($p-direction:all, $p-px:20px 0px 30px 0px);
 
     @include media-quires(large) {
@@ -54,7 +54,7 @@
         }
 
         li {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $black;
         }
 
     }
@@ -104,7 +104,7 @@
     }
 
     @include media-quires(large) {
-        border-right: 2px black solid;
+        border-right: 2px $black solid;
     }
 }
 

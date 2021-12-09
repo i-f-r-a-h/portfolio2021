@@ -12,7 +12,7 @@
     @include size($h-specify:mn, $height:fit-content);
     background-color: $primary-colour;
     color: $white;
-    border-top: 2px solid black;
+    border-top: 2px solid $black;
     @include margin-padding($p-direction:all, $p-px:30px);
     @include flex-layout($direction:column);
 
@@ -50,7 +50,7 @@
         }
 
         h2 {
-            color: peachpuff;
+            color: $accent-colour;
             font-weight: 600;
             line-height: 29px;
             font-size: 18px;
