@@ -11,6 +11,7 @@
 //1.base styling
 .access{
     @extend %main-wrapper;
+    padding-bottom: 50px;
 
     p{
         padding: 40px 0;
