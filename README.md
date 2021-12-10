@@ -35,7 +35,7 @@
 
 ![Screenshot 2021-12-09 at 21 58 28](https://user-images.githubusercontent.com/90143819/145482300-7b5fc00e-1f72-4c9f-8210-3a55fe493b54.png)
 
-This is my portfolio that i build to showcase projects that i make as will as a blog. It is being updated and improved over time. 
+This is my portfolio that i built to showcase projects that i make as well as a bloging. It is being updated and improved over time. 
 
 
 
