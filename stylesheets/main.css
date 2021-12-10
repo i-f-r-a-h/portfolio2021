@@ -1035,17 +1035,17 @@ body.dark-theme .home-secondary {
   gap: 10px;
 }
 
-.footer-main div {
+.footer-main section {
   margin: 20px 0px 0px 40px;
 }
 
 @media (min-width: 600px) {
-  .footer-main div {
+  .footer-main section {
     margin-right: 0px;
   }
 }
 
-.footer-main div h2 {
+.footer-main section h2 {
   color: #FFA351;
   font-weight: 600;
   line-height: 29px;
@@ -1183,6 +1183,10 @@ form input::placeholder, form textarea::placeholder {
     2.table styling
     
 ===============================================================================*/
+.access {
+  padding-bottom: 50px;
+}
+
 .access p {
   padding: 40px 0;
 }
@@ -1862,7 +1866,9 @@ form label {
 }
 
 .project p {
-  width: 80%;
+  width: 90%;
+  max-width: 400px;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
 }
 
 .links a:not(:last-of-type) {
@@ -1875,7 +1881,7 @@ form label {
 
 @media (min-width: 600px) {
   .links a {
-    font-size: 1vmin;
+    font-size: clamp(0.5rem, 1.1vw, 1.2rem);
   }
 }
 

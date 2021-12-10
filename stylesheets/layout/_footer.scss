@@ -42,7 +42,7 @@
 
 
 
-    div {
+    section {
         @include margin-padding(all, 20px 0px 0px 40px);
 
         @include media-quires(medium) {
