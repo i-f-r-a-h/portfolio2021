@@ -9,15 +9,15 @@
 
 //1.Header navigation bar
 %navbar {
-    @include size(100vw,100vh);
+    @include size(100vw, 100vh);
     background-color: $white;
-    @include position(fixed,0,-100vw);
+    @include position(fixed, 0, -100vw);
     display: grid;
     transition: right 0.8s cubic-bezier(0.1, 0, 0.1, 0.2);
     z-index: 2;
 
     @include media-quires('medium') {
-        @include size(auto,auto);
+        @include size(auto, auto);
         @include position(relative, $right:auto);
         transition: none;
     }
@@ -31,7 +31,7 @@
     }
 
     @include media-quires('medium') {
-        @include flex-layout($direction:row,$just:center);
+        @include flex-layout($direction:row, $just:center);
         @include size(auto);
         @include margin-padding(all, 0);
         border: 0;
@@ -44,20 +44,14 @@
     font-size: 6vw;
     color: $black;
     letter-spacing: 2px;
-    transition: ease-in-out 0.5s;
+
 
 
     &:hover {
         color: $secondary-colour;
-        margin-left: 10px;
-        transition: ease-in-out 0.5s;
-        @include media-quires('medium') {
-            margin-left: 25px;
-            margin-right: 5px;
-        }
+        transition: all ease-in-out 0.5s;
+    }
 
-       }
-    
     @include media-quires('medium') {
         font-size: $text-s;
         margin-left: 1.05vw;

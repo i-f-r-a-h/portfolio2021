@@ -281,6 +281,7 @@ a:hover {
     2.View more portfolio
     3.Submit button
     4.Floating icons of landing page 
+    5.Dark mode toggle btn
 
 ===============================================================================*/
 .about-icon {
@@ -453,8 +454,16 @@ a:hover {
 }
 
 .btn-toggle {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+  border: 1px solid white;
   margin-top: 10px;
   padding: 8px;
+  border-radius: 12px;
 }
 
 /*===============================================================================
@@ -544,6 +553,7 @@ a:hover {
     4.links
     5.home page
     6.portfolio section
+
     
 ===============================================================================*/
 body.dark-theme {
@@ -664,22 +674,12 @@ body.dark-theme .home-secondary {
   font-size: 6vw;
   color: #0a0d14;
   letter-spacing: 2px;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
 }
 
 .navbar__list a:hover {
   color: #008080;
-  margin-left: 10px;
-  -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s;
-}
-
-@media (min-width: 600px) {
-  .navbar__list a:hover {
-    margin-left: 25px;
-    margin-right: 5px;
-  }
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 @media (min-width: 600px) {
@@ -898,7 +898,6 @@ body.dark-theme .home-secondary {
     1.logo
     2.site header
     3.site navigation
-    3.1 hamburger menu
 
 ===============================================================================*/
 .navbar__logo {

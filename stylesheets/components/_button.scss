@@ -5,13 +5,14 @@
     2.View more portfolio
     3.Submit button
     4.Floating icons of landing page 
+    5.Dark mode toggle btn
 
 ===============================================================================*/
 
 
 // 1.About icons
 .about-icon {
-    @include flex-layout($direction:column,$just:center,$aItem:center){
+    @include flex-layout($direction:column, $just:center, $aItem:center) {
         font-size: 2rem;
         padding-bottom: 20px;
     }
@@ -20,7 +21,7 @@
 
 
 // 2.View more portfolio
-.view-more{
+.view-more {
     @include flex-layout($just:center, $aItem:center);
     text-align: center;
     font-size: 20px;
@@ -28,17 +29,19 @@
     margin: auto 90px;
 
     height: 100%;
-    i{
+
+    i {
         font-size: 50px;
         margin-bottom: 20px;
     }
-    &:hover{
+
+    &:hover {
         color: $secondary-colour;
     }
 
 
 
-    @include media-quires(medium){
+    @include media-quires(medium) {
         margin: auto 0px;
     }
 }
@@ -56,7 +59,7 @@
     font-weight: 600;
     transition: ease-in-out .7s;
 
-    &:hover{
+    &:hover {
         background-color: $tertiary-colour;
         transition: ease-in-out .7s;
     }
@@ -75,8 +78,10 @@
         padding: 20px;
         border-radius: 50%;
         @include flex-layout($just:center, $aItem:center);
+
         &:nth-of-type(1) {
             @include outer-circle-position(55%, 15%, -1333ms);
+
             &::after {
                 @include outer-circle(50rem);
             }
@@ -84,16 +89,18 @@
         }
 
         &:nth-of-type(2) {
-            @include outer-circle-position(80%, 50%,);
+            @include outer-circle-position(80%, 50%, );
+
             &::after {
                 @include outer-circle(35rem);
                 overflow: hidden;
             }
-            
+
         }
 
         &:nth-of-type(3) {
             @include outer-circle-position(5%, 60%, -2000ms);
+
             &::after {
                 @include outer-circle(20rem);
             }
@@ -117,8 +124,16 @@
 
 }
 
-
-.btn-toggle{
+//5.Dark mode toggle btn
+.btn-toggle {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    border: 1px solid white;
     margin-top: 10px;
     padding: 8px;
+    border-radius: 12px;
 }

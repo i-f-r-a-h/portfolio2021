@@ -4,97 +4,94 @@
     1.logo
     2.site header
     3.site navigation
-    3.1 hamburger menu
 
 ===============================================================================*/
 
 
 
- // 1.logo
- .navbar__logo {
-   font-size: $text-lg;
-   z-index: 5;
-   color: $black;
-   margin-top: 5px;
+// 1.logo
+.navbar__logo {
+  font-size: $text-lg;
+  z-index: 5;
+  color: $black;
+  margin-top: 5px;
 
-   @include media-quires('medium') {
-     font-weight: 500;
-     letter-spacing: -0.03em;
-   }
+  @include media-quires('medium') {
+    font-weight: 500;
+    letter-spacing: -0.03em;
+  }
 
-   @include media-quires('large') {
-     font-size: $text-xl;
-   }
+  @include media-quires('large') {
+    font-size: $text-xl;
+  }
 
-   @include media-quires('xtra-large') {
-     font-size: $text-xxl;
-   }
- }
-
-
-
-
- //2.site header
- .header {
-   background-color: $white;
-   z-index: 9;
-   border-bottom: 1px solid $grey;
-   @include flex-layout($just:space-between);
-   @include margin-padding($p-direction:all, $p-px:0.5rem 1.3rem);
-   @include position(sticky, $top:0);
+  @include media-quires('xtra-large') {
+    font-size: $text-xxl;
+  }
+}
 
 
 
-   @include media-quires('large') {
-     @include margin-padding(all, auto, all, 10px 40px);
-     @include size(2000px, $maxWidth:mx);
-   }
- }
+
+//2.site header
+.header {
+  background-color: $white;
+  z-index: 9;
+  border-bottom: 1px solid $grey;
+  @include flex-layout($just:space-between);
+  @include margin-padding($p-direction:all, $p-px:0.5rem 1.3rem);
+  @include position(sticky, $top:0);
 
 
- //3.site navigation
- .navbar {
-   @extend %navbar;
 
-   @include element(list) {
-     @extend %navbar-item-list;
-     @include element(item) {
-       @include margin-padding($p-direction:all, $p-px:20px);
-       @include media-quires('medium') {
-         @include margin-padding(all, auto, all, 10px);
-       }
-     }
+  @include media-quires('large') {
+    @include margin-padding(all, auto, all, 10px 40px);
+    @include size(2000px, $maxWidth:mx);
+  }
+}
 
-     a {
-       @extend %nav-item-link
-     }
-   }
 
-    //3.1 hamburger menu
-   .hamburger-menu {
-     @include flex-layout($direction:column, $just:space-around);
-     @include position(fixed, 15px, 30px);
-     @include size(1.6rem, 1.6rem);
-     z-index: 2;
+//3.site navigation
+.navbar {
+  @extend %navbar;
 
-     [class^="line"] {
-       height: 3px;
-       background-color: $black;
-       transition: all 0.9s;
-     }
+  @include element(list) {
+    @extend %navbar-item-list;
 
-     @include media-quires('medium') {
+    @include element(item) {
+      @include margin-padding($p-direction:all, $p-px:20px);
+
+      @include media-quires('medium') {
+        @include margin-padding(all, auto, all, 10px);
+      }
+    }
+
+    a {
+      @extend %nav-item-link
+    }
+  }
+
+
+  .hamburger-menu {
+    @include flex-layout($direction:column, $just:space-around);
+    @include position(fixed, 15px, 30px);
+    @include size(1.6rem, 1.6rem);
+    z-index: 2;
+
+    [class^="line"] {
+      height: 3px;
+      background-color: $black;
+      transition: all 0.9s;
+    }
+
+    @include media-quires('medium') {
       display: none;
     }
-   }
-
-   
- }
-
- .change {
-   @include position(grid, $right:0);
- }
+  }
 
 
+}
 
-
+.change {
+  @include position(grid, $right:0);
+}
