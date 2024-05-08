@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Hello! I'm Ifrah. A front-end web developer, designer and student focusing on creating immersive and user-driven experiences on the web">
+    <meta name="description"
+        content="Hello! I'm Ifrah. A front-end web developer, designer and student focusing on creating immersive and user-driven experiences on the web">
     <meta name="keywords" content="Portfolio, Web Developer, Ifrah, Front-end ">
     <meta name="author" content="Ifrah Abdi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,21 +19,35 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="stylesheets/main.css">
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-W5F4CSTT');</script>
-        <!-- End Google Tag Manager -->
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6M9VJYD06E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W5F4CSTT');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M9VJYD06E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-6M9VJYD06E');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6M9VJYD06E');
+    </script>
 
 </head>
 
@@ -75,13 +90,13 @@
         <section class="contact-left">
             <h2>Contact</h2>
             <h3 class="subheading">Don't hesitate to say hi and get in touch!</h3>
-            <img class="contact-lightbulb" src="assets/images/lightbulb.webp"
-                alt="illustration of a lightbulb in a coat watering a plant">
+            <!-- <img class="contact-lightbulb" src="assets/images/lightbulb.webp"
+                alt="illustration of a lightbulb in a coat watering a plant"> -->
         </section>
 
         <aside>
             <!-- form ( hosted with netlify) with access keys-->
-            <form method="post" data-netlify="true">
+            <!-- <form method="post" data-netlify="true">
 
                 <label for="name">Name:</label>
                 <input accessKey="N" type="text" id="name" name="user_name" placeholder="Type your name">
@@ -96,7 +111,12 @@
                 <div data-netlify-recaptcha="true"></div>
 
                 <button accessKey="S" type="submit">Send Message</button>
-            </form>
+            </form> -->
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/ifrahvermeer2/30min"
+                style="min-width:500px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
             <!-- contact links  -->
             <section class="contacts">
                 <div>
@@ -122,8 +142,8 @@
         </aside>
     </main>
 
-    
-<!-- footer -->
+
+    <!-- footer -->
     <footer class="site-footer footer-contact">
         <!-- footer wrapper -->
         <div class="footer-main">
@@ -161,7 +181,9 @@
                 <h2>performance.</h2>
                 <ul>
                     <!-- note: error only occurs due to netlify validation not my own code -->
-                    <li><a target=”_blank” href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fifrahabdi.netlify.app%2Fcontact.html">Page validation</a></li>
+                    <li><a target=”_blank”
+                            href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fifrahabdi.netlify.app%2Fcontact.html">Page
+                            validation</a></li>
                     <li><a target=”_blank” href="access.html">Access keys</a></li>
                     <!-- dark mode inspiried by https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ -->
                     <li><button accessKey="T" class="btn-toggle">Dark mode (contrast option)</button></li>
